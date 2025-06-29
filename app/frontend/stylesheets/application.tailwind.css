@@ -1,0 +1,27 @@
+@import 'tailwindcss' source(none);
+
+@source "../../helpers/**/*.rb";
+@source "../../views/**/*.html.erb";
+@source '../../frontend/**/*.html.erb';
+@source '../../frontend/components/**/*.rb';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Open Sans', sans-serif;
+}
+
+@font-face {
+  font-display:  swap;
+  font-family:   'Open Sans';
+  font-stretch:  100%;
+  font-style:    normal;
+  font-weight:   300 800;
+  src:           url('~/fonts/open-sans.woff2') format('woff2');
+}
+
+body {
+  @apply
+    font-sans
+    subpixel-antialiased;
+}

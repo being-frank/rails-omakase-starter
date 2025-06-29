@@ -1,22 +1,24 @@
 {
-  "name": "RailsQuickStart",
+  "name":             "<%= t('meta_tags.site') %>",
+  "description":      "<%= t('meta_tags.description', default: t('meta_tags.site')) %>.",
+  "display":          "minimal-ui",
+  "orientation":      "landscape-primary",
+  "id":               "/?source=pwa",
+  "scope":            "/",
+  "start_url":        "/?source=pwa",
+  "background_color": "<%= I18n.t('meta_tags.pwa.background_color') %>",
+  "theme_color":      "<%= I18n.t('meta_tags.pwa.theme_color') %>",
   "icons": [
     {
-      "src": "/icon.png",
-      "type": "image/png",
+      "src":   "/icon.png",
+      "type":  "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "/icon.png",
-      "type": "image/png",
-      "sizes": "512x512",
+      "src":     "/icon.png",
+      "type":    "image/png",
+      "sizes":   "512x512",
       "purpose": "maskable"
     }
-  ],
-  "start_url": "/",
-  "display": "standalone",
-  "scope": "/",
-  "description": "RailsQuickStart.",
-  "theme_color": "red",
-  "background_color": "red"
+  ]
 }
