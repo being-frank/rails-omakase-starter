@@ -1,8 +1,71 @@
 # Omakase Ruby styling for Rails
 inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 
-# Overwrite or add rules to create your own house style
-#
-# # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
-# Layout/SpaceInsideArrayLiteralBrackets:
-#   Enabled: false
+# ==== Bundler
+
+Bundler/DuplicatedGem:
+  Enabled: true
+
+# ==== Layout
+
+# Indent `protected` and `private` modifier keywords
+Layout/AccessModifierIndentation:
+  Enabled: true
+
+Layout/ArgumentAlignment:
+  Enabled: true
+  EnforcedStyle: with_fixed_indentation
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: true
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+  EnforcedStyle: ending_only
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true
+  EnforcedStyle: empty_lines_except_namespace
+
+# Align hash values
+Layout/HashAlignment:
+  Enabled: true
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+
+# Required to indent `protected` and `private` methods
+Layout/IndentationWidth:
+  Enabled: true
+
+# Use `some_method(arg1=:default)` not `some_method(arg1 = :default)``
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: true
+  EnforcedStyle: no_space
+
+# ==== Style
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always_true
+  Exclude:
+    - 'db/**/*'
+    - 'spec/**/*'
+
+# Use `'foo'` not `"foo"`
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
+
+# Use `%i[one two]` not `[:one, :two]`
+Style/SymbolArray:
+  Enabled: true
+
+# Use `%w[one two]` not `['one', 'two']`
+Style/WordArray:
+  Enabled: true
