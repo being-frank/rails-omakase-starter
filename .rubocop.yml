@@ -54,6 +54,7 @@ Style/FrozenStringLiteralComment:
   Enabled: true
   EnforcedStyle: always_true
   Exclude:
+    - 'config/initializers/**/*'
     - 'db/**/*'
     - 'spec/**/*'
 

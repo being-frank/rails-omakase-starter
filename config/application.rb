@@ -41,5 +41,6 @@ module RailsQuickStart
     # config.active_record.query_log_tags_enabled   = true
     config.active_record.schema_format            = :ruby
     config.active_record.generate_secure_token_on = :create
+
   end
 end

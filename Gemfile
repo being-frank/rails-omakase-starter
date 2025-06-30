@@ -32,6 +32,7 @@ gem 'kamal', require: false # https://kamal-deploy.org
 # ==== Application =============================================================
 
 # -- General
+gem 'vite_rails'
 
 # -- Authentication
 # gem 'jwt'
