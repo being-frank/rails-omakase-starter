@@ -10,8 +10,7 @@ gem 'thruster', require: false # https://github.com/basecamp/thruster/
 
 # -- Databases
 gem 'pg'
-gem 'redis'
-gem 'sqlite3'
+# gem 'sqlite3'
 
 # -- Frontend
 gem 'importmap-rails'
@@ -79,7 +78,7 @@ end
 # end
 
 group :tools do
-  gem 'rubocop-rails-omakase', require: false # https://github.com/rails/rubocop-rails-omakase/
+  gem 'rubocop-rails-omakase', require: false
   gem 'ruby-lsp', require: false
   gem 'squasher'
 end

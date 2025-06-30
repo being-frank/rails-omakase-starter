@@ -3,12 +3,11 @@
 require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
-  # config.hosts      = host_config.hosts(protocol: false).push(ENV['X_NGROK_HOST']).compact_blank
+  # config.hosts      = host_config.hosts(protocol: false)
   # config.asset_host = host_config.asset_host
 
   # ==== General
 
-  config.cache_classes               = false
   config.consider_all_requests_local = true
   config.eager_load                  = false
   config.enable_reloading            = true
