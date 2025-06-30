@@ -8,10 +8,15 @@ Rails.application.configure do
 
   # ==== General
 
-  config.consider_all_requests_local = true
-  config.eager_load                  = ENV['CI'].present?
-  config.enable_reloading            = false
-  config.time_zone                   = 'UTC'
+  config.cache_store                        = :null_store
+  config.consider_all_requests_local        = true
+  config.eager_load                         = ENV['CI'].present?
+  config.enable_reloading                   = false
+  config.i18n.raise_on_missing_translations = true
+  config.time_zone                          = 'UTC'
+  config.public_file_server.headers         = {
+    'cache-control' => 'public, max-age=3600'
+  }
 
   # ==== ActionController
 
@@ -42,18 +47,4 @@ Rails.application.configure do
   # ==== ActiveSupport
 
   config.active_support.deprecation = :stderr
-
-  # ==== Caching
-
-  config.cache_store = :null_store
-
-  # ==== I18n
-
-  config.i18n.raise_on_missing_translations = true
-
-  # ==== Public file server
-
-  config.public_file_server.headers = {
-    'cache-control' => 'public, max-age=3600'
-  }
 end

@@ -8,22 +8,35 @@ Rails.application.configure do
 
   # ==== General
 
-  config.consider_all_requests_local = true
-  config.eager_load                  = false
-  config.enable_reloading            = true
-  config.force_ssl                   = false
-  config.require_master_key          = true
-  config.server_timing               = true
+  config.cache_store                        = :memory_store
+  config.consider_all_requests_local        = true
+  config.eager_load                         = false
+  config.enable_reloading                   = true
+  config.force_ssl                          = false
+  config.i18n.raise_on_missing_translations = false
+  config.public_file_server.enabled         = true
+  config.require_master_key                 = true
+  config.server_timing                      = true
 
   # ==== ActionCable
 
   # config.action_cable.allowed_request_origins            = host_config.hosts
-  # config.action_cable.disable_request_forgery_protection = true
+  config.action_cable.disable_request_forgery_protection = false
 
   # ==== ActionController
 
   # config.action_controller.default_url_options               = host_config.default_url_options
   config.action_controller.raise_on_missing_callback_actions = true
+  # Run rails dev:cache to toggle Action Controller caching.
+  if Rails.root.join('tmp/caching-dev.txt').exist?
+    config.action_controller.perform_caching               = true
+    config.action_controller.enable_fragment_cache_logging = true
+    config.public_file_server.headers                      = {
+      'cache-control' => "public, max-age=#{2.days.to_i}"
+    }
+  else
+    config.action_controller.perform_caching = false
+  end
 
   # ==== ActionDispatch
 
@@ -64,27 +77,4 @@ Rails.application.configure do
   config.active_support.deprecation                     = :log
   config.active_support.disallowed_deprecation          = :raise
   config.active_support.disallowed_deprecation_warnings = []
-
-  # ==== Caching
-
-  config.cache_store = :memory_store
-
-  # Run rails dev:cache to toggle Action Controller caching.
-  if Rails.root.join('tmp/caching-dev.txt').exist?
-    config.action_controller.perform_caching               = true
-    config.action_controller.enable_fragment_cache_logging = true
-    config.public_file_server.headers                      = {
-      'cache-control' => "public, max-age=#{2.days.to_i}"
-    }
-  else
-    config.action_controller.perform_caching = false
-  end
-
-  # ==== I18n
-
-  config.i18n.raise_on_missing_translations = false
-
-  # ==== Public file server
-
-  config.public_file_server.enabled = true
 end
