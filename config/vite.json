@@ -1,0 +1,23 @@
+{
+  "all": {
+    "additionalEntrypoints": [
+      "~/{favicons,fonts,icons,images}/**/*"
+    ],
+    "publicDir": "public",
+    "sourceCodeDir": "app/frontend"
+  },
+  "development": {
+    "autoBuild": true,
+    "port": 3036,
+    "publicOutputDir": "vite-dev"
+  },
+  "test": {
+    "autoBuild": true,
+    "port": 3037,
+    "publicOutputDir": "vite-test"
+  },
+  "production": {
+    "autoBuild": false,
+    "publicOutputDir": "./"
+  }
+}

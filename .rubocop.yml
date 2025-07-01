@@ -6,6 +6,9 @@ inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 Bundler/DuplicatedGem:
   Enabled: true
 
+Bundler/OrderedGems:
+  Enabled: true
+
 # ==== Layout
 
 # Indent `protected` and `private` modifier keywords

@@ -10,6 +10,10 @@ brew bundle install
 Ruby gems
 ```bash
 bundle install
+
+Yarn
+```
+npm install -g corepack
 ```
 
 ## Setup

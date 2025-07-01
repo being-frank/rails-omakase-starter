@@ -1,0 +1,9 @@
+{
+  "name": "rails-frontend",
+  "private": true,
+  "packageManager": "yarn@4.9.2",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "vite-plugin-rails": "^0.5.0"
+  }
+}

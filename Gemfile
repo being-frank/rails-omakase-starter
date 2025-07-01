@@ -4,75 +4,68 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 8.0.2'
 
-# -- Server
-gem 'puma', '>= 5.0'
-gem 'thruster', require: false # https://github.com/basecamp/thruster/
-
-# -- Databases
+# --- Databases
 gem 'pg'
-# gem 'sqlite3'
 
-# -- Frontend
-gem 'importmap-rails'
-gem 'propshaft'
+# --- Server
+gem 'bootsnap', require: false
+gem 'puma', '>= 5.0'
+gem 'thruster', require: false
+
+# --- Frontend
 gem 'stimulus-rails'
 gem 'turbo-rails'
 
-# -- Database-backed adapters for Rails.cache, Active Job, and Action Cable
+# --- Database-backed adapters for Rails.cache, Active Job, and Action Cable
+gem 'solid_cable'
 gem 'solid_cache'
 gem 'solid_queue'
-gem 'solid_cable'
 
-# -- Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
-
-# -- Deployment
-gem 'kamal', require: false # https://kamal-deploy.org
+# --- Deployment
+gem 'kamal', require: false
 
 # ==== Application =============================================================
 
-# -- General
+# --- General
 gem 'vite_rails'
 
-# -- Authentication
+# --- Authentication
 # gem 'jwt'
 
-# -- ActionView
+# --- ActionView
 
-# -- ActiveModel and ActiveRecord
+# --- ActiveModel and ActiveRecord
 # gem 'bcrypt'
 
-# -- ActiveJob
+# --- ActiveJob
 
-# -- ActiveStorage
+# --- ActiveStorage
 # gem 'aws-sdk-s3'
 # gem 'image_processing', '~> 1.2'
 
-# -- Debugging
+# --- Debugging
 gem 'amazing_print', require: 'ap'
 gem 'pry-rails'
 gem 'pry-stack_explorer'
 
-# -- HTTP
+# --- HTTP
 # gem 'faraday'
 # gem 'faraday-retry'
 
 # ==== Groups ==================================================================
 
 group :development, :test do
-  gem 'debug', platforms: %i[mri], require: 'debug/prelude'
   gem 'brakeman', require: false
+  gem 'debug', platforms: %i[mri], require: 'debug/prelude'
 end
 
 group :development do
-  # gem 'listen'
   gem 'web-console'
 end
 
 group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'webmock'
 end
 
 # group :production do
