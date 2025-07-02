@@ -30,7 +30,7 @@ Layout/EmptyLinesAroundAccessModifier:
 
 Layout/EmptyLinesAroundClassBody:
   Enabled: true
-  EnforcedStyle: ending_only
+  EnforcedStyle: empty_lines
 
 Layout/EmptyLinesAroundModuleBody:
   Enabled: true
@@ -57,7 +57,6 @@ Style/FrozenStringLiteralComment:
   Enabled: true
   EnforcedStyle: always_true
   Exclude:
-    - 'config/initializers/**/*'
     - 'db/**/*'
     - 'spec/**/*'
 

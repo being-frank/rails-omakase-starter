@@ -46,7 +46,6 @@ gem 'vite_rails'
 # --- Debugging
 gem 'amazing_print', require: 'ap'
 gem 'pry-rails'
-gem 'pry-stack_explorer'
 
 # --- HTTP
 # gem 'faraday'

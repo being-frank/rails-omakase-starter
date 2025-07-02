@@ -23,3 +23,14 @@ Delete `config/credentials.yml.enc` if it exists, then create a new credentials 
 EDITOR='nvim' rails credentials:edit
 EDITOR='code --wait' rails credentials:edit
 ```
+
+## Gems
+
+* [pg]()
+* [vite_rails]()
+* [pry-rails]()
+
+## Patterns
+
+* [Service Objects]()
+* [Facades]()

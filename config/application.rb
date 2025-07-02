@@ -1,5 +1,6 @@
-require_relative 'boot'
+# frozen_string_literal: true
 
+require_relative 'boot'
 require 'rails'
 
 %w[
@@ -24,6 +25,7 @@ Bundler.require(*Rails.groups)
 
 module RailsQuickStart
   class Application < Rails::Application
+
     config.load_defaults 8.0
 
     config.autoload_lib(
