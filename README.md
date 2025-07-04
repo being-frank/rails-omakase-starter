@@ -2,18 +2,19 @@
 
 ## Commands
 
-Homebrew dependencies
+Install homebrew
 ```bash
-brew bundle install
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-
-Ruby gems
-```bash
-bundle install
 
 Yarn
 ```
 npm install -g corepack
+```
+
+Setup the project
+```bash
+bin/setup
 ```
 
 ## Setup
@@ -26,9 +27,13 @@ EDITOR='code --wait' rails credentials:edit
 
 ## Gems
 
+* [amazing_print]()
+* [dotenv]() (development, test)
+* [meta-tags]()
 * [pg]()
-* [vite_rails]()
 * [pry-rails]()
+* [pry-rails]()
+* [vite_rails]()
 
 ## Patterns
 

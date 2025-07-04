@@ -1,27 +1,32 @@
 # frozen_string_literal: true
 
 require 'amazing_print'
-require 'pry-stack_explorer'
 
-app_env        = ENV['X_APP_ENV'].presence || Rails.env
-pry_time       = Time.current.strftime('%H:%M')
-pry_app_name   = Pry::Helpers::Text.magenta(Rails.application.class.name.split('::').first.underscore)
-pry_env        = app_env == 'production' ? Pry::Helpers::Text.red(app_env) : Pry::Helpers::Text.yellow(app_env)
-pry_git_branch = Pry::Helpers::Text.green(`git rev-parse --abbrev-ref HEAD`.squish)
+pry_time          = Time.current.strftime('%H:%M')
+pry_rails_env     = Rails.env
+pry_project_name  = Pry::Helpers::Text.green(Rails.application.class.module_parent_name)
+pry_git_branch    = Pry::Helpers::Text.blue(`git rev-parse --abbrev-ref HEAD`.squish)
+pry_formatted_env = case pry_rails_env
+when 'production'
+  Pry::Helpers::Text.red(pry_rails_env)
+else
+  Pry::Helpers::Text.yellow(pry_rails_env)
+end
 
 Pry.config.pager  = false
 Pry.config.color  = true
 Pry.config.prompt = Pry::Prompt.new(
   :custom,
-  'Custom prompt',
-  [
-    proc do |context, nesting, pry_instance, _sep|
-      pry_nesting    = "(#{context})#{nesting > 0 ? ":#{nesting}" : ''}"
-      pry_input_ring = Pry::Helpers::Text.white_on_black("[#{pry_instance.input_ring.count}] #{pry_time}")
+  "Includes the current time, project name, git branch and current Rails environment.\n" \
+  "[1] 20:51 [RailsQuickStart/rails-8.0][development] pry(main)",
+  [ proc do |context, nest_level, pry, sep|
+    pry_input_ring = Pry::Helpers::Text.bold("[#{pry.input_ring.count}] #{pry_time}")
 
-      "#{pry_input_ring} #{pry_nesting} #{pry_app_name}:#{pry_git_branch} #{pry_env}> "
-    end
-  ]
+    "#{pry_input_ring} " \
+    "[#{pry_project_name}/#{pry_git_branch}][#{pry_formatted_env}] " \
+    "#{pry.config.prompt_name}(#{::Pry.view_clip(context)})" \
+    "#{":#{nest_level}" if !nest_level.zero?} "
+  end ]
 )
 
 AmazingPrint.defaults = {

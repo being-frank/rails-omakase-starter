@@ -33,6 +33,7 @@ gem 'vite_rails'
 # gem 'jwt'
 
 # --- ActionView
+gem 'meta-tags'
 
 # --- ActiveModel and ActiveRecord
 # gem 'bcrypt'
@@ -56,6 +57,7 @@ gem 'pry-rails'
 group :development, :test do
   gem 'brakeman', require: false
   gem 'debug', platforms: %i[mri], require: 'debug/prelude'
+  gem 'dotenv-rails', require: 'dotenv/load'
 end
 
 group :development do

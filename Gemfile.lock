@@ -104,6 +104,9 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     dotenv (3.1.8)
+    dotenv-rails (3.1.8)
+      dotenv (= 3.1.8)
+      railties (>= 6.1)
     drb (2.2.3)
     dry-cli (1.2.0)
     ed25519 (1.4.0)
@@ -148,6 +151,8 @@ GEM
       net-smtp
     marcel (1.0.4)
     matrix (0.4.3)
+    meta-tags (2.22.1)
+      actionpack (>= 6.0.0, < 8.1)
     method_source (1.1.0)
     mini_mime (1.1.5)
     minitest (5.25.5)
@@ -381,7 +386,9 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  dotenv-rails
   kamal
+  meta-tags
   pg
   pry-rails
   puma (>= 5.0)
