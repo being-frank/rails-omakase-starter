@@ -3,13 +3,13 @@
 require 'amazing_print'
 
 pry_time          = Time.current.strftime('%H:%M')
-pry_rails_env     = ENV['X_APP_ENV'].presence || Rails.env
+pry_rails_env     = Rails.application.config.app_env
 pry_project_name  = Pry::Helpers::Text.bold(Rails.application.class.module_parent_name)
 pry_git_branch    = Pry::Helpers::Text.blue(`git rev-parse --abbrev-ref HEAD`.squish)
 pry_formatted_env = case pry_rails_env
-when 'production'
+when :production
   Pry::Helpers::Text.red(pry_rails_env)
-when 'staging'
+when :staging
   Pry::Helpers::Text.yellow(pry_rails_env)
 else
   Pry::Helpers::Text.green(pry_rails_env)

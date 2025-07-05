@@ -30,13 +30,14 @@ module RailsQuickStart
 
     # ==== Custom Configuration
 
-    config.app_env = ENV.fetch('X_APP_ENV', Rails.env)
+    config.app_env = ENV.fetch('X_APP_ENV', Rails.env).to_sym
 
     # ==== General
 
     config.autoload_lib(
       ignore: %w[
         assets
+        core_extensions
         tasks
       ]
     )
@@ -47,7 +48,6 @@ module RailsQuickStart
     # ==== ActiveRecord
 
     config.active_record.default_timezone         = :utc
-    # config.active_record.query_log_tags_enabled   = true
     config.active_record.schema_format            = :ruby
     config.active_record.generate_secure_token_on = :create
 

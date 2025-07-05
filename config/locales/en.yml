@@ -1,3 +1,6 @@
 en:
   meta_tags:
-    title: Application
+    site: Application
+    pwa:
+      background_color: red
+      theme_color: red

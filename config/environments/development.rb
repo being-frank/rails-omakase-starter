@@ -54,7 +54,7 @@ Rails.application.configure do
 
   # ==== ActionView
 
-  config.action_view.annotate_rendered_view_with_filenames = true
+  config.action_view.annotate_rendered_view_with_filenames = false
 
   # ==== ActiveJob
 

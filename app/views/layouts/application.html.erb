@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html class='h-full'>
   <head>
     <%= render 'layouts/shared/head' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class='h-full bg-white'>
+    <div class='pt-10 container mx-auto'>
+      <%= yield %>
+    </div>
   </body>
 </html>

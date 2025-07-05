@@ -1,4 +1,4 @@
-import ApplicationController from './application'
+import ApplicationController from '../../javascript/controllers/application'
 
 export default class extends ApplicationController {
 
@@ -13,7 +13,7 @@ export default class extends ApplicationController {
   initialize() {}
 
   connect() {
-    console.log('HelloController connected')
+    console.log('ButtonController connected')
   }
 
   // ==== Actions

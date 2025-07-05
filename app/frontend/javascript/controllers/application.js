@@ -1,9 +1,5 @@
-import { Application } from "@hotwired/stimulus"
+// Reserve Controller for the export name
+import { Controller as BaseController } from '@hotwired/stimulus'
 
-const application = Application.start()
-
-// Configure Stimulus development experience
-application.debug = false
-window.Stimulus   = application
-
-export { application }
+export default class ApplicationController extends BaseController {
+}
