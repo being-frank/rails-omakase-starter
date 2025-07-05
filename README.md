@@ -39,3 +39,9 @@ EDITOR='code --wait' rails credentials:edit
 
 * [Service Objects]()
 * [Facades]()
+
+# Setup script ideas
+
+* Set application name
+* Set database name
+* Prepare keys
