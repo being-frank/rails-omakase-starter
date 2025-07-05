@@ -27,13 +27,12 @@
 # be configured to provide at least as many connections as the number of
 # threads. This includes Active Record's `pool` parameter in `database.yml`.
 
-threads_count = ENV.fetch('RAILS_MAX_THREADS', 3)
-threads ENV.fetch('RAILS_MIN_THREADS', threads_count), threads_count
+threads_count = Integer(ENV.fetch('RAILS_MAX_THREADS', 3))
+threads Integer(ENV.fetch('RAILS_MIN_THREADS', threads_count)), threads_count
 
 # Specifies that the worker count should equal the number of processors in production.
-if %w[production staging].include?(ENV['RAILS_ENV'])
+if Rails.env.production?
   require 'concurrent-ruby'
-
   worker_count = Integer(ENV.fetch('WEB_CONCURRENCY', Concurrent.physical_processor_count))
   workers worker_count if worker_count > 1
 end
@@ -45,16 +44,8 @@ port ENV.fetch('PORT', 3000)
 plugin :tmp_restart
 
 # Run the Solid Queue supervisor inside of Puma for single-server deployments.
-if ENV['SOLID_QUEUE_IN_PUMA'].present?
-  plugin :solid_queue
-end
+plugin :solid_queue if ENV['SOLID_QUEUE_IN_PUMA'].present?
 
 # Specify the PID file. Defaults to tmp/pids/server.pid in development.
 # In other environments, only set the PID file if requested.
-if ENV['PIDFILE'].present?
-  pidfile ENV['PIDFILE']
-end
-
-# Preload the application before starting the workers; this conflicts with
-# phased restart feature. The default is true if your app uses more than 1 worker.
-preload_app!
+pidfile ENV['PIDFILE'] if ENV['PIDFILE'].present?

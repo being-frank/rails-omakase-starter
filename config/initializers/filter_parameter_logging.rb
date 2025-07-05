@@ -18,4 +18,5 @@ Rails.application.config.filter_parameters += %i[
   secret
   ssn
   token
+  vector
 ]

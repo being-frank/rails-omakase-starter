@@ -28,6 +28,12 @@ module RailsQuickStart
 
     config.load_defaults 8.0
 
+    # ==== Custom Configuration
+
+    config.app_env = ENV.fetch('X_APP_ENV', Rails.env)
+
+    # ==== General
+
     config.autoload_lib(
       ignore: %w[
         assets
@@ -35,7 +41,8 @@ module RailsQuickStart
       ]
     )
 
-    # ==== General
+    config.credentials.content_path = Rails.root.join("config/credentials/#{config.app_env}.yml.enc")
+    config.credentials.key_path     = Rails.root.join("config/credentials/#{config.app_env}.key")
 
     # ==== ActiveRecord
 
