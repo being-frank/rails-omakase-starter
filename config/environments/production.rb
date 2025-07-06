@@ -77,8 +77,7 @@ Rails.application.configure do
 
   # ==== ActiveJob
 
-  config.active_job.queue_adapter = :solid_queue
-  config.solid_queue.connects_to  = { database: { writing: :queue } }
+  config.active_job.verbose_enqueue_logs = false
 
   # ==== ActiveRecord
 

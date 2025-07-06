@@ -58,6 +58,7 @@ group :development, :test do
   gem 'brakeman', require: false
   gem 'debug', platforms: %i[mri], require: 'debug/prelude'
   gem 'dotenv-rails', require: 'dotenv/load'
+  gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 8.0'
 end
 
@@ -70,8 +71,8 @@ group :test do
   gem 'climate_control'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
-  gem 'simplecov-cobertura', require: false
   gem 'single_cov', require: false
+  gem 'webmock'
 end
 
 # group :production do

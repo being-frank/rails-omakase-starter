@@ -9,15 +9,13 @@ SingleCov::RAILS_APP_FOLDERS.push(*%w[
 SingleCov.disable if ENV['CI'].to_s == 'true'
 
 require 'simplecov'
-require 'simplecov-cobertura'
 
 SimpleCov.start 'rails' do
   command_name "Job #{ENV['TEST_ENV_NUMBER']}" if ENV.key?('TEST_ENV_NUMBER')
 
-  if ENV['CI'].to_s == 'true'
-    formatter SimpleCov::Formatter::CoberturaFormatter
-  end
-
+  add_filter 'lib/core_extensions'
+  add_filter 'lib/tasks'
+  add_filter 'lib/routable_concern.rb'
   add_filter 'spec'
   add_filter do |source_file|
     source_file.lines.count < 5

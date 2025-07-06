@@ -28,13 +28,20 @@ EDITOR='code --wait' rails credentials:edit
 ## Gems
 
 * [amazing_print]()
-* [dotenv]() (development, test)
+* [climate_control]() (test)
+* [dotenv-rails]() (development, test)
+* [factory_bot_rails]() (development, test)
 * [meta-tags]()
 * [pg]()
 * [pry-rails]()
 * [pry-rails]()
+* [rspec-rails]() (development, test)
+* [simplecov]() (test)
+* [single_cov]() (test)
 * [vite_rails]()
-* [climate_control]() (test)
+* [webmock]() (test)
+* [ruby-lsp]() (tools)
+* [squasher]() (tools)
 
 ## Patterns
 

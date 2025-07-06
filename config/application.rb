@@ -3,23 +3,17 @@
 require_relative 'boot'
 require 'rails'
 
-%w[
-  active_record/railtie
-  active_storage/engine
-  action_controller/railtie
-  action_view/railtie
-  action_mailer/railtie
-  active_job/railtie
-  action_cable/engine
-  action_mailbox/engine
-  action_text/engine
-  rails/test_unit/railtie
-].each do |railtie|
-  begin
-    require railtie
-  rescue LoadError
-  end
-end
+# Pick the frameworks you want:
+require 'active_record/railtie'
+require 'active_storage/engine'
+require 'action_controller/railtie'
+require 'action_view/railtie'
+require 'action_mailer/railtie'
+require 'active_job/railtie'
+require 'action_cable/engine'
+require 'action_mailbox/engine'
+require 'action_text/engine'
+# require 'rails/test_unit/railtie'
 
 Bundler.require(*Rails.groups)
 
@@ -28,28 +22,61 @@ module RailsQuickStart
 
     config.load_defaults 8.0
 
+    config.autoload_lib ignore: %w[
+      assets
+      core_extensions
+      generators
+      tasks
+    ]
+
     # ==== Custom Configuration
 
     config.app_env = ENV.fetch('X_APP_ENV', Rails.env).to_sym
 
     # ==== General
 
-    config.autoload_lib(
-      ignore: %w[
-        assets
-        core_extensions
-        tasks
-      ]
-    )
+    config.beginning_of_week = :monday
+    config.time_zone         = 'UTC' # ActiveSupport::TimeZone.all
+
+    # ==== Credentials
 
     config.credentials.content_path = Rails.root.join("config/credentials/#{config.app_env}.yml.enc")
     config.credentials.key_path     = Rails.root.join("config/credentials/#{config.app_env}.key")
+
+    # ==== i18n
+
+    config.i18n.available_locales = :en
+    config.i18n.default_locale    = :en
+
+    # ==== ActiveJob
+
+    config.active_job.queue_adapter = :solid_queue
+    config.solid_queue.connects_to  = { database: { writing: :queue } }
 
     # ==== ActiveRecord
 
     config.active_record.default_timezone         = :utc
     config.active_record.schema_format            = :ruby
     config.active_record.generate_secure_token_on = :create
+
+    # ==== ActiveStorage
+
+    config.active_storage.track_variants    = false
+    config.active_storage.variant_processor = :vips
+
+    # ==== Annotations
+
+    config.annotations.register_tags(*%w[DEPRECATE DOCUMENT REFACTOR])
+
+    # ==== Generators
+
+    config.generators do |g|
+      g.fixture_replacement :factory_bot, dir: 'spec/factories', filename_proc: proc { |f| "#{f.singularize}_factory" }
+      g.helper              false
+      g.orm                 :active_record, primary_key_type: :uuid
+      g.template_engine     :erb
+      g.test_framework      :rspec, fixtures: true, view_specs: false
+    end
 
   end
 end

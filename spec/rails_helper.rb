@@ -12,8 +12,13 @@ return if !Rails.env.test?
 
 require 'rspec/rails'
 
-# Support files
-require_relative 'support/active_job'
+
+# The following line is provided for convenience purposes. It has the downside
+# of increasing the boot-up time by auto-requiring all files in the support
+# directory. Alternatively, in the individual `*_spec.rb` files, manually
+# require only the support files necessary.
+Rails.root.glob('spec/support/**/*.rb').sort_by(&:to_s).each { |f| require f }
+
 
 begin
   ActiveRecord::Migration.maintain_test_schema!
@@ -24,5 +29,4 @@ end
 RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   config.use_transactional_fixtures = true
-  # config.use_transactional_fixtures = false # enable spec/support/database_cleaner.rb when `false`
 end
