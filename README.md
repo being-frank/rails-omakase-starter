@@ -34,6 +34,7 @@ EDITOR='code --wait' rails credentials:edit
 * [pry-rails]()
 * [pry-rails]()
 * [vite_rails]()
+* [climate_control]() (test)
 
 ## Patterns
 

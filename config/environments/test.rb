@@ -10,7 +10,7 @@ Rails.application.configure do
 
   config.cache_store                        = :null_store
   config.consider_all_requests_local        = true
-  config.eager_load                         = ENV['CI'].present?
+  config.eager_load                         = ENV['CI'].to_s == 'true'
   config.enable_reloading                   = false
   config.i18n.raise_on_missing_translations = true
   config.time_zone                          = 'UTC'
