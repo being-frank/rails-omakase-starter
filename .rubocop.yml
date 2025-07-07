@@ -53,13 +53,6 @@ Layout/SpaceAroundEqualsInParameterDefault:
 
 # ==== Style
 
-Style/FrozenStringLiteralComment:
-  Enabled: true
-  EnforcedStyle: always_true
-  Exclude:
-    - 'db/**/*'
-    - 'spec/**/*'
-
 # Use `'foo'` not `"foo"`
 Style/StringLiterals:
   Enabled: true

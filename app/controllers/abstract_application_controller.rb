@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # rubocop:disable Rails/ApplicationController
 class AbstractApplicationController < ActionController::Base
 

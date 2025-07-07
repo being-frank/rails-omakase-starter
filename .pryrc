@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'amazing_print'
 
 pry_time          = Time.current.strftime('%H:%M')

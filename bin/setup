@@ -8,47 +8,49 @@ def system!(*args)
 end
 
 def section(name)
-  puts "\n==== #{name} ====\n\n"
+  puts "\n🔵 #{name}\n\n"
 end
 
 FileUtils.chdir APP_ROOT do
   edit_files = []
 
-  section('Installing libraries')
-  system('brew bundle install')
+  section('Libraries via Homebrew')
+  system!('brew bundle install')
 
-  section('Installing Ruby gems')
+  section('Bundler and Ruby gems')
   system!('gem install bundler --conservative')
   system('bundle check') || system!('bundle install')
 
-  section('Installing Javascript packages')
+  section('Javascript packages')
   system!('yarn install')
 
   if !File.exist?('.env')
-    section('Copying .env.sample')
+    section('Setup `.env`')
     FileUtils.cp('.env.sample', '.env')
     edit_files.push('.env')
   end
 
-  if !File.exist?('config/master.key')
-    system!('touch config/master.key')
-    edit_files.push('config/master.key')
-  end
+  section('Credentials')
+  %i[development staging production].each do |env|
+    credential_key     = "config/credentials/#{env}.key"
+    credential_content = "config/credentials/#{env}.yml.enc"
 
-  %i[staging production].each do |env|
-    if !File.exist?("config/credentials/#{env}.key")
-      system!("touch config/credentials/#{env}.key")
-      edit_files.push("config/credentials/#{env}.key")
+    if File.exist?(credential_key)
+      FileUtils.rm_f(credential_key)
+    end
+
+    if File.exist?(credential_content)
+      FileUtils.rm_f(credential_content)
     end
   end
 
-  section('Preparing database')
+  section('Database')
   system!('bin/rails db:prepare')
 
-  section('Removing old logs and tempfiles')
+  section('Cleanup')
   system!('bin/rails log:clear tmp:clear')
 
-  puts "✅ Done! ✅\n"
+  puts "✅ Done!\n"
 
   if edit_files.any?
     puts "\nEdit the following files to configure the local environment:\n\n"

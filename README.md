@@ -1,28 +1,44 @@
 # README
 
-## Commands
+## Prerequisites
 
-Install homebrew
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-Yarn
-```
-npm install -g corepack
-```
-
-Setup the project
-```bash
-bin/setup
-```
+* [Homebrew](https://brew.sh)
+* [Ruby](https://www.ruby-lang.org) `~> 3.4`
+* [Node.js](https://nodejs.org) `~> 22.16.0`
+* [Yarn](https://yarnpkg.com) `~> 4.9.2`
 
 ## Setup
 
-Delete `config/credentials.yml.enc` if it exists, then create a new credentials file:
-```bash
+```sh
+bin/setup
+```
+Steps:
+* Libraries via homebrew
+* Bundler and Ruby gems
+* Installing Javascript packages
+* Setup `.env`
+* Credentials
+* Database
+* Cleanup
+
+### Edit credentials
+
+_[Include description]_
+
+```sh
 EDITOR='nvim' rails credentials:edit
 EDITOR='code --wait' rails credentials:edit
+```
+
+## MailHog
+
+_[Include description]_
+
+[Install manually](https://github.com/mailhog/MailHog?tab=readme-ov-file#installation) or,
+via Docker Compose:
+
+```sh
+docker compose up -d
 ```
 
 ## Gems
@@ -36,19 +52,19 @@ EDITOR='code --wait' rails credentials:edit
 * [pry-rails]()
 * [pry-rails]()
 * [rspec-rails]() (development, test)
+* [ruby-lsp]() (tools)
 * [simplecov]() (test)
 * [single_cov]() (test)
+* [squasher]() (tools)
 * [vite_rails]()
 * [webmock]() (test)
-* [ruby-lsp]() (tools)
-* [squasher]() (tools)
 
 ## Patterns
 
 * [Service Objects]()
 * [Facades]()
 
-# Setup script ideas
+### Setup script ideas
 
 * Set application name
 * Set database name

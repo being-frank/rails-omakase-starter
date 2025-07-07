@@ -1,6 +1,6 @@
-# frozen_string_literal: true
-
 require 'active_support/core_ext/integer/time'
+
+Warning[:deprecated] = true
 
 Rails.application.configure do
   # config.hosts      = host_config.hosts(protocol: false)

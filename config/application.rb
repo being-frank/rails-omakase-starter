@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'boot'
 require 'rails'
 
@@ -29,6 +27,15 @@ module RailsQuickStart
       tasks
     ]
 
+    # ==== Annotations
+
+    config.annotations.register_tags(*%w[DEPRECATE DOCUMENT REFACTOR])
+
+    # ==== Credentials
+
+    config.credentials.content_path = Rails.root.join("config/credentials/#{config.app_env}.yml.enc")
+    config.credentials.key_path     = Rails.root.join("config/credentials/#{config.app_env}.key")
+
     # ==== Custom Configuration
 
     config.app_env = ENV.fetch('X_APP_ENV', Rails.env).to_sym
@@ -38,10 +45,15 @@ module RailsQuickStart
     config.beginning_of_week = :monday
     config.time_zone         = 'UTC' # ActiveSupport::TimeZone.all
 
-    # ==== Credentials
+    # ==== Generators
 
-    config.credentials.content_path = Rails.root.join("config/credentials/#{config.app_env}.yml.enc")
-    config.credentials.key_path     = Rails.root.join("config/credentials/#{config.app_env}.key")
+    config.generators do |g|
+      g.fixture_replacement :factory_bot, dir: 'spec/factories', filename_proc: proc { |f| "#{f.singularize}_factory" }
+      g.helper              false
+      g.orm                 :active_record, primary_key_type: :uuid
+      g.template_engine     :erb
+      g.test_framework      :rspec, fixtures: true, view_specs: false
+    end
 
     # ==== i18n
 
@@ -63,20 +75,6 @@ module RailsQuickStart
 
     config.active_storage.track_variants    = false
     config.active_storage.variant_processor = :vips
-
-    # ==== Annotations
-
-    config.annotations.register_tags(*%w[DEPRECATE DOCUMENT REFACTOR])
-
-    # ==== Generators
-
-    config.generators do |g|
-      g.fixture_replacement :factory_bot, dir: 'spec/factories', filename_proc: proc { |f| "#{f.singularize}_factory" }
-      g.helper              false
-      g.orm                 :active_record, primary_key_type: :uuid
-      g.template_engine     :erb
-      g.test_framework      :rspec, fixtures: true, view_specs: false
-    end
 
   end
 end

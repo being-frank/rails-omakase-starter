@@ -42,7 +42,7 @@ gem 'meta-tags'
 
 # --- ActiveStorage
 # gem 'aws-sdk-s3'
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # --- Debugging
 gem 'amazing_print', require: 'ap'

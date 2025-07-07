@@ -1,6 +1,6 @@
-# frozen_string_literal: true
-
 require 'active_support/core_ext/integer/time'
+
+Warning[:deprecated] = true
 
 Rails.application.configure do
   # config.hosts      = host_config.hosts(protocol: false)
@@ -49,8 +49,14 @@ Rails.application.configure do
   # ==== ActionMailer
 
   config.action_mailer.default_url_options   = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method       = :smtp
   config.action_mailer.perform_caching       = false
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings         = {
+    address: 'mailhog',
+    port:    1025,
+    tls:     false
+  }
 
   # ==== ActionView
 
