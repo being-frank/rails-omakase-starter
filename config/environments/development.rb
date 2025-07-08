@@ -8,7 +8,7 @@ Rails.application.configure do
 
   # ==== General
 
-  config.cache_store                        = :memory_store
+  config.cache_store                        = :solid_cache_store
   config.consider_all_requests_local        = true
   config.eager_load                         = false
   config.enable_reloading                   = true
@@ -71,7 +71,7 @@ Rails.application.configure do
   config.active_record.action_on_strict_loading_violation = :raise # :log
   config.active_record.migration_error                    = :page_load
   config.active_record.query_log_tags_enabled             = true
-  config.active_record.strict_loading_by_default          = true
+  config.active_record.strict_loading_by_default          = false
   config.active_record.verbose_query_logs                 = true
 
   # ==== ActiveStorage

@@ -2,32 +2,21 @@ default: &default
   adapter:  postgresql
   encoding: unicode
   pool:     <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
+  url:      <%= ENV['DATABASE_URL'] %>
 
 development:
-  primary:
-    <<: *default
-    url: <%= ENV['DATABASE_URL'] %>
-  queue: &solid_queue_development
-    <<: *default
-    url: <%= ENV.fetch('SOLID_QUEUE_DATABASE_URL', ENV['DATABASE_URL']) %>
-  cache:
-    <<: *solid_queue_development
-  cable:
-    <<: *solid_queue_development
-
+  <<: *default
+  # primary: &primary_development
+  #   <<: *default
+  # cache:
+  #   <<: *primary_development
+  # queue:
+  #   <<: *primary_development
+  # cable:
+  #   <<: *primary_development
 
 test:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
 
 production:
-  primary:
-    <<: *default
-    url: <%= ENV['DATABASE_URL'] %>
-  queue: &solid_queue_production
-    <<: *default
-    url: <%= ENV.fetch('SOLID_QUEUE_DATABASE_URL', ENV['DATABASE_URL']) %>
-  cache:
-    <<: *solid_queue_production
-  cable:
-    <<: *solid_queue_production
+  <<: *default

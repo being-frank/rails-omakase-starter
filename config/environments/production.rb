@@ -82,6 +82,8 @@ Rails.application.configure do
   config.active_record.attributes_for_inspect      = %i[id]
   config.active_record.dump_schema_after_migration = false
   config.active_record.query_log_tags_enabled      = false
+  config.active_record.strict_loading_by_default   = false
+  config.active_record.verbose_query_logs          = false
 
   # ==== ActiveStorage
 

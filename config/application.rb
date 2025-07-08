@@ -1,4 +1,5 @@
 require_relative 'boot'
+
 require 'rails'
 
 # Pick the frameworks you want:
@@ -27,6 +28,10 @@ module RailsQuickStart
       tasks
     ]
 
+    # ==== Custom Configuration
+
+    config.app_env = ENV.fetch('X_APP_ENV', Rails.env).to_sym
+
     # ==== Annotations
 
     config.annotations.register_tags(*%w[DEPRECATE DOCUMENT REFACTOR])
@@ -35,10 +40,6 @@ module RailsQuickStart
 
     config.credentials.content_path = Rails.root.join("config/credentials/#{config.app_env}.yml.enc")
     config.credentials.key_path     = Rails.root.join("config/credentials/#{config.app_env}.key")
-
-    # ==== Custom Configuration
-
-    config.app_env = ENV.fetch('X_APP_ENV', Rails.env).to_sym
 
     # ==== General
 
@@ -63,7 +64,9 @@ module RailsQuickStart
     # ==== ActiveJob
 
     config.active_job.queue_adapter = :solid_queue
-    config.solid_queue.connects_to  = { database: { writing: :queue } }
+    config.solid_queue.logger       = ActiveSupport::TaggedLogging.logger(STDOUT)
+    # Uncomment to separate databases
+    # config.solid_queue.connects_to  = { database: { writing: :queue } }
 
     # ==== ActiveRecord
 

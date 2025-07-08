@@ -125,6 +125,13 @@ GEM
     factory_bot_rails (6.5.0)
       factory_bot (~> 6.5)
       railties (>= 6.1.0)
+    ffi (1.17.2-aarch64-linux-gnu)
+    ffi (1.17.2-aarch64-linux-musl)
+    ffi (1.17.2-arm-linux-gnu)
+    ffi (1.17.2-arm-linux-musl)
+    ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x86_64-linux-gnu)
+    ffi (1.17.2-x86_64-linux-musl)
     fugit (1.11.1)
       et-orbi (~> 1, >= 1.2.11)
       raabro (~> 1.4)
@@ -133,6 +140,9 @@ GEM
     hashdiff (1.2.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
+    image_processing (1.14.0)
+      mini_magick (>= 4.9.5, < 6)
+      ruby-vips (>= 2.0.17, < 3)
     io-console (0.8.0)
     irb (1.15.2)
       pp (>= 0.6.0)
@@ -166,6 +176,9 @@ GEM
     meta-tags (2.22.1)
       actionpack (>= 6.0.0, < 8.1)
     method_source (1.1.0)
+    mini_magick (5.2.0)
+      benchmark
+      logger
     mini_mime (1.1.5)
     minitest (5.25.5)
     msgpack (1.8.0)
@@ -323,6 +336,9 @@ GEM
       rbs (>= 3, < 5)
       sorbet-runtime (>= 0.5.10782)
     ruby-progressbar (1.13.0)
+    ruby-vips (2.2.4)
+      ffi (~> 1.12)
+      logger
     rubyzip (2.4.1)
     securerandom (0.4.1)
     selenium-webdriver (4.33.0)
@@ -335,9 +351,6 @@ GEM
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
-    simplecov-cobertura (2.1.0)
-      rexml
-      simplecov (~> 0.19)
     simplecov-html (0.13.1)
     simplecov_json_formatter (0.1.4)
     single_cov (1.11.0)
@@ -432,6 +445,7 @@ DEPENDENCIES
   debug
   dotenv-rails
   factory_bot_rails
+  image_processing (~> 1.2)
   kamal
   meta-tags
   pg
@@ -443,7 +457,6 @@ DEPENDENCIES
   ruby-lsp
   selenium-webdriver
   simplecov
-  simplecov-cobertura
   single_cov
   solid_cable
   solid_cache

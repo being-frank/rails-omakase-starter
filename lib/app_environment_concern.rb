@@ -20,7 +20,7 @@ module AppEnvironmentConcern
     end
 
     def current_app_env
-      Rails.application.config.app_env
+      ENV['X_APP_ENV'].to_s
     end
 
     private
