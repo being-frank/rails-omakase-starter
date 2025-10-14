@@ -1,7 +1,5 @@
 require 'active_support/core_ext/integer/time'
 
-Warning[:deprecated] = true
-
 Rails.application.configure do
   # config.hosts      = host_config.hosts(protocol: false)
   # config.asset_host = host_config.asset_host
@@ -83,4 +81,8 @@ Rails.application.configure do
   config.active_support.deprecation                     = :log
   config.active_support.disallowed_deprecation          = :raise
   config.active_support.disallowed_deprecation_warnings = []
+
+  # ==== Solid Queue
+
+  config.solid_queue.connects_to  = { database: { writing: :queue } }
 end

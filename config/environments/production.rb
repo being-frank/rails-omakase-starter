@@ -36,7 +36,7 @@ Rails.application.configure do
 
   # ==== Logging
 
-  config.log_level = ENV.fetch('RAILS_LOG_LEVEL', 'info')
+  config.log_level = ENV.fetch('RAILS_LOG_LEVEL', :info)
   config.log_tags  = %i[request_id]
   config.logger    = ActiveSupport::TaggedLogging.logger(STDOUT)
 
@@ -92,4 +92,8 @@ Rails.application.configure do
   # ==== ActiveSupport
 
   config.active_support.report_deprecations = false
+
+  # ==== Solid Queue
+
+  config.solid_queue.connects_to  = { database: { writing: :queue } }
 end

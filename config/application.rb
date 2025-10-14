@@ -3,15 +3,16 @@ require_relative 'boot'
 require 'rails'
 
 # Pick the frameworks you want:
+require 'active_model/railtie'
+require 'active_job/railtie'
 require 'active_record/railtie'
 require 'active_storage/engine'
 require 'action_controller/railtie'
-require 'action_view/railtie'
 require 'action_mailer/railtie'
-require 'active_job/railtie'
-require 'action_cable/engine'
 require 'action_mailbox/engine'
 require 'action_text/engine'
+require 'action_view/railtie'
+require 'action_cable/engine'
 # require 'rails/test_unit/railtie'
 
 Bundler.require(*Rails.groups)
@@ -64,9 +65,6 @@ module RailsQuickStart
     # ==== ActiveJob
 
     config.active_job.queue_adapter = :solid_queue
-    config.solid_queue.logger       = ActiveSupport::TaggedLogging.logger(STDOUT)
-    # Uncomment to separate databases
-    # config.solid_queue.connects_to  = { database: { writing: :queue } }
 
     # ==== ActiveRecord
 
@@ -78,6 +76,10 @@ module RailsQuickStart
 
     config.active_storage.track_variants    = false
     config.active_storage.variant_processor = :vips
+
+    # ==== Solid Queue
+
+    config.solid_queue.logger = ActiveSupport::TaggedLogging.logger(STDOUT)
 
   end
 end

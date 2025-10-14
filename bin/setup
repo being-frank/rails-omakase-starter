@@ -22,7 +22,7 @@ FileUtils.chdir APP_ROOT do
   system('bundle check') || system!('bundle install')
 
   section('Javascript packages')
-  system!('yarn install')
+  system!('bun install')
 
   if !File.exist?('.env')
     section('Setup `.env`')

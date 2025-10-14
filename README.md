@@ -1,11 +1,16 @@
 # README
 
+Project generated using:
+
+```sh
+rails new rails-quick-start --database=postgresql --css=tailwind --javascript=bun --skip-test
+```
+
 ## Prerequisites
 
 * [Homebrew](https://brew.sh)
 * [Ruby](https://www.ruby-lang.org) `~> 3.4`
-* [Node.js](https://nodejs.org) `~> 22.16.0`
-* [Yarn](https://yarnpkg.com) `~> 4.9.2`
+* [Bun](https://bun.com) `~> 1.3`
 
 ## Setup
 
@@ -26,8 +31,8 @@ Steps:
 _[Include description]_
 
 ```sh
-EDITOR='nvim' rails credentials:edit
-EDITOR='code --wait' rails credentials:edit
+EDITOR='nvim' rails credentials:edit -e development | staging | production
+EDITOR='code --wait' rails credentials:edit -e development | staging | production
 ```
 
 ## MailHog
@@ -49,7 +54,6 @@ docker compose up -d
 * [factory_bot_rails]() (development, test)
 * [meta-tags]()
 * [pg]()
-* [pry-rails]()
 * [pry-rails]()
 * [rspec-rails]() (development, test)
 * [ruby-lsp]() (tools)

@@ -38,16 +38,6 @@
 /public/assets
 /public/vite*
 
-# Ignore Yarn
-# .pnp.* # Uncomment to not use Zero-Installs
-.yarn/*
-# !.yarn/cache # Uncomment to not use Zero-Installs
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-
 # Miscellaneous
 *.dump
 .overmind.sock

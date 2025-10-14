@@ -2,53 +2,66 @@ source 'https://rubygems.org'
 
 # ==== Rails Core ==============================================================
 
-gem 'rails', '~> 8.0.2'
+gem 'rails', '~> 8.0.3'
 
 # --- Databases
+
 gem 'pg'
 
 # --- Server
+
 gem 'bootsnap', require: false
 gem 'puma', '>= 5.0'
 gem 'thruster', require: false
 
 # --- Frontend
+
+gem 'importmap-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 
 # --- Database-backed adapters for Rails.cache, Active Job, and Action Cable
+
 gem 'solid_cable'
 gem 'solid_cache'
 gem 'solid_queue'
 
 # --- Deployment
+
 gem 'kamal', require: false
 
 # ==== Application =============================================================
 
 # --- General
+
 gem 'vite_rails'
 
 # --- Authentication
+
 # gem 'jwt'
 
 # --- ActionView
+
 gem 'meta-tags'
 
 # --- ActiveModel and ActiveRecord
+
 # gem 'bcrypt'
 
 # --- ActiveJob
 
 # --- ActiveStorage
+
 # gem 'aws-sdk-s3'
 gem 'image_processing', '~> 1.2'
 
 # --- Debugging
+
 gem 'amazing_print', require: 'ap'
 gem 'pry-rails'
 
 # --- HTTP
+
 # gem 'faraday'
 # gem 'faraday-retry'
 
@@ -63,6 +76,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'annotaterb'
+  gem 'rails-erd'
   gem 'web-console'
 end
 

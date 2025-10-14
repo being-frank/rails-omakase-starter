@@ -1,23 +1,8 @@
 require_relative 'coverage_helper'
-
 require 'dotenv'
 
-# Load the Rails application
-require_relative '../config/environment'
-
-# Prevent database truncation if the environment is production
-if Rails.env.production?
-  abort("The Rails environment is running in production mode!")
-end
-
-# Return early if not in test environment
-return if !Rails.env.test?
-
-# Require RSpec and other testing libraries
-require 'rspec/rails'
-
 # Use environment variables set in the CI/CD environment
-if ENV['CI'].present?
+if ENV['CI'].to_s != 'true'
   Dotenv.load('.env.test')
 end
 
@@ -28,7 +13,7 @@ RSpec.configure do |config|
   end
 
   if config.files_to_run.one?
-    config.default_formatter = 'doc'
+    config.default_formatter = :doc
   end
 
   config.mock_with :rspec do |mocks|

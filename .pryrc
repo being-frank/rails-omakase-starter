@@ -3,7 +3,6 @@ require 'amazing_print'
 pry_time          = Time.current.strftime('%H:%M')
 pry_rails_env     = Rails.application.config.app_env
 pry_project_name  = Pry::Helpers::Text.bold(Rails.application.class.module_parent_name)
-pry_git_branch    = Pry::Helpers::Text.blue(`git rev-parse --abbrev-ref HEAD`.squish)
 pry_formatted_env = case pry_rails_env
 when :production
   Pry::Helpers::Text.red(pry_rails_env)
@@ -23,7 +22,7 @@ Pry.config.prompt = Pry::Prompt.new(
     pry_input_ring = "#{pry_time} [#{pry.input_ring.count}]"
 
     "#{pry_input_ring} " \
-    "#{pry_project_name} [#{pry_git_branch}][#{pry_formatted_env}] " \
+    "#{pry_project_name} [#{pry_formatted_env}] " \
     "#{pry.config.prompt_name}(#{::Pry.view_clip(context)})" \
     "#{":#{nest_level}" if !nest_level.zero?} "
   end ]
