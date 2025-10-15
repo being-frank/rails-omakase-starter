@@ -75,12 +75,8 @@ GEM
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     amazing_print (2.0.0)
-    annotaterb (4.19.0)
-      activerecord (>= 6.0.0)
-      activesupport (>= 6.0.0)
     ast (2.4.3)
     base64 (0.3.0)
-    bcrypt_pbkdf (1.1.1)
     benchmark (0.4.1)
     bigdecimal (3.3.1)
     bindex (0.8.1)
@@ -119,7 +115,6 @@ GEM
       railties (>= 6.1)
     drb (2.2.3)
     dry-cli (1.3.0)
-    ed25519 (1.4.0)
     erb (5.1.1)
     erubi (1.13.1)
     et-orbi (1.4.0)
@@ -157,17 +152,6 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.13.2)
-    kamal (2.7.0)
-      activesupport (>= 7.0)
-      base64 (~> 0.2)
-      bcrypt_pbkdf (~> 1.0)
-      concurrent-ruby (~> 1.2)
-      dotenv (~> 3.1)
-      ed25519 (~> 1.4)
-      net-ssh (~> 7.3)
-      sshkit (>= 1.23.0, < 2.0)
-      thor (~> 1.3)
-      zeitwerk (>= 2.6.18, < 3.0)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     logger (1.7.0)
@@ -188,6 +172,16 @@ GEM
       logger
     mini_mime (1.1.5)
     minitest (5.26.0)
+    mission_control-jobs (1.1.0)
+      actioncable (>= 7.1)
+      actionpack (>= 7.1)
+      activejob (>= 7.1)
+      activerecord (>= 7.1)
+      importmap-rails (>= 1.2.1)
+      irb (~> 1.13)
+      railties (>= 7.1)
+      stimulus-rails
+      turbo-rails
     msgpack (1.8.0)
     mutex_m (0.3.0)
     net-imap (0.5.12)
@@ -197,13 +191,8 @@ GEM
       net-protocol
     net-protocol (0.2.2)
       timeout
-    net-scp (4.1.0)
-      net-ssh (>= 2.6.5, < 8.0.0)
-    net-sftp (4.0.0)
-      net-ssh (>= 5.0.0, < 8.0.0)
     net-smtp (0.5.1)
       net-protocol
-    net-ssh (7.3.0)
     nio4r (2.7.4)
     nokogiri (1.18.10-aarch64-linux-gnu)
       racc (~> 1.4)
@@ -219,7 +208,6 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
-    ostruct (0.6.3)
     parallel (1.27.0)
     parser (3.3.9.0)
       ast (~> 2.4.1)
@@ -234,6 +222,10 @@ GEM
       prettyprint
     prettyprint (0.2.0)
     prism (1.4.0)
+    propshaft (1.3.1)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
     pry (0.15.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -309,7 +301,7 @@ GEM
     rspec-expectations (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.5)
+    rspec-mocks (3.13.6)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-rails (8.0.2)
@@ -359,7 +351,7 @@ GEM
     ruby-vips (2.2.5)
       ffi (~> 1.12)
       logger
-    rubyzip (3.1.1)
+    rubyzip (3.2.0)
     securerandom (0.4.1)
     selenium-webdriver (4.36.0)
       base64 (~> 0.2)
@@ -393,13 +385,6 @@ GEM
       railties (>= 7.1)
       thor (>= 1.3.1)
     squasher (0.8.0)
-    sshkit (1.24.0)
-      base64
-      logger
-      net-scp (>= 1.1.2)
-      net-sftp (>= 2.1.2)
-      net-ssh (>= 2.8.0)
-      ostruct
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.7)
@@ -453,7 +438,6 @@ PLATFORMS
   aarch64-linux-musl
   arm-linux-gnu
   arm-linux-musl
-  arm64-darwin-24
   arm64-darwin-25
   x86_64-linux
   x86_64-linux-gnu
@@ -461,7 +445,6 @@ PLATFORMS
 
 DEPENDENCIES
   amazing_print
-  annotaterb
   bootsnap
   brakeman
   capybara
@@ -470,10 +453,10 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   image_processing (~> 1.2)
-  importmap-rails
-  kamal
   meta-tags
-  pg
+  mission_control-jobs
+  pg (~> 1.1)
+  propshaft
   pry-rails
   puma (>= 5.0)
   rails (~> 8.0.3)

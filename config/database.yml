@@ -1,46 +1,49 @@
-default: &default
+default: &default_db
   adapter:  postgresql
   encoding: unicode
   pool:     <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
   url:      <%= ENV['DATABASE_URL'] %>
 
-cache: &cache
-  <<: *default
+cache: &cache_db
+  <<: *default_db
   migrations_paths: db/cache_migrate
 
-queue: &queue
-  <<: *default
+queue: &queue_db
+  <<: *default_db
   migrations_paths: db/queue_migrate
 
-cable: &cable
-  <<: *default
+cable: &cable_db
+  <<: *default_db
   migrations_paths: db/cable_migrate
 
 development:
   primary:
-    <<: *default
+    <<: *default_db
   cache:
-    <<: *cache
+    <<: *cache_db
     url: <%= ENV['DATABASE_URL']&.+('_cache') %>
   queue:
-    <<: *queue
+    <<: *queue_db
     url: <%= ENV['DATABASE_URL']&.+('_queue') %>
   cable:
-    <<: *cable
+    <<: *cable_db
     url: <%= ENV['DATABASE_URL']&.+('_cable') %>
 
 test:
-  <<: *default
+  <<: *default_db
 
-production:
+production: &production_db
   primary:
-    <<: *default
+    <<: *default_db
   cache:
-    <<: *cache
+    <<: *cache_db
     url: <%= ENV.fetch('DATABASE_URL_QUEUE', ENV['DATABASE_URL']) %>
   queue:
-    <<: *queue
+    <<: *queue_db
     url: <%= ENV.fetch('DATABASE_URL_QUEUE', ENV['DATABASE_URL']) %>
   cable:
-    <<: *cable
+    <<: *cable_db
     url: <%= ENV.fetch('DATABASE_URL_CABLE', ENV['DATABASE_URL']) %>
+
+staging:
+  <<: *production_db

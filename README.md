@@ -3,7 +3,16 @@
 Project generated using:
 
 ```sh
-rails new rails-quick-start --database=postgresql --css=tailwind --javascript=bun --skip-test
+rails new rails-8 \
+  --database=postgresql \
+  --skip-asset-pipeline \
+  --skip-bundle \
+  --skip-jbuilder \
+  --skip-js \
+  --skip-test \
+  --skip-devcontainer \
+  --skip-docker \
+  --skip-kamal
 ```
 
 ## Prerequisites
@@ -17,6 +26,7 @@ rails new rails-quick-start --database=postgresql --css=tailwind --javascript=bu
 ```sh
 bin/setup
 ```
+
 Steps:
 * Libraries via homebrew
 * Bundler and Ruby gems

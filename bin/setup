@@ -18,7 +18,7 @@ FileUtils.chdir APP_ROOT do
   system!('brew bundle install')
 
   section('Bundler and Ruby gems')
-  system!('gem install bundler --conservative')
+  system!('gem install bundler')
   system('bundle check') || system!('bundle install')
 
   section('Javascript packages')
@@ -28,20 +28,6 @@ FileUtils.chdir APP_ROOT do
     section('Setup `.env`')
     FileUtils.cp('.env.sample', '.env')
     edit_files.push('.env')
-  end
-
-  section('Credentials')
-  %i[development staging production].each do |env|
-    credential_key     = "config/credentials/#{env}.key"
-    credential_content = "config/credentials/#{env}.yml.enc"
-
-    if File.exist?(credential_key)
-      FileUtils.rm_f(credential_key)
-    end
-
-    if File.exist?(credential_content)
-      FileUtils.rm_f(credential_content)
-    end
   end
 
   section('Database')

@@ -17,7 +17,7 @@ require 'action_cable/engine'
 
 Bundler.require(*Rails.groups)
 
-module RailsQuickStart
+module RailsOmakaseStarter
   class Application < Rails::Application
 
     config.load_defaults 8.0
@@ -29,18 +29,9 @@ module RailsQuickStart
       tasks
     ]
 
-    # ==== Custom Configuration
-
-    config.app_env = ENV.fetch('X_APP_ENV', Rails.env).to_sym
-
     # ==== Annotations
 
     config.annotations.register_tags(*%w[DEPRECATE DOCUMENT REFACTOR])
-
-    # ==== Credentials
-
-    config.credentials.content_path = Rails.root.join("config/credentials/#{config.app_env}.yml.enc")
-    config.credentials.key_path     = Rails.root.join("config/credentials/#{config.app_env}.key")
 
     # ==== General
 
@@ -79,7 +70,11 @@ module RailsQuickStart
 
     # ==== Solid Queue
 
-    config.solid_queue.logger = ActiveSupport::TaggedLogging.logger(STDOUT)
+    config.solid_queue.silence_polling = true
+
+    # ==== Mission Control Jobs
+
+    config.mission_control.jobs.http_basic_auth_enabled = false
 
   end
 end

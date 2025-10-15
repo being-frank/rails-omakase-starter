@@ -19,5 +19,9 @@
   "production": {
     "autoBuild": false,
     "publicOutputDir": "./"
+  },
+  "staging": {
+    "autoBuild": false,
+    "publicOutputDir": "./"
   }
 }
