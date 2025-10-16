@@ -16,6 +16,10 @@ Rails.application.configure do
   config.require_master_key                 = true
   config.server_timing                      = true
 
+  # ==== Solid Queue
+
+  config.solid_queue.connects_to = { database: { writing: :queue } }
+
   # ==== ActionCable
 
   # config.action_cable.allowed_request_origins            = host_config.hosts
@@ -81,8 +85,4 @@ Rails.application.configure do
   config.active_support.deprecation                     = :log
   config.active_support.disallowed_deprecation          = :raise
   config.active_support.disallowed_deprecation_warnings = []
-
-  # ==== Solid Queue
-
-  config.solid_queue.connects_to  = { database: { writing: :queue } }
 end

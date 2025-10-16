@@ -1,21 +1,21 @@
-development:
+# https://github.com/rails/solid_cable
+
+default: &default
   adapter: solid_cable
   connects_to:
     database:
       writing: cable
-  polling_interval: 0.1.seconds
   message_retention: 1.day
+  polling_interval: 0.1.seconds
+
+development:
+  <<: *default
 
 test:
   adapter: test
 
-production: &production_cable
-  adapter: solid_cable
-  connects_to:
-    database:
-      writing: cable
-  polling_interval: 0.1.seconds
-  message_retention: 1.day
+production: &production
+  <<: *default
 
 staging:
-  <<: *production_cable
+  <<: *production

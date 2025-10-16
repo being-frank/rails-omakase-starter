@@ -4,7 +4,8 @@
       "~/{favicons,fonts,icons,images}/**/*"
     ],
     "publicDir": "public",
-    "sourceCodeDir": "app/frontend"
+    "sourceCodeDir": "app/frontend",
+    "viteBinPath": "bin/vite-shim"
   },
   "development": {
     "autoBuild": true,

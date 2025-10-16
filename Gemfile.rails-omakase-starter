@@ -29,6 +29,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'rails-erd'
 end
 
 group :test do
@@ -41,7 +42,6 @@ group :test do
 end
 
 group :tools do
-  gem 'rails-erd'
   gem 'ruby-lsp', require: false
   gem 'squasher'
 end

@@ -12,7 +12,9 @@ return if !Rails.env.test?
 
 require 'rspec/rails'
 
-Rails.root.glob('spec/support/**/*.rb').sort_by(&:to_s).each { |f| require f }
+Rails.root.glob('spec/support/**/*.rb').sort_by(&:to_s).each do |f|
+  require f
+end
 
 begin
   ActiveRecord::Migration.maintain_test_schema!

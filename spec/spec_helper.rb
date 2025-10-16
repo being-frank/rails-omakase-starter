@@ -24,8 +24,8 @@ RSpec.configure do |config|
   config.example_status_persistence_file_path = 'tmp/rspec/examples.txt'
   config.filter_run_when_matching :focus
   config.order = :random
-  config.profile_examples = 10
   config.shared_context_metadata_behavior = :apply_to_host_groups
+  # config.profile_examples = 10
 
   Kernel.srand config.seed
 end

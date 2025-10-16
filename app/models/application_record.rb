@@ -8,7 +8,7 @@ class ApplicationRecord < ActiveRecord::Base
 
     include ActionView::Helpers::TextHelper
 
-    def human_name(plural: true)
+    def human_name(plural=false)
       if plural
         model_name.human.pluralize
       else
