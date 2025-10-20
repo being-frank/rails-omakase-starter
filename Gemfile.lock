@@ -235,7 +235,7 @@ GEM
       date
       stringio
     public_suffix (6.0.2)
-    puma (7.0.4)
+    puma (7.1.0)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
@@ -455,10 +455,10 @@ DEPENDENCIES
   image_processing (~> 1.2)
   meta-tags
   mission_control-jobs
-  pg (~> 1.1)
+  pg (~> 1.6)
   propshaft
   pry-rails
-  puma (>= 5.0)
+  puma (~> 7.1.0)
   rails (~> 8.0.3)
   rails-erd
   rspec-rails (~> 8.0)
