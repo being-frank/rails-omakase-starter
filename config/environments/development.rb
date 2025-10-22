@@ -1,8 +1,11 @@
+require 'host_config'
 require 'active_support/core_ext/integer/time'
 
+host_config = HostConfig.new
+
 Rails.application.configure do
-  # config.hosts      = host_config.hosts(protocol: false)
-  # config.asset_host = host_config.asset_host
+  config.hosts      = host_config.hosts
+  config.asset_host = host_config.asset_url
 
   # ==== General
 
@@ -22,12 +25,12 @@ Rails.application.configure do
 
   # ==== ActionCable
 
-  # config.action_cable.allowed_request_origins            = host_config.hosts
+  config.action_cable.allowed_request_origins            = host_config.hosts_urls
   config.action_cable.disable_request_forgery_protection = false
 
   # ==== ActionController
 
-  # config.action_controller.default_url_options               = host_config.default_url_options
+  config.action_controller.default_url_options               = host_config.default_url_options
   config.action_controller.raise_on_missing_callback_actions = true
   # Run rails dev:cache to toggle Action Controller caching.
   if Rails.root.join('tmp/caching-dev.txt').exist?
@@ -42,7 +45,7 @@ Rails.application.configure do
 
   # ==== ActionDispatch
 
-  # config.action_dispatch.tld_length = host_config.tld_length
+  config.action_dispatch.tld_length = host_config.tld_length
 
   # ==== ActionMailbox
 
@@ -50,7 +53,7 @@ Rails.application.configure do
 
   # ==== ActionMailer
 
-  config.action_mailer.default_url_options   = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options   = host_config.default_url_options
   config.action_mailer.delivery_method       = :smtp
   config.action_mailer.perform_caching       = false
   config.action_mailer.raise_delivery_errors = true

@@ -1,10 +1,11 @@
+require 'host_config'
 require 'active_support/core_ext/integer/time'
 
-Warning[:deprecated] = true
+host_config = HostConfig.new
 
 Rails.application.configure do
-  # config.hosts      = host_config.hosts(protocol: false)
-  # config.asset_host = host_config.asset_host
+  config.hosts      = host_config.hosts
+  config.asset_host = host_config.asset_url
 
   # ==== General
 
@@ -29,7 +30,7 @@ Rails.application.configure do
 
   # ==== ActionMailer
 
-  config.action_mailer.default_url_options = { host: 'example.com' }
+  config.action_mailer.default_url_options = host_config.default_url_options
   config.action_mailer.delivery_method     = :test
 
   # ==== ActionView

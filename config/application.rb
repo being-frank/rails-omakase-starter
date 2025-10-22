@@ -25,6 +25,7 @@ module RailsOmakaseStarter
     config.autoload_lib ignore: %w[
       assets
       core_extensions
+      host_config
       generators
       tasks
     ]
@@ -70,7 +71,8 @@ module RailsOmakaseStarter
 
     # ==== Solid Queue
 
-    config.solid_queue.silence_polling = true
+    # config.solid_queue.silence_polling = true
+    config.solid_queue.logger = ActiveSupport::TaggedLogging.logger(STDOUT)
 
     # ==== Mission Control Jobs
 

@@ -43,3 +43,4 @@
 .overmind.sock
 /coverage
 /node_modules
+erd.pdf

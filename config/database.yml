@@ -1,3 +1,8 @@
+# Prevent segmentation fault on Apple Silicon devices
+# https://github.com/ged/ruby-pg/issues/538#issuecomment-1610120680
+disable_gssencmode: &disable_gssencmode
+  <% if RUBY_PLATFORM =~ /darwin/ %>gssencmode: disable<% end %>
+
 default: &default
   adapter:  postgresql
   encoding: unicode
@@ -18,19 +23,19 @@ cable: &cable
 
 development:
   primary:
-    <<: *default
+    <<: [*default, *disable_gssencmode]
   cache:
-    <<: *cache
+    <<: [*cache, *disable_gssencmode]
     url: <%= ENV['DATABASE_URL']&.+('_cache') %>
   queue:
-    <<: *queue
+    <<: [*queue, *disable_gssencmode]
     url: <%= ENV['DATABASE_URL']&.+('_queue') %>
   cable:
-    <<: *cable
+    <<: [*cable, *disable_gssencmode]
     url: <%= ENV['DATABASE_URL']&.+('_cable') %>
 
 test:
-  <<: *default
+  <<: [*default, *disable_gssencmode]
 
 production: &production_db
   primary:

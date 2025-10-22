@@ -1,8 +1,12 @@
+require 'host_config'
 require 'active_support/core_ext/integer/time'
 
+host_config = HostConfig.new
+
 Rails.application.configure do
-  # config.hosts      = host_config.hosts(protocol: false)
-  # config.asset_host = host_config.asset_host
+  config.hosts      = host_config.hosts
+  config.asset_host = host_config.asset_url
+
   config.host_authorization = {
     exclude: ->(request) { request.path == '/up' }
   }
@@ -46,7 +50,7 @@ Rails.application.configure do
 
   # ==== ActionCable
 
-  # config.action_cable.allowed_request_origins            = host_config.hosts
+  config.action_cable.allowed_request_origins            = host_config.hosts_urls
   config.action_cable.disable_request_forgery_protection = true
 
   # ==== ActionController
@@ -55,7 +59,7 @@ Rails.application.configure do
 
   # ==== ActionDispatch
 
-  # config.action_dispatch.tld_length = host_config.tld_length
+  config.action_dispatch.tld_length = host_config.tld_length
 
   # ==== ActionMailbox
 
@@ -63,7 +67,7 @@ Rails.application.configure do
 
   # ==== ActionMailer
 
-  config.action_mailer.default_url_options   = { host: 'example.com' }
+  config.action_mailer.default_url_options   = host_config.default_url_options
   config.action_mailer.raise_delivery_errors = false
   # config.action_mailer.smtp_settings         = {
   #   user_name:      Rails.application.credentials.dig(:smtp, :user_name),

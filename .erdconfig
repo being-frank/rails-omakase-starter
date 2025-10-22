@@ -1,0 +1,21 @@
+attributes:
+  - content
+  - foreign_keys
+  - inheritance
+  - primary_keys
+  - timestamps
+cluster: false
+disconnected: true
+exclude: null
+filename: erd
+filetype: pdf
+indirect: true
+inheritance: true
+markup: true
+only: null
+only_recursion_depth: null
+orientation: vertical
+polymorphism: false
+prepend_primary: true
+title: true
+warn: true
