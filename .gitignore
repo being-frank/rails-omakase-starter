@@ -4,10 +4,10 @@
 # belong in git's global ignore instead:
 # `$XDG_CONFIG_HOME/git/ignore` or `~/.config/git/ignore`
 
-# Ignore bundler config
+# Ignore bundler config.
 /.bundle
 
-# Ignore all environment files
+# Ignore all environment files.
 /.env*
 !/.env.sample
 !/.env.test
@@ -18,23 +18,23 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore pidfiles, but keep the directory
+# Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
 
-# Ignore storage (uploaded files in development and any SQLite databases)
+# Ignore storage (uploaded files in development and any SQLite databases).
 /storage/*
 !/storage/.keep
 /tmp/storage/*
 !/tmp/storage/
 !/tmp/storage/.keep
 
-# Ignore keys for decrypting credentials and more
+# Ignore keys for decrypting credentials and more.
 /config/master.key
 /config/credentials/*.key
 
-# Ignore asset builds
+# Ignore asset builds.
 /public/assets
 /public/vite*
 
