@@ -115,33 +115,33 @@ class HostConfig
   end
 
   def csp_font_src
-    if local?
-      vite_url
-    else
-      asset_host_url
-    end
+    csp_asset_src
   end
 
   def csp_img_src
-    csp_font_src
+    csp_asset_src
   end
 
   def csp_script_src
-    if local?
-      vite_url
-    else
-      asset_host_url
-    end
+    csp_asset_src
   end
 
   def csp_style_src
-    csp_font_src
+    csp_asset_src
   end
 
   private
 
     def build_url(options)
       ActionDispatch::Http::URL.full_url_for(options.compact_blank)
+    end
+
+    def csp_asset_src
+      if local?
+        vite_url
+      else
+        asset_host_url
+      end
     end
 
     def force_ssl?
