@@ -4,8 +4,10 @@ require 'active_support/core_ext/integer/time'
 host_config = HostConfig.new
 
 Rails.application.configure do
-  config.hosts      = host_config.hosts
-  config.asset_host = host_config.asset_url
+  # ==== Host Config
+
+  # config.hosts      = host_config.hosts
+  # config.asset_host = host_config.asset_host_url
 
   # ==== General
 
@@ -18,10 +20,6 @@ Rails.application.configure do
   config.public_file_server.enabled         = true
   config.require_master_key                 = true
   config.server_timing                      = true
-
-  # ==== Solid Queue
-
-  config.solid_queue.connects_to = { database: { writing: :queue } }
 
   # ==== ActionCable
 
@@ -88,4 +86,8 @@ Rails.application.configure do
   config.active_support.deprecation                     = :log
   config.active_support.disallowed_deprecation          = :raise
   config.active_support.disallowed_deprecation_warnings = []
+
+  # ==== Solid Queue
+
+  config.solid_queue.connects_to = { database: { writing: :queue } }
 end

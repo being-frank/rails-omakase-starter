@@ -4,8 +4,10 @@ require 'active_support/core_ext/integer/time'
 host_config = HostConfig.new
 
 Rails.application.configure do
+  # ==== Host Config
+
   config.hosts      = host_config.hosts
-  config.asset_host = host_config.asset_url
+  config.asset_host = host_config.asset_host_url
 
   config.host_authorization = {
     exclude: ->(request) { request.path == '/up' }
@@ -37,16 +39,6 @@ Rails.application.configure do
       exclude: ->(request) { request.path == '/up' }
     }
   }
-
-  # ==== Solid Queue
-
-  config.solid_queue.connects_to = { database: { writing: :queue } }
-
-  # ==== Logging
-
-  config.log_level = ENV.fetch('RAILS_LOG_LEVEL', :info)
-  config.log_tags  = %i[request_id]
-  config.logger    = ActiveSupport::TaggedLogging.logger(STDOUT)
 
   # ==== ActionCable
 
@@ -100,4 +92,14 @@ Rails.application.configure do
   # ==== ActiveSupport
 
   config.active_support.report_deprecations = false
+
+  # ==== Logging
+
+  config.log_level = ENV.fetch('RAILS_LOG_LEVEL', :info)
+  config.log_tags  = %i[request_id]
+  config.logger    = ActiveSupport::TaggedLogging.logger(STDOUT)
+
+  # ==== Solid Queue
+
+  config.solid_queue.connects_to = { database: { writing: :queue } }
 end

@@ -12,52 +12,55 @@ class HostConfig
     :app_name,
     to: self
 
-  def asset_url
+  def asset_host_url
     url = build_url(
+      protocol: protocol,
       host:     default_host,
-      port:     port,
-      protocol: protocol
+      port:     port
     )
 
-    ENV.fetch('ASSET_URL', url)
+    ENV.fetch('ASSET_HOST_URL', url)
   end
 
   def cookie_domain
     deployed? ? default_host : :all
   end
 
-  # Returns the first hostname defined in `X_APP_HOST` as the default host.
+  # Returns the first hostname defined in `APP_HOST` as the default host.
   #
   def default_host
     hosts.first.delete_prefix('.')
   end
 
   def default_host_with_port
-    [ default_host, port ].compact_blank.join(':')
+    [
+      default_host,
+      port
+    ].compact_blank.join(':')
   end
 
   def default_url_options
     {
+      protocol:   protocol,
       host:       default_host,
       port:       port,
-      protocol:   protocol,
       tld_length: tld_length
     }.compact_blank
   end
 
-  # Returns an array of hostnames defined in `X_APP_HOST`. Defaults to
+  # Returns an array of hostnames defined in `APP_HOST`. Defaults to
   # `.localhost` if the environment variable is not set.
   #
   # @example Setting a single host
-  #   X_APP_HOST=.localhost
+  #   APP_HOST=.localhost
   #
   # @example Setting multiple hosts
-  #   X_APP_HOST=.example.com,test.example.net
+  #   APP_HOST=.example.com,test.example.net
   #
   # @return [Array<String>] the hosts
   #
   def hosts
-    ENV.fetch('X_APP_HOST', '.localhost')
+    ENV.fetch('APP_HOST', '.localhost')
       .split(',')
       .map(&:strip)
       .compact_blank
@@ -67,9 +70,9 @@ class HostConfig
   def hosts_urls
     hosts.map do |host|
       build_url(
+        protocol: protocol,
         host:     host.delete_prefix('.'),
-        port:     port,
-        protocol: protocol
+        port:     port
       )
     end
   end
@@ -91,13 +94,48 @@ class HostConfig
     ENV.fetch('TLD_LENGTH', 1).to_i
   end
 
-  def vite_host_with_port
+  def vite_url(protocol: nil)
     return if deployed?
 
-    [
-      ENV['VITE_RUBY_HOST'],
-      ENV['VITE_RUBY_PORT']
-    ].compact_blank.join(':')
+    vite_config = ViteRuby.config
+
+    build_url(
+      protocol: protocol.presence || vite_config.protocol,
+      host:     vite_config.host.delete_prefix('.'),
+      port:     vite_config.port
+    )
+  end
+
+  # ==== CSP
+
+  def csp_connect_src
+    return if deployed?
+
+    vite_url(protocol: :ws)
+  end
+
+  def csp_font_src
+    if local?
+      vite_url
+    else
+      asset_host_url
+    end
+  end
+
+  def csp_img_src
+    csp_font_src
+  end
+
+  def csp_script_src
+    if local?
+      vite_url
+    else
+      asset_host_url
+    end
+  end
+
+  def csp_style_src
+    csp_font_src
   end
 
   private
@@ -110,8 +148,9 @@ class HostConfig
       deployed?
     end
 
-    def hostname_uri(url)
-      URI.parse(url).hostname
+    def to_uri(url)
+      uri = URI.parse(url)
+      uri.to_s.delete_prefix("#{uri.scheme}://")
     end
 
     # ==== Environment predicates

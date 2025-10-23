@@ -4,8 +4,10 @@ require 'active_support/core_ext/integer/time'
 host_config = HostConfig.new
 
 Rails.application.configure do
+  # ==== Host Config
+
   config.hosts      = host_config.hosts
-  config.asset_host = host_config.asset_url
+  config.asset_host = host_config.asset_host_url
 
   # ==== General
 
