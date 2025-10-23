@@ -63,7 +63,6 @@ Rails.application.configure do
 
     policy.style_src(
       :self,
-      :unsafe_inline,
       host_config.csp_style_src
     )
 

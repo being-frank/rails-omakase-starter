@@ -137,11 +137,7 @@ class HostConfig
     end
 
     def csp_asset_src
-      if local?
-        vite_url
-      else
-        asset_host_url
-      end
+      asset_host_url
     end
 
     def force_ssl?
