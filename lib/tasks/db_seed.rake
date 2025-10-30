@@ -1,5 +1,5 @@
 namespace :db do
-  namespace :seed do
+  namespace :seeding do
     Rails.root.glob('db/seeds/*_seeds.rb').each do |filename|
       task_name = File.basename(filename, '.rb').gsub('_seeds', '')
 

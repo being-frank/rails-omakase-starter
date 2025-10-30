@@ -23,6 +23,7 @@ module RailsOmakaseStarter
 
     config.autoload_lib ignore: %w[
       assets
+      kitsune_ui
       core_extensions
       host_config
       generators
@@ -68,14 +69,15 @@ module RailsOmakaseStarter
     config.active_storage.track_variants    = false
     config.active_storage.variant_processor = :vips
 
-    # ==== Solid Queue
-
-    # config.solid_queue.silence_polling = true
-    config.solid_queue.logger = ActiveSupport::TaggedLogging.logger(STDOUT)
 
     # ==== Mission Control Jobs
 
     config.mission_control.jobs.http_basic_auth_enabled = false
+
+    # ==== Solid Queue
+
+    # config.solid_queue.silence_polling = true
+    config.solid_queue.logger = ActiveSupport::TaggedLogging.logger(STDOUT)
 
   end
 end

@@ -1,4 +1,3 @@
-brew 'graphviz'
 brew 'overmind'
-brew 'postgresql@17'
+brew 'postgresql@18'
 brew 'vips'

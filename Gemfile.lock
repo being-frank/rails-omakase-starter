@@ -1,3 +1,14 @@
+PATH
+  remote: lib/kitsune_ui
+  specs:
+    kitsune_ui (1.0.0)
+      dry-initializer-rails
+      dry-types
+      lookbook
+      tailwind_merge
+      view_component
+      view_component-contrib
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -99,7 +110,6 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    choice (0.2.0)
     climate_control (1.2.0)
     coderay (1.1.3)
     concurrent-ruby (1.3.5)
@@ -108,6 +118,8 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
+    css_parser (1.21.1)
+      addressable
     date (3.4.1)
     debug (1.11.0)
       irb (~> 1.10)
@@ -120,6 +132,27 @@ GEM
       railties (>= 6.1)
     drb (2.2.3)
     dry-cli (1.3.0)
+    dry-core (1.1.0)
+      concurrent-ruby (~> 1.0)
+      logger
+      zeitwerk (~> 2.6)
+    dry-inflector (1.2.0)
+    dry-initializer (3.2.0)
+    dry-initializer-rails (3.1.1)
+      dry-initializer (>= 2.4, < 4)
+      rails (> 3.0)
+    dry-logic (1.6.0)
+      bigdecimal
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.1)
+      zeitwerk (~> 2.6)
+    dry-types (1.8.3)
+      bigdecimal (~> 3.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0)
+      dry-inflector (~> 1.0)
+      dry-logic (~> 1.4)
+      zeitwerk (~> 2.6)
     erb (5.1.3)
     erubi (1.13.1)
     et-orbi (1.4.0)
@@ -142,6 +175,8 @@ GEM
     globalid (1.3.0)
       activesupport (>= 6.1)
     hashdiff (1.2.1)
+    htmlbeautifier (1.4.3)
+    htmlentities (4.3.4)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     image_processing (1.14.0)
@@ -163,6 +198,18 @@ GEM
     loofah (2.24.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
+    lookbook (2.3.13)
+      activemodel
+      css_parser
+      htmlbeautifier (~> 1.3)
+      htmlentities (~> 4.3.4)
+      marcel (~> 1.0)
+      railties (>= 5.0)
+      redcarpet (~> 3.5)
+      rouge (>= 3.26, < 5.0)
+      view_component (>= 2.0)
+      yard (~> 0.9)
+      zeitwerk (~> 2.5)
     mail (2.9.0)
       logger
       mini_mime (>= 0.1.1)
@@ -273,14 +320,11 @@ GEM
       activesupport (>= 5.0.0)
       minitest
       nokogiri (>= 1.6)
-    rails-erd (1.7.2)
-      activerecord (>= 4.2)
-      activesupport (>= 4.2)
-      choice (~> 0.2.0)
-      ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.6.2)
       loofah (~> 2.21)
       nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
+    rails-mermaid_erd (0.6.0)
+      rails (>= 5.2)
     railties (8.1.0)
       actionpack (= 8.1.0)
       activesupport (= 8.1.0)
@@ -298,10 +342,12 @@ GEM
       erb
       psych (>= 4.0.0)
       tsort
+    redcarpet (3.6.1)
     regexp_parser (2.11.3)
     reline (0.6.2)
       io-console (~> 0.5)
     rexml (3.4.4)
+    rouge (4.6.1)
     rspec-core (3.13.6)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.5)
@@ -347,12 +393,11 @@ GEM
       rubocop (>= 1.72)
       rubocop-performance (>= 1.24)
       rubocop-rails (>= 2.30)
-    ruby-graphviz (1.2.5)
-      rexml
     ruby-lsp (0.26.1)
       language_server-protocol (~> 3.17.0)
       prism (>= 1.2, < 2.0)
       rbs (>= 3, < 5)
+    ruby-next-core (1.1.2)
     ruby-progressbar (1.13.0)
     ruby-vips (2.2.5)
       ffi (~> 1.12)
@@ -371,6 +416,7 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.13.2)
     simplecov_json_formatter (0.1.4)
+    sin_lru_redux (2.5.2)
     single_cov (1.11.0)
     solid_cable (3.0.12)
       actioncable (>= 7.2)
@@ -392,6 +438,8 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.7)
+    tailwind_merge (1.3.1)
+      sin_lru_redux (~> 2.5)
     thor (1.4.0)
     thruster (0.1.16)
     thruster (0.1.16-aarch64-linux)
@@ -409,6 +457,12 @@ GEM
     unicode-emoji (4.1.0)
     uri (1.0.4)
     useragent (0.16.11)
+    view_component (4.1.0)
+      activesupport (>= 7.1.0, < 8.2)
+      concurrent-ruby (~> 1)
+    view_component-contrib (0.2.5)
+      ruby-next-core (>= 0.15.0)
+      view_component
     vite_rails (3.0.19)
       railties (>= 5.1, < 9)
       vite_ruby (~> 3.0, >= 3.2.2)
@@ -434,6 +488,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    yard (0.9.37)
     zeitwerk (2.7.3)
 
 PLATFORMS
@@ -458,6 +513,7 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   image_processing (~> 1.2)
+  kitsune_ui!
   meta-tags
   mission_control-jobs
   pg (~> 1.6)
@@ -465,7 +521,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 7.1.0)
   rails (~> 8.1.0)
-  rails-erd
+  rails-mermaid_erd
   rspec-rails (~> 8.0)
   rubocop-rails-omakase
   ruby-lsp

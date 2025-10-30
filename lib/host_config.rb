@@ -82,11 +82,15 @@ class HostConfig
   end
 
   def protocol
-    force_ssl? ? :https : :http
+    ssl_connection? ? :https : :http
   end
 
   def port
     ENV.fetch('PORT', nil)
+  end
+
+  def session_key
+    ssl_connection? ? "__Host-Http-#{app_name}_session" : "_#{app_name}_session"
   end
 
   # Set `TLD_LENGTH` for multipart TLDs. For example, `example.co.za`'s TLD
@@ -142,7 +146,7 @@ class HostConfig
       asset_host_url
     end
 
-    def force_ssl?
+    def ssl_connection?
       deployed?
     end
 
