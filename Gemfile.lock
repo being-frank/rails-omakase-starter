@@ -1,10 +1,11 @@
 PATH
-  remote: lib/kitsune_ui
+  remote: ../engines/kitsune_ui
   specs:
-    kitsune_ui (1.0.0)
+    kitsune_ui (0.4.0)
       dry-initializer-rails
       dry-types
       lookbook
+      rails (>= 8.1.0)
       tailwind_merge
       view_component
       view_component-contrib
@@ -162,13 +163,7 @@ GEM
     factory_bot_rails (6.5.1)
       factory_bot (~> 6.5)
       railties (>= 6.1.0)
-    ffi (1.17.2-aarch64-linux-gnu)
-    ffi (1.17.2-aarch64-linux-musl)
-    ffi (1.17.2-arm-linux-gnu)
-    ffi (1.17.2-arm-linux-musl)
     ffi (1.17.2-arm64-darwin)
-    ffi (1.17.2-x86_64-linux-gnu)
-    ffi (1.17.2-x86_64-linux-musl)
     fugit (1.12.1)
       et-orbi (~> 1.4)
       raabro (~> 1.4)
@@ -247,30 +242,14 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.18.10-aarch64-linux-gnu)
-      racc (~> 1.4)
-    nokogiri (1.18.10-aarch64-linux-musl)
-      racc (~> 1.4)
-    nokogiri (1.18.10-arm-linux-gnu)
-      racc (~> 1.4)
-    nokogiri (1.18.10-arm-linux-musl)
-      racc (~> 1.4)
     nokogiri (1.18.10-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.18.10-x86_64-linux-gnu)
-      racc (~> 1.4)
-    nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
     parallel (1.27.0)
     parser (3.3.10.0)
       ast (~> 2.4.1)
       racc
     pg (1.6.2)
-    pg (1.6.2-aarch64-linux)
-    pg (1.6.2-aarch64-linux-musl)
     pg (1.6.2-arm64-darwin)
-    pg (1.6.2-x86_64-linux)
-    pg (1.6.2-x86_64-linux-musl)
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
@@ -442,9 +421,7 @@ GEM
       sin_lru_redux (~> 2.5)
     thor (1.4.0)
     thruster (0.1.16)
-    thruster (0.1.16-aarch64-linux)
     thruster (0.1.16-arm64-darwin)
-    thruster (0.1.16-x86_64-linux)
     timeout (0.4.3)
     tsort (0.2.0)
     turbo-rails (2.0.17)
@@ -492,15 +469,7 @@ GEM
     zeitwerk (2.7.3)
 
 PLATFORMS
-  aarch64-linux
-  aarch64-linux-gnu
-  aarch64-linux-musl
-  arm-linux-gnu
-  arm-linux-musl
   arm64-darwin-25
-  x86_64-linux
-  x86_64-linux-gnu
-  x86_64-linux-musl
 
 DEPENDENCIES
   amazing_print
