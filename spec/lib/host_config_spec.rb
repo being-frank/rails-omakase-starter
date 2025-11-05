@@ -2,7 +2,7 @@ require 'rails_helper'
 
 SingleCov.covered! file: 'lib/host_config.rb'
 
-RSpec.describe HostConfig, order: :defined do
+RSpec.describe HostConfig do
   subject { described_class.new }
 
   describe '.app_name' do
