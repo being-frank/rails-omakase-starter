@@ -1,2 +1,2 @@
-class ApplicationViewComponent < KitsuneUI::ViewComponent
+class ApplicationViewComponent < KitsuneDS::ViewComponent
 end

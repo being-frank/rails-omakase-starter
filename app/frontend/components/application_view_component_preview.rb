@@ -1,2 +1,2 @@
-class ApplicationViewComponentPreview < KitsuneUI::ViewComponentPreview
+class ApplicationViewComponentPreview < KitsuneDS::ViewComponentPreview
 end

@@ -18,15 +18,13 @@ Bundler.require(*Rails.groups)
 
 module RailsOmakaseStarter
   class Application < Rails::Application
-
     config.load_defaults 8.1
 
     config.autoload_lib ignore: %w[
       assets
-      kitsune_ui
       core_extensions
-      host_config
       generators
+      host_config
       tasks
     ]
 
@@ -78,6 +76,5 @@ module RailsOmakaseStarter
 
     # config.solid_queue.silence_polling = true
     config.solid_queue.logger = ActiveSupport::TaggedLogging.logger(STDOUT)
-
   end
 end

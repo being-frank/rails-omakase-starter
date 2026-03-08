@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount KitsuneUI::Engine, at: '/kitsune-ui', as: :kitsune_ui
+  mount KitsuneDS::Engine, at: '/kitsune-ds', as: :kitsune_ds
   mount MissionControl::Jobs::Engine, at: :jobs, as: :jobs
 
   # ==== System

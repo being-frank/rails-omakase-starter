@@ -4,7 +4,7 @@ eval_gemfile 'Gemfile.rails-core'
 
 # ==== General
 
-gem 'kitsune_ui', path: '../engines/kitsune_ui'
+gem 'kitsune_ds', path: '../engines/kitsune_ds'
 gem 'meta-tags'
 gem 'mission_control-jobs'
 gem 'propshaft' # Required for mission_control-jobs

@@ -28,14 +28,6 @@ Layout/EmptyLinesAroundBlockBody:
 Layout/EmptyLinesAroundAccessModifier:
   Enabled: true
 
-Layout/EmptyLinesAroundClassBody:
-  Enabled: true
-  EnforcedStyle: empty_lines
-
-Layout/EmptyLinesAroundModuleBody:
-  Enabled: true
-  EnforcedStyle: empty_lines_except_namespace
-
 # Align hash values
 Layout/HashAlignment:
   Enabled: true
