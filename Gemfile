@@ -13,7 +13,7 @@ gem 'vite_rails'
 # ==== ActiveStorage
 
 # gem 'aws-sdk-s3'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.14'
 
 # ==== Debugging
 

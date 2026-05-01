@@ -22,11 +22,19 @@ Layout/ArgumentAlignment:
 Layout/EmptyLineAfterMagicComment:
   Enabled: true
 
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+
 Layout/EmptyLinesAroundBlockBody:
   Enabled: true
 
-Layout/EmptyLinesAroundAccessModifier:
+Layout/EmptyLinesAroundClassBody:
   Enabled: true
+  EnforcedStyle: empty_lines_except_namespace
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true
+  EnforcedStyle: empty_lines_except_namespace
 
 # Align hash values
 Layout/HashAlignment:
