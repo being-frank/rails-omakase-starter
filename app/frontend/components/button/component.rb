@@ -1,6 +1,58 @@
 class Button::Component < ApplicationViewComponent
 
-  html_options { }
+  html_options {
+    attributes { {
+      data: {
+        component: :button
+      }
+    } }
+    css_variants {
+      base { %w[
+        inline-flex
+        h-10
+        items-center
+        justify-center
+        rounded-md
+        px-3.5
+        text-sm
+        font-medium
+        uppercase
+        text-white
+        focus-visible:outline-2
+        focus-visible:outline-offset-2
+      ] }
+      variants {
+        color {
+          primary { %w[
+            bg-blue-600
+            hover:bg-brand-bold-hover
+            focus-visible:bg-brand-bold-active
+          ] }
+          secondary { %w[
+            text-brand
+            ring-2
+            ring-inset
+            ring-brand-bold
+            hover:bg-brand-bold-hover
+            hover:text-white
+            hover:ring-0
+            focus-visible:bg-brand-bold-active
+            focus-visible:text-white
+            focus-visible:ring-0
+          ] }
+          alert   { %w[
+            bg-alert-bold
+            hover:bg-alert-bold-hover
+            focus-visible:bg-alert-bold-active
+          ] }
+        }
+        width {
+          auto { %w[w-fit] }
+          full { %w[w-full] }
+        }
+      }
+    }
+  }
 
   # ==== Properties
 
@@ -9,7 +61,7 @@ class Button::Component < ApplicationViewComponent
     required: true
 
   property :color,
-    enum:    %i[primary secondary],
+    enum:    css_variants_for(:color),
     default: :primary
 
   property :url,
@@ -17,7 +69,7 @@ class Button::Component < ApplicationViewComponent
     optional: true
 
   property :width,
-    enum:     %i[auto full],
+    enum:     css_variants_for(:width),
     optional: true
 
   # ==== Slots
@@ -27,7 +79,7 @@ class Button::Component < ApplicationViewComponent
   # ==== Instance
 
   def call
-    tag.div(label)
+    # tag.div(label, **root_html_options(color: color, width: width))
   end
 
 end

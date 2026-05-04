@@ -1,7 +1,7 @@
 class Button::Preview < ApplicationViewComponentPreview
 
   # @param label [String] "Button label"
-  # @param color [Symbol]
+  # @param color [Symbol] "Color variant"
   # @param url [String] url "Adding a URL will use `link_to` in the style of a button"
   # @param width [Symbol]
   def playground(
