@@ -18,6 +18,7 @@ Bundler.require(*Rails.groups)
 
 module RailsOmakaseStarter
   class Application < Rails::Application
+
     config.load_defaults 8.1
 
     config.autoload_lib ignore: %w[
@@ -76,5 +77,6 @@ module RailsOmakaseStarter
 
     # config.solid_queue.silence_polling = true
     config.solid_queue.logger = ActiveSupport::TaggedLogging.logger(STDOUT)
+
   end
 end

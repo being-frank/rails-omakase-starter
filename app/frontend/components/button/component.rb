@@ -79,7 +79,7 @@ class Button::Component < ApplicationViewComponent
   # ==== Instance
 
   def call
-    # tag.div(label, **root_html_options(color: color, width: width))
+    tag.div(label, **root_html_options(color: color, width: width))
   end
 
 end

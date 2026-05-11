@@ -1,0 +1,551 @@
+/*
+  !!DO NOT MODIFY!! This file is auto-generated!
+  To make modifications, update `app/frontend/design_system/tokens.yml`
+  and save the file to auto-generate an updated version.
+  To manually force an update run: `rails generate_tw_utilities`
+*/
+
+:root {
+  --kds-color-bg-ui-surface: var(--color-ui-0);
+  --kds-color-bg-ui-surface-hover: color-mix(in oklab, var(--color-ui-0), var(--color-ui-200) 20%);
+  --kds-color-bg-ui-surface-active: color-mix(in oklab, var(--color-ui-0), var(--color-ui-200) 40%);
+  --kds-color-bg-ui-surface-select: color-mix(in oklab, var(--color-ui-0), var(--color-ui-accent-600) 40%);
+  --kds-color-bg-ui-surface-highlight: var(--color-ui-accent-600);
+  --kds-color-bg-ui-minimal: var(--color-ui-100);
+  --kds-color-bg-ui-minimal-hover: color-mix(in oklab, var(--color-ui-100), var(--color-ui-300) 20%);
+  --kds-color-bg-ui-minimal-active: color-mix(in oklab, var(--color-ui-100), var(--color-ui-300) 40%);
+  --kds-color-bg-ui-minimal-select: color-mix(in oklab, var(--color-ui-100), var(--color-ui-accent-600) 40%);
+  --kds-color-bg-ui-minimal-highlight: var(--color-ui-accent-600);
+  --kds-color-bg-ui-muted: var(--color-ui-200);
+  --kds-color-bg-ui-muted-hover: color-mix(in oklab, var(--color-ui-200), var(--color-ui-400) 20%);
+  --kds-color-bg-ui-muted-active: color-mix(in oklab, var(--color-ui-200), var(--color-ui-400) 40%);
+  --kds-color-bg-ui-muted-select: color-mix(in oklab, var(--color-ui-200), var(--color-ui-accent-600) 40%);
+  --kds-color-bg-ui-muted-highlight: var(--color-ui-accent-600);
+  --kds-color-bg-ui-subtle: var(--color-ui-300);
+  --kds-color-bg-ui-subtle-hover: color-mix(in oklab, var(--color-ui-300), var(--color-ui-500) 20%);
+  --kds-color-bg-ui-subtle-active: color-mix(in oklab, var(--color-ui-300), var(--color-ui-500) 40%);
+  --kds-color-bg-ui-subtle-select: color-mix(in oklab, var(--color-ui-300), var(--color-ui-accent-600) 40%);
+  --kds-color-bg-ui-subtle-highlight: var(--color-ui-accent-600);
+  --kds-color-bg-ui-bold: var(--color-ui-400);
+  --kds-color-bg-ui-bold-hover: color-mix(in oklab, var(--color-ui-400), var(--color-ui-600) 20%);
+  --kds-color-bg-ui-bold-active: color-mix(in oklab, var(--color-ui-400), var(--color-ui-600) 40%);
+  --kds-color-bg-ui-bold-select: color-mix(in oklab, var(--color-ui-400), var(--color-ui-accent-600) 40%);
+  --kds-color-bg-ui-bold-highlight: var(--color-ui-accent-600);
+  --kds-color-bg-ui-strong: var(--color-ui-500);
+  --kds-color-bg-ui-strong-hover: color-mix(in oklab, var(--color-ui-500), var(--color-ui-700) 20%);
+  --kds-color-bg-ui-strong-active: color-mix(in oklab, var(--color-ui-500), var(--color-ui-700) 40%);
+  --kds-color-bg-ui-strong-select: color-mix(in oklab, var(--color-ui-500), var(--color-ui-accent-600) 40%);
+  --kds-color-bg-ui-strong-highlight: var(--color-ui-accent-600);
+  --kds-color-bg-success-minimal: transparent;
+  --kds-color-bg-success-minimal-hover: color-mix(in oklab, var(--color-success-50), var(--color-success-200) 20%);
+  --kds-color-bg-success-minimal-active: color-mix(in oklab, var(--color-success-50), var(--color-success-200) 40%);
+  --kds-color-bg-success-subtle: var(--color-success-200);
+  --kds-color-bg-success-subtle-hover: color-mix(in oklab, var(--color-success-200), var(--color-success-400) 20%);
+  --kds-color-bg-success-subtle-active: color-mix(in oklab, var(--color-success-200), var(--color-success-400) 40%);
+  --kds-color-bg-success-bold: var(--color-success-600);
+  --kds-color-bg-success-bold-hover: color-mix(in oklab, var(--color-success-600), var(--color-success-800) 20%);
+  --kds-color-bg-success-bold-active: color-mix(in oklab, var(--color-success-600), var(--color-success-800) 40%);
+  --kds-color-bg-notice-minimal: transparent;
+  --kds-color-bg-notice-minimal-hover: color-mix(in oklab, var(--color-notice-50), var(--color-notice-200) 20%);
+  --kds-color-bg-notice-minimal-active: color-mix(in oklab, var(--color-notice-50), var(--color-notice-200) 40%);
+  --kds-color-bg-notice-subtle: var(--color-notice-200);
+  --kds-color-bg-notice-subtle-hover: color-mix(in oklab, var(--color-notice-200), var(--color-notice-400) 20%);
+  --kds-color-bg-notice-subtle-active: color-mix(in oklab, var(--color-notice-200), var(--color-notice-400) 40%);
+  --kds-color-bg-notice-bold: var(--color-notice-600);
+  --kds-color-bg-notice-bold-hover: color-mix(in oklab, var(--color-notice-600), var(--color-notice-800) 20%);
+  --kds-color-bg-notice-bold-active: color-mix(in oklab, var(--color-notice-600), var(--color-notice-800) 40%);
+  --kds-color-bg-warning-minimal: transparent;
+  --kds-color-bg-warning-minimal-hover: color-mix(in oklab, var(--color-warning-50), var(--color-warning-200) 20%);
+  --kds-color-bg-warning-minimal-active: color-mix(in oklab, var(--color-warning-50), var(--color-warning-200) 40%);
+  --kds-color-bg-warning-subtle: var(--color-warning-200);
+  --kds-color-bg-warning-subtle-hover: color-mix(in oklab, var(--color-warning-200), var(--color-warning-400) 20%);
+  --kds-color-bg-warning-subtle-active: color-mix(in oklab, var(--color-warning-200), var(--color-warning-400) 40%);
+  --kds-color-bg-warning-bold: var(--color-warning-600);
+  --kds-color-bg-warning-bold-hover: color-mix(in oklab, var(--color-warning-600), var(--color-warning-800) 20%);
+  --kds-color-bg-warning-bold-active: color-mix(in oklab, var(--color-warning-600), var(--color-warning-800) 40%);
+  --kds-color-bg-alert-minimal: transparent;
+  --kds-color-bg-alert-minimal-hover: color-mix(in oklab, var(--color-alert-50), var(--color-alert-200) 20%);
+  --kds-color-bg-alert-minimal-active: color-mix(in oklab, var(--color-alert-50), var(--color-alert-200) 40%);
+  --kds-color-bg-alert-subtle: var(--color-alert-200);
+  --kds-color-bg-alert-subtle-hover: color-mix(in oklab, var(--color-alert-200), var(--color-alert-400) 20%);
+  --kds-color-bg-alert-subtle-active: color-mix(in oklab, var(--color-alert-200), var(--color-alert-400) 40%);
+  --kds-color-bg-alert-bold: var(--color-alert-600);
+  --kds-color-bg-alert-bold-hover: color-mix(in oklab, var(--color-alert-600), var(--color-alert-800) 20%);
+  --kds-color-bg-alert-bold-active: color-mix(in oklab, var(--color-alert-600), var(--color-alert-800) 40%);
+  --kds-color-border-ui-minimal: var(--color-ui-100);
+  --kds-color-border-ui-minimal-hover: var(--color-ui-200);
+  --kds-color-border-ui-minimal-focus: var(--color-ui-accent-600);
+  --kds-color-border-ui-minimal-select: var(--color-ui-accent-400);
+  --kds-color-border-ui-minimal-highlight: var(--color-ui-accent-600);
+  --kds-color-border-ui-muted: var(--color-ui-200);
+  --kds-color-border-ui-muted-hover: var(--color-ui-300);
+  --kds-color-border-ui-muted-focus: var(--color-ui-accent-600);
+  --kds-color-border-ui-muted-select: var(--color-ui-accent-400);
+  --kds-color-border-ui-muted-highlight: var(--color-ui-accent-600);
+  --kds-color-border-ui-subtle: var(--color-ui-300);
+  --kds-color-border-ui-subtle-hover: var(--color-ui-400);
+  --kds-color-border-ui-subtle-focus: var(--color-ui-accent-600);
+  --kds-color-border-ui-subtle-select: var(--color-ui-accent-400);
+  --kds-color-border-ui-subtle-highlight: var(--color-ui-accent-600);
+  --kds-color-border-ui-bold: var(--color-ui-400);
+  --kds-color-border-ui-bold-hover: var(--color-ui-500);
+  --kds-color-border-ui-bold-focus: var(--color-ui-accent-600);
+  --kds-color-border-ui-bold-select: var(--color-ui-accent-400);
+  --kds-color-border-ui-bold-highlight: var(--color-ui-accent-600);
+  --kds-color-border-ui-strong: var(--color-ui-500);
+  --kds-color-border-ui-strong-hover: var(--color-ui-600);
+  --kds-color-border-ui-strong-focus: var(--color-ui-accent-600);
+  --kds-color-border-ui-strong-select: var(--color-ui-accent-400);
+  --kds-color-border-ui-strong-highlight: var(--color-ui-accent-600);
+  --kds-color-border-success: var(--color-success-600);
+  --kds-color-border-success-focus: var(--color-success-600);
+  --kds-color-border-success-select: var(--color-success-400);
+  --kds-color-border-success-highlight: var(--color-success-600);
+  --kds-color-border-notice: var(--color-notice-600);
+  --kds-color-border-notice-focus: var(--color-notice-600);
+  --kds-color-border-notice-select: var(--color-notice-400);
+  --kds-color-border-notice-highlight: var(--color-notice-600);
+  --kds-color-border-warning: var(--color-warning-600);
+  --kds-color-border-warning-focus: var(--color-warning-600);
+  --kds-color-border-warning-select: var(--color-warning-400);
+  --kds-color-border-warning-highlight: var(--color-warning-600);
+  --kds-color-border-alert: var(--color-alert-600);
+  --kds-color-border-alert-focus: var(--color-alert-600);
+  --kds-color-border-alert-select: var(--color-alert-400);
+  --kds-color-border-alert-highlight: var(--color-alert-600);
+  --kds-color-ring-ui-minimal: var(--color-ui-100);
+  --kds-color-ring-ui-minimal-hover: var(--color-ui-200);
+  --kds-color-ring-ui-minimal-focus: var(--color-ui-accent-600);
+  --kds-color-ring-ui-minimal-select: var(--color-ui-accent-400);
+  --kds-color-ring-ui-minimal-highlight: var(--color-ui-accent-600);
+  --kds-color-ring-ui-muted: var(--color-ui-200);
+  --kds-color-ring-ui-muted-hover: var(--color-ui-300);
+  --kds-color-ring-ui-muted-focus: var(--color-ui-accent-600);
+  --kds-color-ring-ui-muted-select: var(--color-ui-accent-400);
+  --kds-color-ring-ui-muted-highlight: var(--color-ui-accent-600);
+  --kds-color-ring-ui-subtle: var(--color-ui-300);
+  --kds-color-ring-ui-subtle-hover: var(--color-ui-400);
+  --kds-color-ring-ui-subtle-focus: var(--color-ui-accent-600);
+  --kds-color-ring-ui-subtle-select: var(--color-ui-accent-400);
+  --kds-color-ring-ui-subtle-highlight: var(--color-ui-accent-600);
+  --kds-color-ring-ui-bold: var(--color-ui-400);
+  --kds-color-ring-ui-bold-hover: var(--color-ui-500);
+  --kds-color-ring-ui-bold-focus: var(--color-ui-accent-600);
+  --kds-color-ring-ui-bold-select: var(--color-ui-accent-400);
+  --kds-color-ring-ui-bold-highlight: var(--color-ui-accent-600);
+  --kds-color-ring-ui-strong: var(--color-ui-500);
+  --kds-color-ring-ui-strong-hover: var(--color-ui-600);
+  --kds-color-ring-ui-strong-focus: var(--color-ui-accent-600);
+  --kds-color-ring-ui-strong-select: var(--color-ui-accent-400);
+  --kds-color-ring-ui-strong-highlight: var(--color-ui-accent-600);
+  --kds-color-ring-success: var(--color-success-600);
+  --kds-color-ring-success-focus: var(--color-success-600);
+  --kds-color-ring-success-select: var(--color-success-400);
+  --kds-color-ring-success-highlight: var(--color-success-600);
+  --kds-color-ring-notice: var(--color-notice-600);
+  --kds-color-ring-notice-focus: var(--color-notice-600);
+  --kds-color-ring-notice-select: var(--color-notice-400);
+  --kds-color-ring-notice-highlight: var(--color-notice-600);
+  --kds-color-ring-warning: var(--color-warning-600);
+  --kds-color-ring-warning-focus: var(--color-warning-600);
+  --kds-color-ring-warning-select: var(--color-warning-400);
+  --kds-color-ring-warning-highlight: var(--color-warning-600);
+  --kds-color-ring-alert: var(--color-alert-600);
+  --kds-color-ring-alert-focus: var(--color-alert-600);
+  --kds-color-ring-alert-select: var(--color-alert-400);
+  --kds-color-ring-alert-highlight: var(--color-alert-600);
+  --kds-color-text-primary: var(--color-ui-950);
+  --kds-color-text-secondary: var(--color-ui-600);
+  --kds-color-text-tertiary: var(--color-ui-300);
+  --kds-color-text-link: var(--color-ui-accent-600);
+  --kds-color-text-success: var(--color-success-600);
+  --kds-color-text-notice: var(--color-notice-600);
+  --kds-color-text-warning: var(--color-warning-600);
+  --kds-color-text-alert: var(--color-alert-600);
+}
+
+:root.dark, .dark {
+  --kds-color-bg-ui-surface: var(--color-ui-950);
+  --kds-color-bg-ui-surface-hover: color-mix(in oklab, var(--color-ui-950), var(--color-ui-800) 20%);
+  --kds-color-bg-ui-surface-active: color-mix(in oklab, var(--color-ui-950), var(--color-ui-800) 40%);
+  --kds-color-bg-ui-surface-select: color-mix(in oklab, var(--color-ui-950), var(--color-ui-accent-500) 40%);
+  --kds-color-bg-ui-surface-highlight: var(--color-ui-accent-500);
+  --kds-color-bg-ui-minimal: var(--color-ui-900);
+  --kds-color-bg-ui-minimal-hover: color-mix(in oklab, var(--color-ui-900), var(--color-ui-700) 20%);
+  --kds-color-bg-ui-minimal-active: color-mix(in oklab, var(--color-ui-900), var(--color-ui-700) 40%);
+  --kds-color-bg-ui-minimal-select: color-mix(in oklab, var(--color-ui-900), var(--color-ui-accent-500) 40%);
+  --kds-color-bg-ui-minimal-highlight: var(--color-ui-accent-500);
+  --kds-color-bg-ui-muted: var(--color-ui-800);
+  --kds-color-bg-ui-muted-hover: color-mix(in oklab, var(--color-ui-800), var(--color-ui-600) 20%);
+  --kds-color-bg-ui-muted-active: color-mix(in oklab, var(--color-ui-800), var(--color-ui-600) 40%);
+  --kds-color-bg-ui-muted-select: color-mix(in oklab, var(--color-ui-800), var(--color-ui-accent-500) 40%);
+  --kds-color-bg-ui-muted-highlight: var(--color-ui-accent-500);
+  --kds-color-bg-ui-subtle: var(--color-ui-700);
+  --kds-color-bg-ui-subtle-hover: color-mix(in oklab, var(--color-ui-700), var(--color-ui-500) 20%);
+  --kds-color-bg-ui-subtle-active: color-mix(in oklab, var(--color-ui-700), var(--color-ui-500) 40%);
+  --kds-color-bg-ui-subtle-select: color-mix(in oklab, var(--color-ui-700), var(--color-ui-accent-500) 40%);
+  --kds-color-bg-ui-subtle-highlight: var(--color-ui-accent-500);
+  --kds-color-bg-ui-bold: var(--color-ui-600);
+  --kds-color-bg-ui-bold-hover: color-mix(in oklab, var(--color-ui-600), var(--color-ui-400) 20%);
+  --kds-color-bg-ui-bold-active: color-mix(in oklab, var(--color-ui-600), var(--color-ui-400) 40%);
+  --kds-color-bg-ui-bold-select: color-mix(in oklab, var(--color-ui-600), var(--color-ui-accent-500) 40%);
+  --kds-color-bg-ui-bold-highlight: var(--color-ui-accent-500);
+  --kds-color-bg-ui-strong: var(--color-ui-500);
+  --kds-color-bg-ui-strong-hover: color-mix(in oklab, var(--color-ui-500), var(--color-ui-300) 20%);
+  --kds-color-bg-ui-strong-active: color-mix(in oklab, var(--color-ui-500), var(--color-ui-300) 40%);
+  --kds-color-bg-ui-strong-select: color-mix(in oklab, var(--color-ui-500), var(--color-ui-accent-500) 40%);
+  --kds-color-bg-ui-strong-highlight: var(--color-ui-accent-500);
+  --kds-color-bg-success-minimal: transparent;
+  --kds-color-bg-success-minimal-hover: color-mix(in oklab, var(--color-success-950), var(--color-success-800) 20%);
+  --kds-color-bg-success-minimal-active: color-mix(in oklab, var(--color-success-950), var(--color-success-800) 40%);
+  --kds-color-bg-success-subtle: var(--color-success-800);
+  --kds-color-bg-success-subtle-hover: color-mix(in oklab, var(--color-success-800), var(--color-success-600) 20%);
+  --kds-color-bg-success-subtle-active: color-mix(in oklab, var(--color-success-800), var(--color-success-600) 40%);
+  --kds-color-bg-success-bold: var(--color-success-500);
+  --kds-color-bg-success-bold-hover: color-mix(in oklab, var(--color-success-500), var(--color-success-300) 20%);
+  --kds-color-bg-success-bold-active: color-mix(in oklab, var(--color-success-500), var(--color-success-300) 40%);
+  --kds-color-bg-notice-minimal: transparent;
+  --kds-color-bg-notice-minimal-hover: color-mix(in oklab, var(--color-notice-950), var(--color-notice-800) 20%);
+  --kds-color-bg-notice-minimal-active: color-mix(in oklab, var(--color-notice-950), var(--color-notice-800) 40%);
+  --kds-color-bg-notice-subtle: var(--color-notice-800);
+  --kds-color-bg-notice-subtle-hover: color-mix(in oklab, var(--color-notice-800), var(--color-notice-600) 20%);
+  --kds-color-bg-notice-subtle-active: color-mix(in oklab, var(--color-notice-800), var(--color-notice-600) 40%);
+  --kds-color-bg-notice-bold: var(--color-notice-500);
+  --kds-color-bg-notice-bold-hover: color-mix(in oklab, var(--color-notice-500), var(--color-notice-300) 20%);
+  --kds-color-bg-notice-bold-active: color-mix(in oklab, var(--color-notice-500), var(--color-notice-300) 40%);
+  --kds-color-bg-warning-minimal: transparent;
+  --kds-color-bg-warning-minimal-hover: color-mix(in oklab, var(--color-warning-950), var(--color-warning-800) 20%);
+  --kds-color-bg-warning-minimal-active: color-mix(in oklab, var(--color-warning-950), var(--color-warning-800) 40%);
+  --kds-color-bg-warning-subtle: var(--color-warning-800);
+  --kds-color-bg-warning-subtle-hover: color-mix(in oklab, var(--color-warning-800), var(--color-warning-600) 20%);
+  --kds-color-bg-warning-subtle-active: color-mix(in oklab, var(--color-warning-800), var(--color-warning-600) 40%);
+  --kds-color-bg-warning-bold: var(--color-warning-500);
+  --kds-color-bg-warning-bold-hover: color-mix(in oklab, var(--color-warning-500), var(--color-warning-300) 20%);
+  --kds-color-bg-warning-bold-active: color-mix(in oklab, var(--color-warning-500), var(--color-warning-300) 40%);
+  --kds-color-bg-alert-minimal: transparent;
+  --kds-color-bg-alert-minimal-hover: color-mix(in oklab, var(--color-alert-950), var(--color-alert-800) 20%);
+  --kds-color-bg-alert-minimal-active: color-mix(in oklab, var(--color-alert-950), var(--color-alert-800) 40%);
+  --kds-color-bg-alert-subtle: var(--color-alert-800);
+  --kds-color-bg-alert-subtle-hover: color-mix(in oklab, var(--color-alert-800), var(--color-alert-600) 20%);
+  --kds-color-bg-alert-subtle-active: color-mix(in oklab, var(--color-alert-800), var(--color-alert-600) 40%);
+  --kds-color-bg-alert-bold: var(--color-alert-500);
+  --kds-color-bg-alert-bold-hover: color-mix(in oklab, var(--color-alert-500), var(--color-alert-300) 20%);
+  --kds-color-bg-alert-bold-active: color-mix(in oklab, var(--color-alert-500), var(--color-alert-300) 40%);
+  --kds-color-border-ui-minimal: var(--color-ui-900);
+  --kds-color-border-ui-minimal-hover: var(--color-ui-800);
+  --kds-color-border-ui-minimal-focus: var(--color-ui-accent-500);
+  --kds-color-border-ui-minimal-select: var(--color-ui-accent-700);
+  --kds-color-border-ui-minimal-highlight: var(--color-ui-accent-500);
+  --kds-color-border-ui-muted: var(--color-ui-800);
+  --kds-color-border-ui-muted-hover: var(--color-ui-700);
+  --kds-color-border-ui-muted-focus: var(--color-ui-accent-500);
+  --kds-color-border-ui-muted-select: var(--color-ui-accent-700);
+  --kds-color-border-ui-muted-highlight: var(--color-ui-accent-500);
+  --kds-color-border-ui-subtle: var(--color-ui-700);
+  --kds-color-border-ui-subtle-hover: var(--color-ui-600);
+  --kds-color-border-ui-subtle-focus: var(--color-ui-accent-500);
+  --kds-color-border-ui-subtle-select: var(--color-ui-accent-700);
+  --kds-color-border-ui-subtle-highlight: var(--color-ui-accent-500);
+  --kds-color-border-ui-bold: var(--color-ui-600);
+  --kds-color-border-ui-bold-hover: var(--color-ui-500);
+  --kds-color-border-ui-bold-focus: var(--color-ui-accent-500);
+  --kds-color-border-ui-bold-select: var(--color-ui-accent-700);
+  --kds-color-border-ui-bold-highlight: var(--color-ui-accent-500);
+  --kds-color-border-ui-strong: var(--color-ui-500);
+  --kds-color-border-ui-strong-hover: var(--color-ui-400);
+  --kds-color-border-ui-strong-focus: var(--color-ui-accent-500);
+  --kds-color-border-ui-strong-select: var(--color-ui-accent-700);
+  --kds-color-border-ui-strong-highlight: var(--color-ui-accent-500);
+  --kds-color-border-success: var(--color-success-500);
+  --kds-color-border-success-focus: var(--color-success-500);
+  --kds-color-border-success-select: var(--color-success-700);
+  --kds-color-border-success-highlight: var(--color-success-500);
+  --kds-color-border-notice: var(--color-notice-500);
+  --kds-color-border-notice-focus: var(--color-notice-500);
+  --kds-color-border-notice-select: var(--color-notice-700);
+  --kds-color-border-notice-highlight: var(--color-notice-500);
+  --kds-color-border-warning: var(--color-warning-500);
+  --kds-color-border-warning-focus: var(--color-warning-500);
+  --kds-color-border-warning-select: var(--color-warning-700);
+  --kds-color-border-warning-highlight: var(--color-warning-500);
+  --kds-color-border-alert: var(--color-alert-500);
+  --kds-color-border-alert-focus: var(--color-alert-500);
+  --kds-color-border-alert-select: var(--color-alert-700);
+  --kds-color-border-alert-highlight: var(--color-alert-500);
+  --kds-color-ring-ui-minimal: var(--color-ui-900);
+  --kds-color-ring-ui-minimal-hover: var(--color-ui-800);
+  --kds-color-ring-ui-minimal-focus: var(--color-ui-accent-500);
+  --kds-color-ring-ui-minimal-select: var(--color-ui-accent-700);
+  --kds-color-ring-ui-minimal-highlight: var(--color-ui-accent-500);
+  --kds-color-ring-ui-muted: var(--color-ui-800);
+  --kds-color-ring-ui-muted-hover: var(--color-ui-700);
+  --kds-color-ring-ui-muted-focus: var(--color-ui-accent-500);
+  --kds-color-ring-ui-muted-select: var(--color-ui-accent-700);
+  --kds-color-ring-ui-muted-highlight: var(--color-ui-accent-500);
+  --kds-color-ring-ui-subtle: var(--color-ui-700);
+  --kds-color-ring-ui-subtle-hover: var(--color-ui-600);
+  --kds-color-ring-ui-subtle-focus: var(--color-ui-accent-500);
+  --kds-color-ring-ui-subtle-select: var(--color-ui-accent-700);
+  --kds-color-ring-ui-subtle-highlight: var(--color-ui-accent-500);
+  --kds-color-ring-ui-bold: var(--color-ui-600);
+  --kds-color-ring-ui-bold-hover: var(--color-ui-500);
+  --kds-color-ring-ui-bold-focus: var(--color-ui-accent-500);
+  --kds-color-ring-ui-bold-select: var(--color-ui-accent-700);
+  --kds-color-ring-ui-bold-highlight: var(--color-ui-accent-500);
+  --kds-color-ring-ui-strong: var(--color-ui-500);
+  --kds-color-ring-ui-strong-hover: var(--color-ui-400);
+  --kds-color-ring-ui-strong-focus: var(--color-ui-accent-500);
+  --kds-color-ring-ui-strong-select: var(--color-ui-accent-700);
+  --kds-color-ring-ui-strong-highlight: var(--color-ui-accent-500);
+  --kds-color-ring-success: var(--color-success-500);
+  --kds-color-ring-success-focus: var(--color-success-500);
+  --kds-color-ring-success-select: var(--color-success-700);
+  --kds-color-ring-success-highlight: var(--color-success-500);
+  --kds-color-ring-notice: var(--color-notice-500);
+  --kds-color-ring-notice-focus: var(--color-notice-500);
+  --kds-color-ring-notice-select: var(--color-notice-700);
+  --kds-color-ring-notice-highlight: var(--color-notice-500);
+  --kds-color-ring-warning: var(--color-warning-500);
+  --kds-color-ring-warning-focus: var(--color-warning-500);
+  --kds-color-ring-warning-select: var(--color-warning-700);
+  --kds-color-ring-warning-highlight: var(--color-warning-500);
+  --kds-color-ring-alert: var(--color-alert-500);
+  --kds-color-ring-alert-focus: var(--color-alert-500);
+  --kds-color-ring-alert-select: var(--color-alert-700);
+  --kds-color-ring-alert-highlight: var(--color-alert-500);
+  --kds-color-text-primary: var(--color-ui-100);
+  --kds-color-text-secondary: var(--color-ui-400);
+  --kds-color-text-tertiary: var(--color-ui-500);
+  --kds-color-text-link: var(--color-ui-accent-500);
+  --kds-color-text-success: var(--color-success-500);
+  --kds-color-text-notice: var(--color-notice-500);
+  --kds-color-text-warning: var(--color-warning-500);
+  --kds-color-text-alert: var(--color-alert-500);
+}
+
+@theme inline static {
+  --color-ui-0: var(--color-white);
+  --color-ui-50: var(--color-gray-50);
+  --color-ui-100: var(--color-gray-100);
+  --color-ui-200: var(--color-gray-200);
+  --color-ui-300: var(--color-gray-300);
+  --color-ui-400: var(--color-gray-400);
+  --color-ui-500: var(--color-gray-500);
+  --color-ui-600: var(--color-gray-600);
+  --color-ui-700: var(--color-gray-700);
+  --color-ui-800: var(--color-gray-800);
+  --color-ui-900: var(--color-gray-900);
+  --color-ui-950: var(--color-gray-950);
+  --color-ui-accent-50: var(--color-blue-50);
+  --color-ui-accent-100: var(--color-blue-100);
+  --color-ui-accent-200: var(--color-blue-200);
+  --color-ui-accent-300: var(--color-blue-300);
+  --color-ui-accent-400: var(--color-blue-400);
+  --color-ui-accent-500: var(--color-blue-500);
+  --color-ui-accent-600: var(--color-blue-600);
+  --color-ui-accent-700: var(--color-blue-700);
+  --color-ui-accent-800: var(--color-blue-800);
+  --color-ui-accent-900: var(--color-blue-900);
+  --color-ui-accent-950: var(--color-blue-950);
+  --color-alert-50: var(--color-rose-50);
+  --color-alert-100: var(--color-rose-100);
+  --color-alert-200: var(--color-rose-200);
+  --color-alert-300: var(--color-rose-300);
+  --color-alert-400: var(--color-rose-400);
+  --color-alert-500: var(--color-rose-500);
+  --color-alert-600: var(--color-rose-600);
+  --color-alert-700: var(--color-rose-700);
+  --color-alert-800: var(--color-rose-800);
+  --color-alert-900: var(--color-rose-900);
+  --color-alert-950: var(--color-rose-950);
+  --color-notice-50: var(--color-blue-50);
+  --color-notice-100: var(--color-blue-100);
+  --color-notice-200: var(--color-blue-200);
+  --color-notice-300: var(--color-blue-300);
+  --color-notice-400: var(--color-blue-400);
+  --color-notice-500: var(--color-blue-500);
+  --color-notice-600: var(--color-blue-600);
+  --color-notice-700: var(--color-blue-700);
+  --color-notice-800: var(--color-blue-800);
+  --color-notice-900: var(--color-blue-900);
+  --color-notice-950: var(--color-blue-950);
+  --color-success-50: var(--color-lime-50);
+  --color-success-100: var(--color-lime-100);
+  --color-success-200: var(--color-lime-200);
+  --color-success-300: var(--color-lime-300);
+  --color-success-400: var(--color-lime-400);
+  --color-success-500: var(--color-lime-500);
+  --color-success-600: var(--color-lime-600);
+  --color-success-700: var(--color-lime-700);
+  --color-success-800: var(--color-lime-800);
+  --color-success-900: var(--color-lime-900);
+  --color-success-950: var(--color-lime-950);
+  --color-warning-50: var(--color-amber-50);
+  --color-warning-100: var(--color-amber-100);
+  --color-warning-200: var(--color-amber-200);
+  --color-warning-300: var(--color-amber-300);
+  --color-warning-400: var(--color-amber-400);
+  --color-warning-500: var(--color-amber-500);
+  --color-warning-600: var(--color-amber-600);
+  --color-warning-700: var(--color-amber-700);
+  --color-warning-800: var(--color-amber-800);
+  --color-warning-900: var(--color-amber-900);
+  --color-warning-950: var(--color-amber-950);
+}
+
+@utility bg-ui-surface { background-color: var(--kds-color-bg-ui-surface); }
+@utility bg-ui-surface-hover { background-color: var(--kds-color-bg-ui-surface-hover); }
+@utility bg-ui-surface-active { background-color: var(--kds-color-bg-ui-surface-active); }
+@utility bg-ui-surface-select { background-color: var(--kds-color-bg-ui-surface-select); }
+@utility bg-ui-surface-highlight { background-color: var(--kds-color-bg-ui-surface-highlight); }
+@utility bg-ui-minimal { background-color: var(--kds-color-bg-ui-minimal); }
+@utility bg-ui-minimal-hover { background-color: var(--kds-color-bg-ui-minimal-hover); }
+@utility bg-ui-minimal-active { background-color: var(--kds-color-bg-ui-minimal-active); }
+@utility bg-ui-minimal-select { background-color: var(--kds-color-bg-ui-minimal-select); }
+@utility bg-ui-minimal-highlight { background-color: var(--kds-color-bg-ui-minimal-highlight); }
+@utility bg-ui-muted { background-color: var(--kds-color-bg-ui-muted); }
+@utility bg-ui-muted-hover { background-color: var(--kds-color-bg-ui-muted-hover); }
+@utility bg-ui-muted-active { background-color: var(--kds-color-bg-ui-muted-active); }
+@utility bg-ui-muted-select { background-color: var(--kds-color-bg-ui-muted-select); }
+@utility bg-ui-muted-highlight { background-color: var(--kds-color-bg-ui-muted-highlight); }
+@utility bg-ui-subtle { background-color: var(--kds-color-bg-ui-subtle); }
+@utility bg-ui-subtle-hover { background-color: var(--kds-color-bg-ui-subtle-hover); }
+@utility bg-ui-subtle-active { background-color: var(--kds-color-bg-ui-subtle-active); }
+@utility bg-ui-subtle-select { background-color: var(--kds-color-bg-ui-subtle-select); }
+@utility bg-ui-subtle-highlight { background-color: var(--kds-color-bg-ui-subtle-highlight); }
+@utility bg-ui-bold { background-color: var(--kds-color-bg-ui-bold); }
+@utility bg-ui-bold-hover { background-color: var(--kds-color-bg-ui-bold-hover); }
+@utility bg-ui-bold-active { background-color: var(--kds-color-bg-ui-bold-active); }
+@utility bg-ui-bold-select { background-color: var(--kds-color-bg-ui-bold-select); }
+@utility bg-ui-bold-highlight { background-color: var(--kds-color-bg-ui-bold-highlight); }
+@utility bg-ui-strong { background-color: var(--kds-color-bg-ui-strong); }
+@utility bg-ui-strong-hover { background-color: var(--kds-color-bg-ui-strong-hover); }
+@utility bg-ui-strong-active { background-color: var(--kds-color-bg-ui-strong-active); }
+@utility bg-ui-strong-select { background-color: var(--kds-color-bg-ui-strong-select); }
+@utility bg-ui-strong-highlight { background-color: var(--kds-color-bg-ui-strong-highlight); }
+@utility bg-success-minimal { background-color: var(--kds-color-bg-success-minimal); }
+@utility bg-success-minimal-hover { background-color: var(--kds-color-bg-success-minimal-hover); }
+@utility bg-success-minimal-active { background-color: var(--kds-color-bg-success-minimal-active); }
+@utility bg-success-subtle { background-color: var(--kds-color-bg-success-subtle); }
+@utility bg-success-subtle-hover { background-color: var(--kds-color-bg-success-subtle-hover); }
+@utility bg-success-subtle-active { background-color: var(--kds-color-bg-success-subtle-active); }
+@utility bg-success-bold { background-color: var(--kds-color-bg-success-bold); }
+@utility bg-success-bold-hover { background-color: var(--kds-color-bg-success-bold-hover); }
+@utility bg-success-bold-active { background-color: var(--kds-color-bg-success-bold-active); }
+@utility bg-notice-minimal { background-color: var(--kds-color-bg-notice-minimal); }
+@utility bg-notice-minimal-hover { background-color: var(--kds-color-bg-notice-minimal-hover); }
+@utility bg-notice-minimal-active { background-color: var(--kds-color-bg-notice-minimal-active); }
+@utility bg-notice-subtle { background-color: var(--kds-color-bg-notice-subtle); }
+@utility bg-notice-subtle-hover { background-color: var(--kds-color-bg-notice-subtle-hover); }
+@utility bg-notice-subtle-active { background-color: var(--kds-color-bg-notice-subtle-active); }
+@utility bg-notice-bold { background-color: var(--kds-color-bg-notice-bold); }
+@utility bg-notice-bold-hover { background-color: var(--kds-color-bg-notice-bold-hover); }
+@utility bg-notice-bold-active { background-color: var(--kds-color-bg-notice-bold-active); }
+@utility bg-warning-minimal { background-color: var(--kds-color-bg-warning-minimal); }
+@utility bg-warning-minimal-hover { background-color: var(--kds-color-bg-warning-minimal-hover); }
+@utility bg-warning-minimal-active { background-color: var(--kds-color-bg-warning-minimal-active); }
+@utility bg-warning-subtle { background-color: var(--kds-color-bg-warning-subtle); }
+@utility bg-warning-subtle-hover { background-color: var(--kds-color-bg-warning-subtle-hover); }
+@utility bg-warning-subtle-active { background-color: var(--kds-color-bg-warning-subtle-active); }
+@utility bg-warning-bold { background-color: var(--kds-color-bg-warning-bold); }
+@utility bg-warning-bold-hover { background-color: var(--kds-color-bg-warning-bold-hover); }
+@utility bg-warning-bold-active { background-color: var(--kds-color-bg-warning-bold-active); }
+@utility bg-alert-minimal { background-color: var(--kds-color-bg-alert-minimal); }
+@utility bg-alert-minimal-hover { background-color: var(--kds-color-bg-alert-minimal-hover); }
+@utility bg-alert-minimal-active { background-color: var(--kds-color-bg-alert-minimal-active); }
+@utility bg-alert-subtle { background-color: var(--kds-color-bg-alert-subtle); }
+@utility bg-alert-subtle-hover { background-color: var(--kds-color-bg-alert-subtle-hover); }
+@utility bg-alert-subtle-active { background-color: var(--kds-color-bg-alert-subtle-active); }
+@utility bg-alert-bold { background-color: var(--kds-color-bg-alert-bold); }
+@utility bg-alert-bold-hover { background-color: var(--kds-color-bg-alert-bold-hover); }
+@utility bg-alert-bold-active { background-color: var(--kds-color-bg-alert-bold-active); }
+@utility border-ui-minimal { border-color: var(--kds-color-border-ui-minimal); }
+@utility border-ui-minimal-hover { border-color: var(--kds-color-border-ui-minimal-hover); }
+@utility border-ui-minimal-focus { border-color: var(--kds-color-border-ui-minimal-focus); }
+@utility border-ui-minimal-select { border-color: var(--kds-color-border-ui-minimal-select); }
+@utility border-ui-minimal-highlight { border-color: var(--kds-color-border-ui-minimal-highlight); }
+@utility border-ui-muted { border-color: var(--kds-color-border-ui-muted); }
+@utility border-ui-muted-hover { border-color: var(--kds-color-border-ui-muted-hover); }
+@utility border-ui-muted-focus { border-color: var(--kds-color-border-ui-muted-focus); }
+@utility border-ui-muted-select { border-color: var(--kds-color-border-ui-muted-select); }
+@utility border-ui-muted-highlight { border-color: var(--kds-color-border-ui-muted-highlight); }
+@utility border-ui-subtle { border-color: var(--kds-color-border-ui-subtle); }
+@utility border-ui-subtle-hover { border-color: var(--kds-color-border-ui-subtle-hover); }
+@utility border-ui-subtle-focus { border-color: var(--kds-color-border-ui-subtle-focus); }
+@utility border-ui-subtle-select { border-color: var(--kds-color-border-ui-subtle-select); }
+@utility border-ui-subtle-highlight { border-color: var(--kds-color-border-ui-subtle-highlight); }
+@utility border-ui-bold { border-color: var(--kds-color-border-ui-bold); }
+@utility border-ui-bold-hover { border-color: var(--kds-color-border-ui-bold-hover); }
+@utility border-ui-bold-focus { border-color: var(--kds-color-border-ui-bold-focus); }
+@utility border-ui-bold-select { border-color: var(--kds-color-border-ui-bold-select); }
+@utility border-ui-bold-highlight { border-color: var(--kds-color-border-ui-bold-highlight); }
+@utility border-ui-strong { border-color: var(--kds-color-border-ui-strong); }
+@utility border-ui-strong-hover { border-color: var(--kds-color-border-ui-strong-hover); }
+@utility border-ui-strong-focus { border-color: var(--kds-color-border-ui-strong-focus); }
+@utility border-ui-strong-select { border-color: var(--kds-color-border-ui-strong-select); }
+@utility border-ui-strong-highlight { border-color: var(--kds-color-border-ui-strong-highlight); }
+@utility border-success { border-color: var(--kds-color-border-success); }
+@utility border-success-focus { border-color: var(--kds-color-border-success-focus); }
+@utility border-success-select { border-color: var(--kds-color-border-success-select); }
+@utility border-success-highlight { border-color: var(--kds-color-border-success-highlight); }
+@utility border-notice { border-color: var(--kds-color-border-notice); }
+@utility border-notice-focus { border-color: var(--kds-color-border-notice-focus); }
+@utility border-notice-select { border-color: var(--kds-color-border-notice-select); }
+@utility border-notice-highlight { border-color: var(--kds-color-border-notice-highlight); }
+@utility border-warning { border-color: var(--kds-color-border-warning); }
+@utility border-warning-focus { border-color: var(--kds-color-border-warning-focus); }
+@utility border-warning-select { border-color: var(--kds-color-border-warning-select); }
+@utility border-warning-highlight { border-color: var(--kds-color-border-warning-highlight); }
+@utility border-alert { border-color: var(--kds-color-border-alert); }
+@utility border-alert-focus { border-color: var(--kds-color-border-alert-focus); }
+@utility border-alert-select { border-color: var(--kds-color-border-alert-select); }
+@utility border-alert-highlight { border-color: var(--kds-color-border-alert-highlight); }
+@utility ring-ui-minimal { --tw-ring-color: var(--kds-color-ring-ui-minimal); }
+@utility ring-ui-minimal-hover { --tw-ring-color: var(--kds-color-ring-ui-minimal-hover); }
+@utility ring-ui-minimal-focus { --tw-ring-color: var(--kds-color-ring-ui-minimal-focus); }
+@utility ring-ui-minimal-select { --tw-ring-color: var(--kds-color-ring-ui-minimal-select); }
+@utility ring-ui-minimal-highlight { --tw-ring-color: var(--kds-color-ring-ui-minimal-highlight); }
+@utility ring-ui-muted { --tw-ring-color: var(--kds-color-ring-ui-muted); }
+@utility ring-ui-muted-hover { --tw-ring-color: var(--kds-color-ring-ui-muted-hover); }
+@utility ring-ui-muted-focus { --tw-ring-color: var(--kds-color-ring-ui-muted-focus); }
+@utility ring-ui-muted-select { --tw-ring-color: var(--kds-color-ring-ui-muted-select); }
+@utility ring-ui-muted-highlight { --tw-ring-color: var(--kds-color-ring-ui-muted-highlight); }
+@utility ring-ui-subtle { --tw-ring-color: var(--kds-color-ring-ui-subtle); }
+@utility ring-ui-subtle-hover { --tw-ring-color: var(--kds-color-ring-ui-subtle-hover); }
+@utility ring-ui-subtle-focus { --tw-ring-color: var(--kds-color-ring-ui-subtle-focus); }
+@utility ring-ui-subtle-select { --tw-ring-color: var(--kds-color-ring-ui-subtle-select); }
+@utility ring-ui-subtle-highlight { --tw-ring-color: var(--kds-color-ring-ui-subtle-highlight); }
+@utility ring-ui-bold { --tw-ring-color: var(--kds-color-ring-ui-bold); }
+@utility ring-ui-bold-hover { --tw-ring-color: var(--kds-color-ring-ui-bold-hover); }
+@utility ring-ui-bold-focus { --tw-ring-color: var(--kds-color-ring-ui-bold-focus); }
+@utility ring-ui-bold-select { --tw-ring-color: var(--kds-color-ring-ui-bold-select); }
+@utility ring-ui-bold-highlight { --tw-ring-color: var(--kds-color-ring-ui-bold-highlight); }
+@utility ring-ui-strong { --tw-ring-color: var(--kds-color-ring-ui-strong); }
+@utility ring-ui-strong-hover { --tw-ring-color: var(--kds-color-ring-ui-strong-hover); }
+@utility ring-ui-strong-focus { --tw-ring-color: var(--kds-color-ring-ui-strong-focus); }
+@utility ring-ui-strong-select { --tw-ring-color: var(--kds-color-ring-ui-strong-select); }
+@utility ring-ui-strong-highlight { --tw-ring-color: var(--kds-color-ring-ui-strong-highlight); }
+@utility ring-success { --tw-ring-color: var(--kds-color-ring-success); }
+@utility ring-success-focus { --tw-ring-color: var(--kds-color-ring-success-focus); }
+@utility ring-success-select { --tw-ring-color: var(--kds-color-ring-success-select); }
+@utility ring-success-highlight { --tw-ring-color: var(--kds-color-ring-success-highlight); }
+@utility ring-notice { --tw-ring-color: var(--kds-color-ring-notice); }
+@utility ring-notice-focus { --tw-ring-color: var(--kds-color-ring-notice-focus); }
+@utility ring-notice-select { --tw-ring-color: var(--kds-color-ring-notice-select); }
+@utility ring-notice-highlight { --tw-ring-color: var(--kds-color-ring-notice-highlight); }
+@utility ring-warning { --tw-ring-color: var(--kds-color-ring-warning); }
+@utility ring-warning-focus { --tw-ring-color: var(--kds-color-ring-warning-focus); }
+@utility ring-warning-select { --tw-ring-color: var(--kds-color-ring-warning-select); }
+@utility ring-warning-highlight { --tw-ring-color: var(--kds-color-ring-warning-highlight); }
+@utility ring-alert { --tw-ring-color: var(--kds-color-ring-alert); }
+@utility ring-alert-focus { --tw-ring-color: var(--kds-color-ring-alert-focus); }
+@utility ring-alert-select { --tw-ring-color: var(--kds-color-ring-alert-select); }
+@utility ring-alert-highlight { --tw-ring-color: var(--kds-color-ring-alert-highlight); }
+@utility text-primary { color: var(--kds-color-text-primary); }
+@utility text-secondary { color: var(--kds-color-text-secondary); }
+@utility text-tertiary { color: var(--kds-color-text-tertiary); }
+@utility text-link { color: var(--kds-color-text-link); }
+@utility text-success { color: var(--kds-color-text-success); }
+@utility text-notice { color: var(--kds-color-text-notice); }
+@utility text-warning { color: var(--kds-color-text-warning); }
+@utility text-alert { color: var(--kds-color-text-alert); }

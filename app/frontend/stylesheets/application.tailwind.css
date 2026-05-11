@@ -1,11 +1,14 @@
 @import 'tailwindcss' source(none);
 
-@source "../../helpers/**/*.rb";
-@source "../../views/**/*.html.erb";
+@source './tailwind-safelist.txt';
+@source '../../helpers/**/*.rb';
+@source '../../views/**/*.html.erb';
 @source '../../frontend/**/*.html.erb';
 @source '../../frontend/components/**/*.rb';
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@import './color-theme.tailwind.css';
 
 @theme {
   --font-sans: 'Open Sans', sans-serif;
@@ -24,4 +27,13 @@ body {
   @apply
     font-sans
     subpixel-antialiased;
+}
+
+/* Lookbook page overrides */
+#app-main {
+  #page {
+    [data-component='prose'] {
+      max-width: 100% !important;
+    }
+  }
 }
