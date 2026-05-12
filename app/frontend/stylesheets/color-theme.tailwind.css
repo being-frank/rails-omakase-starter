@@ -63,15 +63,15 @@
   --kds-color-bg-warning-bold: var(--color-warning-600);
   --kds-color-bg-warning-bold-hover: color-mix(in oklab, var(--color-warning-600), var(--color-warning-800) 20%);
   --kds-color-bg-warning-bold-active: color-mix(in oklab, var(--color-warning-600), var(--color-warning-800) 40%);
-  --kds-color-bg-alert-minimal: transparent;
-  --kds-color-bg-alert-minimal-hover: color-mix(in oklab, var(--color-alert-50), var(--color-alert-200) 20%);
-  --kds-color-bg-alert-minimal-active: color-mix(in oklab, var(--color-alert-50), var(--color-alert-200) 40%);
-  --kds-color-bg-alert-subtle: var(--color-alert-200);
-  --kds-color-bg-alert-subtle-hover: color-mix(in oklab, var(--color-alert-200), var(--color-alert-400) 20%);
-  --kds-color-bg-alert-subtle-active: color-mix(in oklab, var(--color-alert-200), var(--color-alert-400) 40%);
-  --kds-color-bg-alert-bold: var(--color-alert-600);
-  --kds-color-bg-alert-bold-hover: color-mix(in oklab, var(--color-alert-600), var(--color-alert-800) 20%);
-  --kds-color-bg-alert-bold-active: color-mix(in oklab, var(--color-alert-600), var(--color-alert-800) 40%);
+  --kds-color-bg-error-minimal: transparent;
+  --kds-color-bg-error-minimal-hover: color-mix(in oklab, var(--color-error-50), var(--color-error-200) 20%);
+  --kds-color-bg-error-minimal-active: color-mix(in oklab, var(--color-error-50), var(--color-error-200) 40%);
+  --kds-color-bg-error-subtle: var(--color-error-200);
+  --kds-color-bg-error-subtle-hover: color-mix(in oklab, var(--color-error-200), var(--color-error-400) 20%);
+  --kds-color-bg-error-subtle-active: color-mix(in oklab, var(--color-error-200), var(--color-error-400) 40%);
+  --kds-color-bg-error-bold: var(--color-error-600);
+  --kds-color-bg-error-bold-hover: color-mix(in oklab, var(--color-error-600), var(--color-error-800) 20%);
+  --kds-color-bg-error-bold-active: color-mix(in oklab, var(--color-error-600), var(--color-error-800) 40%);
   --kds-color-border-ui-minimal: var(--color-ui-100);
   --kds-color-border-ui-minimal-hover: var(--color-ui-200);
   --kds-color-border-ui-minimal-focus: var(--color-ui-accent-600);
@@ -109,10 +109,10 @@
   --kds-color-border-warning-focus: var(--color-warning-600);
   --kds-color-border-warning-select: var(--color-warning-400);
   --kds-color-border-warning-highlight: var(--color-warning-600);
-  --kds-color-border-alert: var(--color-alert-600);
-  --kds-color-border-alert-focus: var(--color-alert-600);
-  --kds-color-border-alert-select: var(--color-alert-400);
-  --kds-color-border-alert-highlight: var(--color-alert-600);
+  --kds-color-border-error: var(--color-error-600);
+  --kds-color-border-error-focus: var(--color-error-600);
+  --kds-color-border-error-select: var(--color-error-400);
+  --kds-color-border-error-highlight: var(--color-error-600);
   --kds-color-ring-ui-minimal: var(--color-ui-100);
   --kds-color-ring-ui-minimal-hover: var(--color-ui-200);
   --kds-color-ring-ui-minimal-focus: var(--color-ui-accent-600);
@@ -150,10 +150,10 @@
   --kds-color-ring-warning-focus: var(--color-warning-600);
   --kds-color-ring-warning-select: var(--color-warning-400);
   --kds-color-ring-warning-highlight: var(--color-warning-600);
-  --kds-color-ring-alert: var(--color-alert-600);
-  --kds-color-ring-alert-focus: var(--color-alert-600);
-  --kds-color-ring-alert-select: var(--color-alert-400);
-  --kds-color-ring-alert-highlight: var(--color-alert-600);
+  --kds-color-ring-error: var(--color-error-600);
+  --kds-color-ring-error-focus: var(--color-error-600);
+  --kds-color-ring-error-select: var(--color-error-400);
+  --kds-color-ring-error-highlight: var(--color-error-600);
   --kds-color-text-primary: var(--color-ui-950);
   --kds-color-text-secondary: var(--color-ui-600);
   --kds-color-text-tertiary: var(--color-ui-300);
@@ -161,7 +161,7 @@
   --kds-color-text-success: var(--color-success-600);
   --kds-color-text-notice: var(--color-notice-600);
   --kds-color-text-warning: var(--color-warning-600);
-  --kds-color-text-alert: var(--color-alert-600);
+  --kds-color-text-error: var(--color-error-600);
 }
 
 :root.dark, .dark {
@@ -222,15 +222,15 @@
   --kds-color-bg-warning-bold: var(--color-warning-500);
   --kds-color-bg-warning-bold-hover: color-mix(in oklab, var(--color-warning-500), var(--color-warning-300) 20%);
   --kds-color-bg-warning-bold-active: color-mix(in oklab, var(--color-warning-500), var(--color-warning-300) 40%);
-  --kds-color-bg-alert-minimal: transparent;
-  --kds-color-bg-alert-minimal-hover: color-mix(in oklab, var(--color-alert-950), var(--color-alert-800) 20%);
-  --kds-color-bg-alert-minimal-active: color-mix(in oklab, var(--color-alert-950), var(--color-alert-800) 40%);
-  --kds-color-bg-alert-subtle: var(--color-alert-800);
-  --kds-color-bg-alert-subtle-hover: color-mix(in oklab, var(--color-alert-800), var(--color-alert-600) 20%);
-  --kds-color-bg-alert-subtle-active: color-mix(in oklab, var(--color-alert-800), var(--color-alert-600) 40%);
-  --kds-color-bg-alert-bold: var(--color-alert-500);
-  --kds-color-bg-alert-bold-hover: color-mix(in oklab, var(--color-alert-500), var(--color-alert-300) 20%);
-  --kds-color-bg-alert-bold-active: color-mix(in oklab, var(--color-alert-500), var(--color-alert-300) 40%);
+  --kds-color-bg-error-minimal: transparent;
+  --kds-color-bg-error-minimal-hover: color-mix(in oklab, var(--color-error-950), var(--color-error-800) 20%);
+  --kds-color-bg-error-minimal-active: color-mix(in oklab, var(--color-error-950), var(--color-error-800) 40%);
+  --kds-color-bg-error-subtle: var(--color-error-800);
+  --kds-color-bg-error-subtle-hover: color-mix(in oklab, var(--color-error-800), var(--color-error-600) 20%);
+  --kds-color-bg-error-subtle-active: color-mix(in oklab, var(--color-error-800), var(--color-error-600) 40%);
+  --kds-color-bg-error-bold: var(--color-error-500);
+  --kds-color-bg-error-bold-hover: color-mix(in oklab, var(--color-error-500), var(--color-error-300) 20%);
+  --kds-color-bg-error-bold-active: color-mix(in oklab, var(--color-error-500), var(--color-error-300) 40%);
   --kds-color-border-ui-minimal: var(--color-ui-900);
   --kds-color-border-ui-minimal-hover: var(--color-ui-800);
   --kds-color-border-ui-minimal-focus: var(--color-ui-accent-500);
@@ -268,10 +268,10 @@
   --kds-color-border-warning-focus: var(--color-warning-500);
   --kds-color-border-warning-select: var(--color-warning-700);
   --kds-color-border-warning-highlight: var(--color-warning-500);
-  --kds-color-border-alert: var(--color-alert-500);
-  --kds-color-border-alert-focus: var(--color-alert-500);
-  --kds-color-border-alert-select: var(--color-alert-700);
-  --kds-color-border-alert-highlight: var(--color-alert-500);
+  --kds-color-border-error: var(--color-error-500);
+  --kds-color-border-error-focus: var(--color-error-500);
+  --kds-color-border-error-select: var(--color-error-700);
+  --kds-color-border-error-highlight: var(--color-error-500);
   --kds-color-ring-ui-minimal: var(--color-ui-900);
   --kds-color-ring-ui-minimal-hover: var(--color-ui-800);
   --kds-color-ring-ui-minimal-focus: var(--color-ui-accent-500);
@@ -309,10 +309,10 @@
   --kds-color-ring-warning-focus: var(--color-warning-500);
   --kds-color-ring-warning-select: var(--color-warning-700);
   --kds-color-ring-warning-highlight: var(--color-warning-500);
-  --kds-color-ring-alert: var(--color-alert-500);
-  --kds-color-ring-alert-focus: var(--color-alert-500);
-  --kds-color-ring-alert-select: var(--color-alert-700);
-  --kds-color-ring-alert-highlight: var(--color-alert-500);
+  --kds-color-ring-error: var(--color-error-500);
+  --kds-color-ring-error-focus: var(--color-error-500);
+  --kds-color-ring-error-select: var(--color-error-700);
+  --kds-color-ring-error-highlight: var(--color-error-500);
   --kds-color-text-primary: var(--color-ui-100);
   --kds-color-text-secondary: var(--color-ui-400);
   --kds-color-text-tertiary: var(--color-ui-500);
@@ -320,7 +320,7 @@
   --kds-color-text-success: var(--color-success-500);
   --kds-color-text-notice: var(--color-notice-500);
   --kds-color-text-warning: var(--color-warning-500);
-  --kds-color-text-alert: var(--color-alert-500);
+  --kds-color-text-error: var(--color-error-500);
 }
 
 @theme inline static {
@@ -347,17 +347,17 @@
   --color-ui-accent-800: var(--color-blue-800);
   --color-ui-accent-900: var(--color-blue-900);
   --color-ui-accent-950: var(--color-blue-950);
-  --color-alert-50: var(--color-rose-50);
-  --color-alert-100: var(--color-rose-100);
-  --color-alert-200: var(--color-rose-200);
-  --color-alert-300: var(--color-rose-300);
-  --color-alert-400: var(--color-rose-400);
-  --color-alert-500: var(--color-rose-500);
-  --color-alert-600: var(--color-rose-600);
-  --color-alert-700: var(--color-rose-700);
-  --color-alert-800: var(--color-rose-800);
-  --color-alert-900: var(--color-rose-900);
-  --color-alert-950: var(--color-rose-950);
+  --color-error-50: var(--color-rose-50);
+  --color-error-100: var(--color-rose-100);
+  --color-error-200: var(--color-rose-200);
+  --color-error-300: var(--color-rose-300);
+  --color-error-400: var(--color-rose-400);
+  --color-error-500: var(--color-rose-500);
+  --color-error-600: var(--color-rose-600);
+  --color-error-700: var(--color-rose-700);
+  --color-error-800: var(--color-rose-800);
+  --color-error-900: var(--color-rose-900);
+  --color-error-950: var(--color-rose-950);
   --color-notice-50: var(--color-blue-50);
   --color-notice-100: var(--color-blue-100);
   --color-notice-200: var(--color-blue-200);
@@ -450,15 +450,15 @@
 @utility bg-warning-bold { background-color: var(--kds-color-bg-warning-bold); }
 @utility bg-warning-bold-hover { background-color: var(--kds-color-bg-warning-bold-hover); }
 @utility bg-warning-bold-active { background-color: var(--kds-color-bg-warning-bold-active); }
-@utility bg-alert-minimal { background-color: var(--kds-color-bg-alert-minimal); }
-@utility bg-alert-minimal-hover { background-color: var(--kds-color-bg-alert-minimal-hover); }
-@utility bg-alert-minimal-active { background-color: var(--kds-color-bg-alert-minimal-active); }
-@utility bg-alert-subtle { background-color: var(--kds-color-bg-alert-subtle); }
-@utility bg-alert-subtle-hover { background-color: var(--kds-color-bg-alert-subtle-hover); }
-@utility bg-alert-subtle-active { background-color: var(--kds-color-bg-alert-subtle-active); }
-@utility bg-alert-bold { background-color: var(--kds-color-bg-alert-bold); }
-@utility bg-alert-bold-hover { background-color: var(--kds-color-bg-alert-bold-hover); }
-@utility bg-alert-bold-active { background-color: var(--kds-color-bg-alert-bold-active); }
+@utility bg-error-minimal { background-color: var(--kds-color-bg-error-minimal); }
+@utility bg-error-minimal-hover { background-color: var(--kds-color-bg-error-minimal-hover); }
+@utility bg-error-minimal-active { background-color: var(--kds-color-bg-error-minimal-active); }
+@utility bg-error-subtle { background-color: var(--kds-color-bg-error-subtle); }
+@utility bg-error-subtle-hover { background-color: var(--kds-color-bg-error-subtle-hover); }
+@utility bg-error-subtle-active { background-color: var(--kds-color-bg-error-subtle-active); }
+@utility bg-error-bold { background-color: var(--kds-color-bg-error-bold); }
+@utility bg-error-bold-hover { background-color: var(--kds-color-bg-error-bold-hover); }
+@utility bg-error-bold-active { background-color: var(--kds-color-bg-error-bold-active); }
 @utility border-ui-minimal { border-color: var(--kds-color-border-ui-minimal); }
 @utility border-ui-minimal-hover { border-color: var(--kds-color-border-ui-minimal-hover); }
 @utility border-ui-minimal-focus { border-color: var(--kds-color-border-ui-minimal-focus); }
@@ -496,10 +496,10 @@
 @utility border-warning-focus { border-color: var(--kds-color-border-warning-focus); }
 @utility border-warning-select { border-color: var(--kds-color-border-warning-select); }
 @utility border-warning-highlight { border-color: var(--kds-color-border-warning-highlight); }
-@utility border-alert { border-color: var(--kds-color-border-alert); }
-@utility border-alert-focus { border-color: var(--kds-color-border-alert-focus); }
-@utility border-alert-select { border-color: var(--kds-color-border-alert-select); }
-@utility border-alert-highlight { border-color: var(--kds-color-border-alert-highlight); }
+@utility border-error { border-color: var(--kds-color-border-error); }
+@utility border-error-focus { border-color: var(--kds-color-border-error-focus); }
+@utility border-error-select { border-color: var(--kds-color-border-error-select); }
+@utility border-error-highlight { border-color: var(--kds-color-border-error-highlight); }
 @utility ring-ui-minimal { --tw-ring-color: var(--kds-color-ring-ui-minimal); }
 @utility ring-ui-minimal-hover { --tw-ring-color: var(--kds-color-ring-ui-minimal-hover); }
 @utility ring-ui-minimal-focus { --tw-ring-color: var(--kds-color-ring-ui-minimal-focus); }
@@ -537,10 +537,10 @@
 @utility ring-warning-focus { --tw-ring-color: var(--kds-color-ring-warning-focus); }
 @utility ring-warning-select { --tw-ring-color: var(--kds-color-ring-warning-select); }
 @utility ring-warning-highlight { --tw-ring-color: var(--kds-color-ring-warning-highlight); }
-@utility ring-alert { --tw-ring-color: var(--kds-color-ring-alert); }
-@utility ring-alert-focus { --tw-ring-color: var(--kds-color-ring-alert-focus); }
-@utility ring-alert-select { --tw-ring-color: var(--kds-color-ring-alert-select); }
-@utility ring-alert-highlight { --tw-ring-color: var(--kds-color-ring-alert-highlight); }
+@utility ring-error { --tw-ring-color: var(--kds-color-ring-error); }
+@utility ring-error-focus { --tw-ring-color: var(--kds-color-ring-error-focus); }
+@utility ring-error-select { --tw-ring-color: var(--kds-color-ring-error-select); }
+@utility ring-error-highlight { --tw-ring-color: var(--kds-color-ring-error-highlight); }
 @utility text-primary { color: var(--kds-color-text-primary); }
 @utility text-secondary { color: var(--kds-color-text-secondary); }
 @utility text-tertiary { color: var(--kds-color-text-tertiary); }
@@ -548,4 +548,4 @@
 @utility text-success { color: var(--kds-color-text-success); }
 @utility text-notice { color: var(--kds-color-text-notice); }
 @utility text-warning { color: var(--kds-color-text-warning); }
-@utility text-alert { color: var(--kds-color-text-alert); }
+@utility text-error { color: var(--kds-color-text-error); }
