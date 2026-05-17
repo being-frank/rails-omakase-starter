@@ -1,9 +1,9 @@
 @import 'tailwindcss' source(none);
 
-@source './tailwind-safelist.txt';
 @source '../../helpers/**/*.rb';
 @source '../../views/**/*.html.erb';
 @source '../../frontend/**/*.html.erb';
+@source '../../frontend/**/*.md.erb';
 @source '../../frontend/components/**/*.rb';
 
 @custom-variant dark (&:where(.dark, .dark *));
