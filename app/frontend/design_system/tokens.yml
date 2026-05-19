@@ -2,7 +2,7 @@ prefix: kds
 
 formats:
   primitive:
-    color:   prefix.category.variant.scale
+    $default: prefix.category.variant.scale
     spacing: category.scale
 
   semantic:
@@ -296,34 +296,34 @@ semantic:
         minimal:
           light:
             $base:  transparent
-            hover:  color-mix(in oklab, var(--{prefix}color-error-50), var(--{prefix}color-error-200) 20%)
-            active: color-mix(in oklab, var(--{prefix}color-error-50), var(--{prefix}color-error-200) 40%)
+            hover:  color-mix(in oklab, var(--{prefix}color-danger-50), var(--{prefix}color-danger-200) 20%)
+            active: color-mix(in oklab, var(--{prefix}color-danger-50), var(--{prefix}color-danger-200) 40%)
           dark:
             $base:  transparent
-            hover:  color-mix(in oklab, var(--{prefix}color-error-950), var(--{prefix}color-error-800) 20%)
-            active: color-mix(in oklab, var(--{prefix}color-error-950), var(--{prefix}color-error-800) 40%)
+            hover:  color-mix(in oklab, var(--{prefix}color-danger-950), var(--{prefix}color-danger-800) 20%)
+            active: color-mix(in oklab, var(--{prefix}color-danger-950), var(--{prefix}color-danger-800) 40%)
 
         subtle:
           light:
-            $base:  var(--{prefix}color-error-200)
-            hover:  color-mix(in oklab, var(--{prefix}color-error-200), var(--{prefix}color-error-400) 20%)
-            active: color-mix(in oklab, var(--{prefix}color-error-200), var(--{prefix}color-error-400) 40%)
+            $base:  var(--{prefix}color-danger-200)
+            hover:  color-mix(in oklab, var(--{prefix}color-danger-200), var(--{prefix}color-danger-400) 20%)
+            active: color-mix(in oklab, var(--{prefix}color-danger-200), var(--{prefix}color-danger-400) 40%)
           dark:
-            $base:  var(--{prefix}color-error-800)
-            hover:  color-mix(in oklab, var(--{prefix}color-error-800), var(--{prefix}color-error-600) 20%)
-            active: color-mix(in oklab, var(--{prefix}color-error-800), var(--{prefix}color-error-600) 40%)
+            $base:  var(--{prefix}color-danger-800)
+            hover:  color-mix(in oklab, var(--{prefix}color-danger-800), var(--{prefix}color-danger-600) 20%)
+            active: color-mix(in oklab, var(--{prefix}color-danger-800), var(--{prefix}color-danger-600) 40%)
 
         bold:
           light:
-            $base:  var(--{prefix}color-error-600)
-            hover:  color-mix(in oklab, var(--{prefix}color-error-600), var(--{prefix}color-error-800) 20%)
-            active: color-mix(in oklab, var(--{prefix}color-error-600), var(--{prefix}color-error-800) 40%)
+            $base:  var(--{prefix}color-danger-600)
+            hover:  color-mix(in oklab, var(--{prefix}color-danger-600), var(--{prefix}color-danger-800) 20%)
+            active: color-mix(in oklab, var(--{prefix}color-danger-600), var(--{prefix}color-danger-800) 40%)
           dark:
-            $base:  var(--{prefix}color-error-500)
-            hover:  color-mix(in oklab, var(--{prefix}color-error-500), var(--{prefix}color-error-300) 20%)
-            active: color-mix(in oklab, var(--{prefix}color-error-500), var(--{prefix}color-error-300) 40%)
+            $base:  var(--{prefix}color-danger-500)
+            hover:  color-mix(in oklab, var(--{prefix}color-danger-500), var(--{prefix}color-danger-300) 20%)
+            active: color-mix(in oklab, var(--{prefix}color-danger-500), var(--{prefix}color-danger-300) 40%)
 
-    border:
+    border: &semantic-color-border
       ui:
         minimal:
           light:
@@ -433,18 +433,18 @@ semantic:
 
       danger:
         light:
-          $base:     var(--{prefix}color-error-600)
-          focus:     var(--{prefix}color-error-600)
-          select:    var(--{prefix}color-error-400)
-          highlight: var(--{prefix}color-error-600)
+          $base:     var(--{prefix}color-danger-600)
+          focus:     var(--{prefix}color-danger-600)
+          select:    var(--{prefix}color-danger-400)
+          highlight: var(--{prefix}color-danger-600)
         dark:
-          $base:     var(--{prefix}color-error-500)
-          focus:     var(--{prefix}color-error-500)
-          select:    var(--{prefix}color-error-700)
-          highlight: var(--{prefix}color-error-500)
+          $base:     var(--{prefix}color-danger-500)
+          focus:     var(--{prefix}color-danger-500)
+          select:    var(--{prefix}color-danger-700)
+          highlight: var(--{prefix}color-danger-500)
 
-    # ring:
-    #   *semantic-border
+    ring:
+      *semantic-color-border
 
     text:
       primary:
@@ -476,5 +476,5 @@ semantic:
         dark:  var(--{prefix}color-warning-500)
 
       danger:
-        light: var(--{prefix}color-error-600)
-        dark:  var(--{prefix}color-error-500)
+        light: var(--{prefix}color-danger-600)
+        dark:  var(--{prefix}color-danger-500)
