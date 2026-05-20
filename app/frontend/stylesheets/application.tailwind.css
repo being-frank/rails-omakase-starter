@@ -6,9 +6,7 @@
 @source '../../frontend/**/*.md.erb';
 @source '../../frontend/components/**/*.rb';
 
-@custom-variant dark (&:where(.dark, .dark *));
-
-@import './color-theme.tailwind.css';
+@import './kitsune-ds.tailwind.css';
 
 @theme {
   --font-sans: 'Open Sans', sans-serif;
