@@ -5,6 +5,7 @@
 @source '../../frontend/**/*.html.erb';
 @source '../../frontend/**/*.md.erb';
 @source '../../frontend/components/**/*.rb';
+@source '../../../../engines/kitsune_ds/app/views/kitsune_ds/pages/**/*.html.erb';
 
 @import './kitsune-ds.tailwind.css';
 
