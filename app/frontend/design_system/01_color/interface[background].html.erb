@@ -1,0 +1,36 @@
+---
+priority: 1
+---
+<h2>Background</h2>
+
+<%
+  property = :bg
+  variant  = :ui
+  tokens   = KitsuneDS::DesignTokens.new.semantic.select do |token|
+    token.is_bg? && token.variant == variant.to_s
+  end
+%>
+
+<%= render 'kitsune_ds/pages/kdsdocs_styles',
+  styles_for: %i[states tokens variants]
+%>
+
+<%= render 'kitsune_ds/pages/colors/variants',
+  title:  'Variants',
+  tokens: tokens
+%>
+
+<%= render 'kitsune_ds/pages/colors/states',
+  title:  'Interaction States',
+  tokens: tokens
+%>
+
+<%= render 'kitsune_ds/pages/tokens_table',
+  group_by: :scale,
+  title:    'Tokens',
+  subtitle: :scale,
+  group:    :semantic,
+  category: :color,
+  property: property,
+  variant:  variant
+%>

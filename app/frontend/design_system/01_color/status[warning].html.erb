@@ -1,0 +1,49 @@
+---
+priority: 3
+---
+
+<%
+  variant = :warning
+  tokens  = KitsuneDS::DesignTokens.new.semantic.select do |token|
+    (token.is_bg? || token.is_border?) && token.variant == variant.to_s
+  end
+%>
+
+<%= render 'kitsune_ds/pages/kdsdocs_styles',
+  styles_for: %i[states tokens variants]
+%>
+
+<%= render 'kitsune_ds/pages/colors/variants',
+  title:  'Variants',
+  tokens: tokens.select { |token| token.is_bg? }
+%>
+
+<%= render 'kitsune_ds/pages/colors/states',
+  title:  'Background',
+  tokens: tokens.select { |token| token.is_bg? }
+%>
+
+<%= render 'kitsune_ds/pages/colors/states',
+  title:  'Border',
+  tokens: tokens.select { |token| token.is_border? }
+%>
+
+<%= render 'kitsune_ds/pages/tokens_table',
+  group_by: :scale,
+  title:    'Tokens - Background',
+  subtitle: :scale,
+  group:    :semantic,
+  category: :color,
+  property: :bg,
+  variant:  variant
+%>
+
+<%= render 'kitsune_ds/pages/tokens_table',
+  group_by: :scale,
+  title:    'Tokens - Border',
+  subtitle: :scale,
+  group:    :semantic,
+  category: :color,
+  property: :border,
+  variant:  variant
+%>
