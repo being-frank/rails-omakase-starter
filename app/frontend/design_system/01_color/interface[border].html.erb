@@ -4,9 +4,8 @@ priority: 2
 <h2>Border</h2>
 
 <%
-  property = :border
-  variant  = :ui
-  tokens   = KitsuneDS::DesignTokens.new.semantic.select do |token|
+  variant = :ui
+  tokens  = KitsuneDS::DesignTokens.new.semantic.select do |token|
     token.is_border? && token.variant == variant.to_s
   end
 %>
@@ -31,6 +30,6 @@ priority: 2
   subtitle: :scale,
   group:    :semantic,
   category: :color,
-  property: property,
+  property: :border,
   variant:  variant
 %>

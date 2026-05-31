@@ -4,9 +4,8 @@ priority: 1
 <h2>Background</h2>
 
 <%
-  property = :bg
-  variant  = :ui
-  tokens   = KitsuneDS::DesignTokens.new.semantic.select do |token|
+  variant = :ui
+  tokens  = KitsuneDS::DesignTokens.new.semantic.select do |token|
     token.is_bg? && token.variant == variant.to_s
   end
 %>
@@ -15,10 +14,12 @@ priority: 1
   styles_for: %i[states tokens variants]
 %>
 
-<%= render 'kitsune_ds/pages/colors/variants',
+<%#= render 'kitsune_ds/pages/colors/variants',
   title:  'Variants',
   tokens: tokens
 %>
+
+<%= lookbook_render :variants, title: 'Variants', tokens: tokens %>
 
 <%= render 'kitsune_ds/pages/colors/states',
   title:  'Interaction States',
@@ -31,6 +32,6 @@ priority: 1
   subtitle: :scale,
   group:    :semantic,
   category: :color,
-  property: property,
+  property: :bg,
   variant:  variant
 %>
