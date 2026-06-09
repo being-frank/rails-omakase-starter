@@ -3,14 +3,12 @@ priority: 1
 ---
 <h2>Success</h2>
 
-<%= render 'kitsune_ds/pages/kdsdocs_styles', styles_for: %i[states tokens variants] %>
-
-<%= render_design_tokens(
+<%#= render_design_tokens(
   title:    'Variants',
   set:      :semantic,
   category: :color,
   property: :bg,
-  variant:  :success,
+  role:     :success,
   display:  :variants
 ) %>
 
@@ -19,16 +17,7 @@ priority: 1
   set:      :semantic,
   category: :color,
   property: :bg,
-  variant:  :success,
-  display:  :states
-) %>
-
-<%= render_design_tokens(
-  title:    nil,
-  set:      :semantic,
-  category: :color,
-  property: :border,
-  variant:  :success,
+  role:     :success,
   display:  :states
 ) %>
 
@@ -37,17 +26,6 @@ priority: 1
   set:      :semantic,
   category: :color,
   property: :bg,
-  variant:  :success,
-  group_by: :scale,
-  display:  :list
-) %>
-
-<%= render_design_tokens(
-  title:    nil,
-  set:      :semantic,
-  category: :color,
-  property: :border,
-  variant:  :success,
-  group_by: :scale,
+  role:     :success,
   display:  :list
 ) %>

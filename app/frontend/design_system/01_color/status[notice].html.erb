@@ -3,51 +3,11 @@ priority: 2
 ---
 <h2>Notice</h2>
 
-<%= render 'kitsune_ds/pages/kdsdocs_styles', styles_for: %i[states tokens variants] %>
-
-<%= render_design_tokens(
-  title:    'Variants',
-  set:      :semantic,
-  category: :color,
-  property: :bg,
-  variant:  :notice,
-  display:  :variants
-) %>
-
-<%= render_design_tokens(
-  title:    'Interaction States',
-  set:      :semantic,
-  category: :color,
-  property: :bg,
-  variant:  :notice,
-  display:  :states
-) %>
-
-<%= render_design_tokens(
-  title:    nil,
-  set:      :semantic,
-  category: :color,
-  property: :border,
-  variant:  :notice,
-  display:  :states
-) %>
-
 <%= render_design_tokens(
   title:    'Tokens',
   set:      :semantic,
   category: :color,
   property: :bg,
-  variant:  :notice,
-  group_by: :scale,
-  display:  :list
-) %>
-
-<%= render_design_tokens(
-  title:    nil,
-  set:      :semantic,
-  category: :color,
-  property: :border,
-  variant:  :notice,
-  group_by: :scale,
+  role:     :notice,
   display:  :list
 ) %>

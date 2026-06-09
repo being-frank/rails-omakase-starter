@@ -3,51 +3,11 @@ priority: 4
 ---
 <h2>Danger</h2>
 
-<%= render 'kitsune_ds/pages/kdsdocs_styles', styles_for: %i[states tokens variants] %>
-
-<%= render_design_tokens(
-  title:    'Variants',
-  set:      :semantic,
-  category: :color,
-  property: :bg,
-  variant:  :danger,
-  display:  :variants
-) %>
-
-<%= render_design_tokens(
-  title:    'Interaction States',
-  set:      :semantic,
-  category: :color,
-  property: :bg,
-  variant:  :danger,
-  display:  :states
-) %>
-
-<%= render_design_tokens(
-  title:    nil,
-  set:      :semantic,
-  category: :color,
-  property: :border,
-  variant:  :danger,
-  display:  :states
-) %>
-
 <%= render_design_tokens(
   title:    'Tokens',
   set:      :semantic,
   category: :color,
   property: :bg,
-  variant:  :danger,
-  group_by: :scale,
-  display:  :list
-) %>
-
-<%= render_design_tokens(
-  title:    nil,
-  set:      :semantic,
-  category: :color,
-  property: :border,
-  variant:  :danger,
-  group_by: :scale,
+  role:     :danger,
   display:  :list
 ) %>

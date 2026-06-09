@@ -1,64 +1,46 @@
-formats:
-  token:
-    DEFAULT: prefix.set.component.category.property.role.emphasis.state.mode
+schema:
+  system: kds
 
-    primitive:
-      DEFAULT: category.role.emphasis
-      spacing: category.emphasis
-
-    semantic:
-      DEFAULT: prefix.category.property.role.emphasis.state.mode
-
-  css_variable:
-    primitive:
-      DEFAULT: category.role.emphasis
-
-    semantic:
-      DEFAULT: prefix.category.property.role.emphasis.state
-
-  css_class:
-    DEFAULT: property.role.emphasis.state
-
-
-definitions:
-  prefix: kds
-
-  modes:
+  themes:
     - light
     - dark
 
-  emphasis:
-    - subtlest
-    - subtler
-    - subtle
-    - bold
-    - bolder
-    - boldest
+  parse:
+    primitive:
+      BASE: category.role.scale
+      spacing: scale
 
-  roles:
-    - neutral
-    - brand
-    - success
-    - information
-    - warning
-    - alert
-    - discovery
-    - accent
-    - inverse
-    - input
+    semantic:
+      BASE: category.property.role.emphasis.state.theme
+      color:
+        text: category.property.role.emphasis.theme
 
-  states:
-    - default
-    - hovered
-    - pressed
-    - selected
-    - focused
-    - disabled
+  output:
+    token:
+      BASE: system.set.component.category.property.role.variant.emphasis.scale.state.theme
 
+      primitive:
+        BASE: category.role.scale
+        spacing: category.scale
+
+      semantic:
+        BASE: system.category.property.role.variant.emphasis.scale.state.theme
+
+    css_variable:
+      primitive:
+        BASE: category.role.scale
+
+      semantic:
+        BASE: property.role.variant.emphasis.scale.state
+
+    css_class:
+      BASE: property.role.variant.emphasis.scale.state
+
+# ----
 
 primitive:
   color:
-    ui:
+    neutral:
       0:   var(--color-white)
       50:  var(--color-gray-50)
       100: var(--color-gray-100)
@@ -71,19 +53,6 @@ primitive:
       800: var(--color-gray-800)
       900: var(--color-gray-900)
       950: var(--color-gray-950)
-
-    ui-accent:
-      50:  var(--color-blue-50)
-      100: var(--color-blue-100)
-      200: var(--color-blue-200)
-      300: var(--color-blue-300)
-      400: var(--color-blue-400)
-      500: var(--color-blue-500)
-      600: var(--color-blue-600)
-      700: var(--color-blue-700)
-      800: var(--color-blue-800)
-      900: var(--color-blue-900)
-      950: var(--color-blue-950)
 
     success:
       50:  var(--color-emerald-50)
@@ -180,36 +149,94 @@ primitive:
     112: 7rem
     128: 8rem
 
+# ----
 
 semantic:
   color:
-    text:
-      default:
-        light: var(--color-ui-900)
-        dark:  var(--color-ui-100)
-
-      subtle:
-        light: var(--color-ui-600)
-        dark:  var(--color-ui-400)
-
-      subtler:
-        light: var(--color-ui-400)
-        dark:  var(--color-ui-600)
-
-      subtlest:
-        light: var(--color-ui-300)
-        dark:  var(--color-ui-700)
-
-      disabled:
-        light: --alpha(var(--color-ui-400) / 40%)
-        dark:  --alpha(var(--color-ui-600) / 40%)
-
-      selected:
-        light: var(--color-accent-600)
-        dark:  var(--color-accent-500)
+    bg:
+      surface:
+        primary:
+          BASE:
+            light: var(--color-neutral-0)
+            dark:  var(--color-neutral-950)
+          hovered:
+            light: color-mix(in oklch, var(--color-neutral-0),   var(--color-neutral-200) 20%)
+            dark:  color-mix(in oklch, var(--color-neutral-950), var(--color-neutral-800) 20%)
+          pressed:
+            light: color-mix(in oklch, var(--color-neutral-0),   var(--color-neutral-200) 40%)
+            dark:  color-mix(in oklch, var(--color-neutral-950), var(--color-neutral-800) 40%)
+          selected:
+            light: color-mix(in oklch, var(--color-neutral-0),   var(--color-accent-600) 40%)
+            dark:  color-mix(in oklch, var(--color-neutral-950), var(--color-accent-500) 40%)
+          highlighted:
+            light: var(--color-accent-600)
+            dark:  var(--color-accent-500)
 
       success:
-        DEFAULT:
+        subtlest:
+          BASE:
+            light: var(--color-success-50)
+            dark:  var(--color-success-950)
+          hovered:
+            light: color-mix(in oklch, var(--color-success-50),  var(--color-success-200) 20%)
+            dark:  color-mix(in oklch, var(--color-success-950), var(--color-success-800) 20%)
+          pressed:
+            light: color-mix(in oklch, var(--color-success-50),  var(--color-success-200) 40%)
+            dark:  color-mix(in oklch, var(--color-success-950), var(--color-success-800) 40%)
+        subtler:
+          BASE:
+            light: var(--color-success-200)
+            dark:  var(--color-success-800)
+          hovered:
+            light: color-mix(in oklch, var(--color-success-200), var(--color-success-400) 20%)
+            dark:  color-mix(in oklch, var(--color-success-800), var(--color-success-600) 20%)
+          pressed:
+            light: color-mix(in oklch, var(--color-success-200), var(--color-success-400) 40%)
+            dark:  color-mix(in oklch, var(--color-success-800), var(--color-success-600) 40%)
+        bold:
+          BASE:
+            light: var(--color-success-600)
+            dark:  var(--color-success-500)
+          hovered:
+            light: color-mix(in oklch, var(--color-success-600), var(--color-success-800) 20%)
+            dark:  color-mix(in oklch, var(--color-success-500), var(--color-success-300) 20%)
+          pressed:
+            light: color-mix(in oklch, var(--color-success-600), var(--color-success-800) 40%)
+            dark:  color-mix(in oklch, var(--color-success-500), var(--color-success-300) 40%)
+
+    text:
+      default:
+        BASE:
+          light: var(--color-neutral-900)
+          dark:  var(--color-neutral-100)
+
+      subtle:
+        BASE:
+          light: var(--color-neutral-600)
+          dark:  var(--color-neutral-400)
+
+      subtler:
+        BASE:
+          light: var(--color-neutral-400)
+          dark:  var(--color-neutral-600)
+
+      subtlest:
+        BASE:
+          light: var(--color-neutral-300)
+          dark:  var(--color-neutral-700)
+
+      disabled:
+        BASE:
+          light: --alpha(var(--color-neutral-400) / 40%)
+          dark:  --alpha(var(--color-neutral-600) / 40%)
+
+      selected:
+        BASE:
+          light: var(--color-accent-600)
+          dark:  var(--color-accent-500)
+
+      success:
+        BASE:
           light: var(--color-success-600)
           dark:  var(--color-success-500)
 
@@ -218,7 +245,7 @@ semantic:
           dark:  var(--color-success-400)
 
       information:
-        DEFAULT:
+        BASE:
           light: var(--color-information-600)
           dark:  var(--color-information-500)
 
@@ -227,7 +254,7 @@ semantic:
           dark:  var(--color-information-400)
 
       warning:
-        DEFAULT:
+        BASE:
           light: var(--color-warning-600)
           dark:  var(--color-warning-500)
 
@@ -236,7 +263,7 @@ semantic:
           dark:  var(--color-warning-400)
 
       alert:
-        DEFAULT:
+        BASE:
           light: var(--color-alert-600)
           dark:  var(--color-alert-500)
 
@@ -245,7 +272,7 @@ semantic:
           dark:  var(--color-alert-400)
 
       discovery:
-        DEFAULT:
+        BASE:
           light: var(--color-discovery-600)
           dark:  var(--color-discovery-500)
 
@@ -254,5 +281,6 @@ semantic:
           dark:  var(--color-discovery-400)
 
       inverse:
-        light: var(--color-ui-100)
-        dark:  var(--color-ui-900)
+        BASE:
+          light: var(--color-neutral-100)
+          dark:  var(--color-neutral-900)
