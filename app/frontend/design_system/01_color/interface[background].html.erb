@@ -3,7 +3,7 @@ priority: 1
 ---
 <h2>Background</h2>
 
-<%#= render_design_tokens(
+<%= render_design_tokens(
   title:    'Variants',
   set:      :semantic,
   category: :color,
@@ -23,6 +23,7 @@ priority: 1
   title:    'Tokens',
   set:      :semantic,
   category: :color,
-  property: :surface,
-  display:  :list
+  property: :bg,
+  display:  :list,
+  group_by: :emphasis
 ) %>

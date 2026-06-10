@@ -5,36 +5,36 @@ schema:
     - light
     - dark
 
-  parse:
+  definitions:
     primitive:
-      BASE: category.role.scale
+      $base: category.role.scale
       spacing: scale
 
     semantic:
-      BASE: category.property.role.emphasis.state.theme
+      $base: category.property.role.emphasis.state.theme
       color:
         text: category.property.role.emphasis.theme
 
-  output:
+  formats:
     token:
-      BASE: system.set.component.category.property.role.variant.emphasis.scale.state.theme
+      $base: system.set.component.category.property.role.variant.emphasis.scale.state.theme
 
       primitive:
-        BASE: category.role.scale
+        $base: category.role.scale
         spacing: category.scale
 
       semantic:
-        BASE: system.category.property.role.variant.emphasis.scale.state.theme
+        $base: system.category.property.role.variant.emphasis.scale.state.theme
 
     css_variable:
       primitive:
-        BASE: category.role.scale
+        $base: category.role.scale
 
       semantic:
-        BASE: property.role.variant.emphasis.scale.state
+        $base: property.role.variant.emphasis.scale.state
 
     css_class:
-      BASE: property.role.variant.emphasis.scale.state
+      $base: property.role.variant.emphasis.scale.state
 
 # ----
 
@@ -156,7 +156,7 @@ semantic:
     bg:
       surface:
         primary:
-          BASE:
+          $base:
             light: var(--color-neutral-0)
             dark:  var(--color-neutral-950)
           hovered:
@@ -174,7 +174,7 @@ semantic:
 
       success:
         subtlest:
-          BASE:
+          $base:
             light: var(--color-success-50)
             dark:  var(--color-success-950)
           hovered:
@@ -184,7 +184,7 @@ semantic:
             light: color-mix(in oklch, var(--color-success-50),  var(--color-success-200) 40%)
             dark:  color-mix(in oklch, var(--color-success-950), var(--color-success-800) 40%)
         subtler:
-          BASE:
+          $base:
             light: var(--color-success-200)
             dark:  var(--color-success-800)
           hovered:
@@ -194,7 +194,7 @@ semantic:
             light: color-mix(in oklch, var(--color-success-200), var(--color-success-400) 40%)
             dark:  color-mix(in oklch, var(--color-success-800), var(--color-success-600) 40%)
         bold:
-          BASE:
+          $base:
             light: var(--color-success-600)
             dark:  var(--color-success-500)
           hovered:
@@ -206,37 +206,37 @@ semantic:
 
     text:
       default:
-        BASE:
+        $base:
           light: var(--color-neutral-900)
           dark:  var(--color-neutral-100)
 
       subtle:
-        BASE:
+        $base:
           light: var(--color-neutral-600)
           dark:  var(--color-neutral-400)
 
       subtler:
-        BASE:
+        $base:
           light: var(--color-neutral-400)
           dark:  var(--color-neutral-600)
 
       subtlest:
-        BASE:
+        $base:
           light: var(--color-neutral-300)
           dark:  var(--color-neutral-700)
 
       disabled:
-        BASE:
+        $base:
           light: --alpha(var(--color-neutral-400) / 40%)
           dark:  --alpha(var(--color-neutral-600) / 40%)
 
       selected:
-        BASE:
+        $base:
           light: var(--color-accent-600)
           dark:  var(--color-accent-500)
 
       success:
-        BASE:
+        $base:
           light: var(--color-success-600)
           dark:  var(--color-success-500)
 
@@ -245,7 +245,7 @@ semantic:
           dark:  var(--color-success-400)
 
       information:
-        BASE:
+        $base:
           light: var(--color-information-600)
           dark:  var(--color-information-500)
 
@@ -254,7 +254,7 @@ semantic:
           dark:  var(--color-information-400)
 
       warning:
-        BASE:
+        $base:
           light: var(--color-warning-600)
           dark:  var(--color-warning-500)
 
@@ -263,7 +263,7 @@ semantic:
           dark:  var(--color-warning-400)
 
       alert:
-        BASE:
+        $base:
           light: var(--color-alert-600)
           dark:  var(--color-alert-500)
 
@@ -272,7 +272,7 @@ semantic:
           dark:  var(--color-alert-400)
 
       discovery:
-        BASE:
+        $base:
           light: var(--color-discovery-600)
           dark:  var(--color-discovery-500)
 
@@ -281,6 +281,6 @@ semantic:
           dark:  var(--color-discovery-400)
 
       inverse:
-        BASE:
+        $base:
           light: var(--color-neutral-100)
           dark:  var(--color-neutral-900)
