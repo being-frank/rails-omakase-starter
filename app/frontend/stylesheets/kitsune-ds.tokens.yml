@@ -8,6 +8,8 @@ schema:
     - light
     - dark
 
+  taxonomy: system.set.component.category.property.role.variant.emphasis.scale.state.mode
+
   definitions:
     primitive:
       $default: category.role.scale
@@ -16,6 +18,7 @@ schema:
     semantic:
       $default: category.property.role.emphasis.state.mode
       color:
+        border: category.property.role.emphasis.state.mode
         text: category.property.role.emphasis.mode
 
   formats:
@@ -272,7 +275,7 @@ semantic:
             dark:  var(--color-ui-accent-500)
 
       success:
-        subtlest:
+        minimal:
           $base:
             light: var(--color-success-50)
             dark:  var(--color-success-950)
@@ -282,7 +285,8 @@ semantic:
           pressed:
             light: color-mix(in display-p3, var(--color-success-50),  var(--color-success-200) 40%)
             dark:  color-mix(in display-p3, var(--color-success-950), var(--color-success-800) 40%)
-        subtler:
+
+        muted:
           $base:
             light: var(--color-success-200)
             dark:  var(--color-success-800)
@@ -292,6 +296,7 @@ semantic:
           pressed:
             light: color-mix(in display-p3, var(--color-success-200), var(--color-success-400) 40%)
             dark:  color-mix(in display-p3, var(--color-success-800), var(--color-success-600) 40%)
+
         bold:
           $base:
             light: var(--color-success-600)
@@ -389,6 +394,36 @@ semantic:
           selected-bold:
             light: var(--color-ui-accent-600)
             dark:  var(--color-ui-accent-500)
+
+      success:
+        $base:
+          $base:
+            light: var(--color-success-600)
+            dark:  var(--color-success-500)
+          focused:
+            light: var(--color-success-600)
+            dark:  var(--color-success-500)
+          selected:
+            light: var(--color-success-400)
+            dark:  var(--color-success-700)
+          selected-bold:
+            light: var(--color-success-600)
+            dark:  var(--color-success-500)
+
+      notice:
+        $base:
+          $base:
+            light: var(--color-notice-600)
+            dark:  var(--color-notice-500)
+          focused:
+            light: var(--color-notice-600)
+            dark:  var(--color-notice-500)
+          selected:
+            light: var(--color-notice-400)
+            dark:  var(--color-notice-700)
+          selected-bold:
+            light: var(--color-notice-600)
+            dark:  var(--color-notice-500)
 
     text:
       default:

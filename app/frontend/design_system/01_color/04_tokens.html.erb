@@ -4,9 +4,9 @@
 <% KitsuneDS::DesignTokens.new.semantic.select { |t|
   t.mode != 'dark'
 }.group_by(&:property).each do |role, role_tokens|
-  role_tokens.group_by(&:emphasis).each do |emphasis, tokens|
+  role_tokens.group_by { |t| t.role }.each do |emphasis, tokens|
 %>
-  <h3 class='-font-mono'><%= [role, emphasis].compact.join(' - ') %></h3>
+  <h3 class='-font-mono'><%= [role, emphasis].compact_blank.join('.') %></h3>
   <table class='kdsdocs-table'>
     <thead>
       <tr>
@@ -20,7 +20,7 @@
         <th>variant</th>
         <th>emphasis</th>
         <th class='-right'>scale</th>
-        <th class='-right' style='width:64px'>state</th>
+        <th class='-right'>state</th>
       </tr>
     </thead>
     <tbody>
