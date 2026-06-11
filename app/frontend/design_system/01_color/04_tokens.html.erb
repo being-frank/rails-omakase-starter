@@ -2,41 +2,41 @@
 <%= render 'kitsune_ds/pages/kdsdocs_styles', styles_for: %i[states tokens variants] %>
 
 <% KitsuneDS::DesignTokens.new.semantic.select { |t|
-  t.theme != 'dark'
+  t.mode != 'dark'
 }.group_by(&:property).each do |role, role_tokens|
   role_tokens.group_by(&:emphasis).each do |emphasis, tokens|
 %>
-  <h3><%= role %> - <%= emphasis %></h3>
+  <h3 class='-font-mono'><%= [role, emphasis].compact.join(' - ') %></h3>
   <table class='kdsdocs-table'>
     <thead>
       <tr>
-        <th class='-center'>type</th>
-        <th class='-center'>set</th>
-        <th class='-center'>system</th>
-        <th class='-center'>component</th>
-        <th class='-center'>category</th>
-        <th class='-center'>property</th>
-        <th class='-center'>role</th>
-        <th class='-center'>variant</th>
-        <th class='-center'>emphasis</th>
-        <th class='-center'>scale</th>
-        <th class='-center'>state</th>
+        <th>type</th>
+        <th>set</th>
+        <th>system</th>
+        <th>component</th>
+        <th>category</th>
+        <th>property</th>
+        <th>role</th>
+        <th>variant</th>
+        <th>emphasis</th>
+        <th class='-right'>scale</th>
+        <th class='-right' style='width:64px'>state</th>
       </tr>
     </thead>
     <tbody>
       <% tokens.each do |token| %>
         <tr>
-          <td class='-center'><tt style='font-size:10px'><%= token.type %></tt></td>
-          <td class='-center'><tt style='font-size:10px'><%= token.set %></tt></td>
-          <td class='-center'><tt style='font-size:10px'><%= token.system %></tt></td>
-          <td class='-center'><tt style='font-size:10px'><%= token.component %></tt></td>
-          <td class='-center'><tt style='font-size:10px'><%= token.category %></tt></td>
-          <td class='-center'><tt style='font-size:10px'><%= token.property %></tt></td>
-          <td class='-center'><tt style='font-size:10px'><%= token.role %></tt></td>
-          <td class='-center'><tt style='font-size:10px'><%= token.variant %></tt></td>
-          <td class='-center'><tt style='font-size:10px'><%= token.emphasis %></tt></td>
-          <td class='-center'><tt style='font-size:10px'><%= token.scale %></tt></td>
-          <td class='-center'><tt style='font-size:10px'><%= token.state %></tt></td>
+          <td><tt style='font-size:10px'><%= token.type %></tt></td>
+          <td><tt style='font-size:10px'><%= token.set %></tt></td>
+          <td><tt style='font-size:10px'><%= token.system %></tt></td>
+          <td><tt style='font-size:10px'><%= token.component %></tt></td>
+          <td><tt style='font-size:10px'><%= token.category %></tt></td>
+          <td><tt style='font-size:10px'><%= token.property %></tt></td>
+          <td><tt style='font-size:10px'><%= token.role %></tt></td>
+          <td><tt style='font-size:10px'><%= token.variant %></tt></td>
+          <td><tt style='font-size:10px'><%= token.emphasis %></tt></td>
+          <td class='-right'><tt style='font-size:10px'><%= token.scale %></tt></td>
+          <td class='-right'><tt style='font-size:10px'><%= token.state %></tt></td>
         </tr>
       <% end %>
     </tbody>
