@@ -98,7 +98,7 @@ primitive:
       900: var(--color-emerald-900)
       950: var(--color-emerald-950)
 
-    information:
+    notice:
       50:  var(--color-sky-50)
       100: var(--color-sky-100)
       200: var(--color-sky-200)
@@ -307,6 +307,74 @@ semantic:
           pressed:
             light: color-mix(in display-p3, var(--color-success-600), var(--color-success-800) 40%)
             dark:  color-mix(in display-p3, var(--color-success-500), var(--color-success-300) 40%)
+
+      notice:
+        minimal:
+          $base:
+            light: var(--color-notice-50)
+            dark:  var(--color-notice-950)
+          hovered:
+            light: color-mix(in display-p3, var(--color-notice-50),  var(--color-notice-200) 20%)
+            dark:  color-mix(in display-p3, var(--color-notice-950), var(--color-notice-800) 20%)
+          pressed:
+            light: color-mix(in display-p3, var(--color-notice-50),  var(--color-notice-200) 40%)
+            dark:  color-mix(in display-p3, var(--color-notice-950), var(--color-notice-800) 40%)
+
+        muted:
+          $base:
+            light: var(--color-notice-200)
+            dark:  var(--color-notice-800)
+          hovered:
+            light: color-mix(in display-p3, var(--color-notice-200), var(--color-notice-400) 20%)
+            dark:  color-mix(in display-p3, var(--color-notice-800), var(--color-notice-600) 20%)
+          pressed:
+            light: color-mix(in display-p3, var(--color-notice-200), var(--color-notice-400) 40%)
+            dark:  color-mix(in display-p3, var(--color-notice-800), var(--color-notice-600) 40%)
+
+        bold:
+          $base:
+            light: var(--color-notice-600)
+            dark:  var(--color-notice-500)
+          hovered:
+            light: color-mix(in display-p3, var(--color-notice-600), var(--color-notice-800) 20%)
+            dark:  color-mix(in display-p3, var(--color-notice-500), var(--color-notice-300) 20%)
+          pressed:
+            light: color-mix(in display-p3, var(--color-notice-600), var(--color-notice-800) 40%)
+            dark:  color-mix(in display-p3, var(--color-notice-500), var(--color-notice-300) 40%)
+
+      warning:
+        minimal:
+          $base:
+            light: var(--color-warning-50)
+            dark:  var(--color-warning-950)
+          hovered:
+            light: color-mix(in display-p3, var(--color-warning-50),  var(--color-warning-200) 20%)
+            dark:  color-mix(in display-p3, var(--color-warning-950), var(--color-warning-800) 20%)
+          pressed:
+            light: color-mix(in display-p3, var(--color-warning-50),  var(--color-warning-200) 40%)
+            dark:  color-mix(in display-p3, var(--color-warning-950), var(--color-warning-800) 40%)
+
+        muted:
+          $base:
+            light: var(--color-warning-200)
+            dark:  var(--color-warning-800)
+          hovered:
+            light: color-mix(in display-p3, var(--color-warning-200), var(--color-warning-400) 20%)
+            dark:  color-mix(in display-p3, var(--color-warning-800), var(--color-warning-600) 20%)
+          pressed:
+            light: color-mix(in display-p3, var(--color-warning-200), var(--color-warning-400) 40%)
+            dark:  color-mix(in display-p3, var(--color-warning-800), var(--color-warning-600) 40%)
+
+        bold:
+          $base:
+            light: var(--color-warning-600)
+            dark:  var(--color-warning-500)
+          hovered:
+            light: color-mix(in display-p3, var(--color-warning-600), var(--color-warning-800) 20%)
+            dark:  color-mix(in display-p3, var(--color-warning-500), var(--color-warning-300) 20%)
+          pressed:
+            light: color-mix(in display-p3, var(--color-warning-600), var(--color-warning-800) 40%)
+            dark:  color-mix(in display-p3, var(--color-warning-500), var(--color-warning-300) 40%)
 
     border:
       ui:
