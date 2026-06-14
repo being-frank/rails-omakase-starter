@@ -13,13 +13,14 @@ schema:
   definitions:
     primitive:
       $default: category.role.scale
-      spacing: scale
+      spacing:  scale
 
     semantic:
       $default: category.property.role.emphasis.state.mode
       color:
-        border: category.property.role.emphasis.state.mode
-        text: category.property.role.emphasis.mode
+        bg:     category.property.role.variant.emphasis.state.mode
+        border: category.property.role.variant.emphasis.state.mode
+        text:   category.property.role.variant.emphasis.mode
 
   formats:
     token:
@@ -27,7 +28,7 @@ schema:
 
       primitive:
         $default: category.role.scale
-        spacing: category.scale
+        spacing:  category.scale
 
       semantic:
         $default: system.category.property.role.variant.emphasis.scale.state.mode
@@ -45,6 +46,8 @@ schema:
 
 primitive:
   color:
+    space: srgb
+
     ui:
       0:   var(--color-white)
       50:  var(--color-gray-50)
@@ -86,30 +89,30 @@ primitive:
       950: var(--color-accent-950)
 
     success:
-      50:  var(--color-emerald-50)
-      100: var(--color-emerald-100)
-      200: var(--color-emerald-200)
-      300: var(--color-emerald-300)
-      400: var(--color-emerald-400)
-      500: var(--color-emerald-500)
-      600: var(--color-emerald-600)
-      700: var(--color-emerald-700)
-      800: var(--color-emerald-800)
-      900: var(--color-emerald-900)
-      950: var(--color-emerald-950)
+      50:  var(--color-green-50)
+      100: var(--color-green-100)
+      200: var(--color-green-200)
+      300: var(--color-green-300)
+      400: var(--color-green-400)
+      500: var(--color-green-500)
+      600: var(--color-green-600)
+      700: var(--color-green-700)
+      800: var(--color-green-800)
+      900: var(--color-green-900)
+      950: var(--color-green-950)
 
     notice:
-      50:  var(--color-sky-50)
-      100: var(--color-sky-100)
-      200: var(--color-sky-200)
-      300: var(--color-sky-300)
-      400: var(--color-sky-400)
-      500: var(--color-sky-500)
-      600: var(--color-sky-600)
-      700: var(--color-sky-700)
-      800: var(--color-sky-800)
-      900: var(--color-sky-900)
-      950: var(--color-sky-950)
+      50:  var(--color-blue-50)
+      100: var(--color-blue-100)
+      200: var(--color-blue-200)
+      300: var(--color-blue-300)
+      400: var(--color-blue-400)
+      500: var(--color-blue-500)
+      600: var(--color-blue-600)
+      700: var(--color-blue-700)
+      800: var(--color-blue-800)
+      900: var(--color-blue-900)
+      950: var(--color-blue-950)
 
     warning:
       50:  var(--color-amber-50)
@@ -125,30 +128,30 @@ primitive:
       950: var(--color-amber-950)
 
     alert:
-      50:  var(--color-rose-50)
-      100: var(--color-rose-100)
-      200: var(--color-rose-200)
-      300: var(--color-rose-300)
-      400: var(--color-rose-400)
-      500: var(--color-rose-500)
-      600: var(--color-rose-600)
-      700: var(--color-rose-700)
-      800: var(--color-rose-800)
-      900: var(--color-rose-900)
-      950: var(--color-rose-950)
+      50:  var(--color-red-50)
+      100: var(--color-red-100)
+      200: var(--color-red-200)
+      300: var(--color-red-300)
+      400: var(--color-red-400)
+      500: var(--color-red-500)
+      600: var(--color-red-600)
+      700: var(--color-red-700)
+      800: var(--color-red-800)
+      900: var(--color-red-900)
+      950: var(--color-red-950)
 
     discovery:
-      50:  var(--color-fuchsia-50)
-      100: var(--color-fuchsia-100)
-      200: var(--color-fuchsia-200)
-      300: var(--color-fuchsia-300)
-      400: var(--color-fuchsia-400)
-      500: var(--color-fuchsia-500)
-      600: var(--color-fuchsia-600)
-      700: var(--color-fuchsia-700)
-      800: var(--color-fuchsia-800)
-      900: var(--color-fuchsia-900)
-      950: var(--color-fuchsia-950)
+      50:  var(--color-purple-50)
+      100: var(--color-purple-100)
+      200: var(--color-purple-200)
+      300: var(--color-purple-300)
+      400: var(--color-purple-400)
+      500: var(--color-purple-500)
+      600: var(--color-purple-600)
+      700: var(--color-purple-700)
+      800: var(--color-purple-800)
+      900: var(--color-purple-900)
+      950: var(--color-purple-950)
 
   spacing:
     '*': initial
@@ -172,404 +175,513 @@ semantic:
   color:
     bg:
       ui:
-        primary:
-          $base:
-            light: var(--color-ui-0)
-            dark:  var(--color-ui-950)
-          hovered:
-            light: color-mix(in display-p3, var(--color-ui-0),   var(--color-ui-200) 20%)
-            dark:  color-mix(in display-p3, var(--color-ui-950), var(--color-ui-800) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-ui-0),   var(--color-ui-200) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-950), var(--color-ui-800) 40%)
-          selected:
-            light: color-mix(in display-p3, var(--color-ui-0),   var(--color-ui-accent-600) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-950), var(--color-ui-accent-500) 40%)
-          selected-bold:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
+        $base: # no variant
+          primary:
+            $base:
+              light: var(--color-ui-0)
+              dark:  var(--color-ui-950)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-ui-0),   var(--color-ui-200) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-950), var(--color-ui-800) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-ui-0),   var(--color-ui-200) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-950), var(--color-ui-800) 40%)
+            selected:
+              light: color-mix(in var(--color-space), var(--color-ui-0),   var(--color-ui-accent-600) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-950), var(--color-ui-accent-500) 40%)
+            selected-bold:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
 
-        minimal:
-          $base:
-            light: var(--color-ui-100)
-            dark:  var(--color-ui-900)
-          hovered:
-            light: color-mix(in display-p3, var(--color-ui-100), var(--color-ui-300) 20%)
-            dark:  color-mix(in display-p3, var(--color-ui-900), var(--color-ui-700) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-ui-100), var(--color-ui-300) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-900), var(--color-ui-700) 40%)
-          selected:
-            light: color-mix(in display-p3, var(--color-ui-100), var(--color-ui-accent-600) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-900), var(--color-ui-accent-500) 40%)
-          selected-bold:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
+          muted:
+            $base:
+              light: var(--color-ui-100)
+              dark:  var(--color-ui-900)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-ui-100), var(--color-ui-300) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-900), var(--color-ui-700) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-ui-100), var(--color-ui-300) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-900), var(--color-ui-700) 40%)
+            selected:
+              light: color-mix(in var(--color-space), var(--color-ui-100), var(--color-ui-accent-600) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-900), var(--color-ui-accent-500) 40%)
+            selected-bold:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
 
-        muted:
-          $base:
-            light: var(--color-ui-200)
-            dark:  var(--color-ui-800)
-          hovered:
-            light: color-mix(in display-p3, var(--color-ui-200), var(--color-ui-400) 20%)
-            dark:  color-mix(in display-p3, var(--color-ui-800), var(--color-ui-600) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-ui-200), var(--color-ui-400) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-800), var(--color-ui-600) 40%)
-          selected:
-            light: color-mix(in display-p3, var(--color-ui-200), var(--color-ui-accent-600) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-800), var(--color-ui-accent-500) 40%)
-          selected-bold:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
+          minimal:
+            $base:
+              light: var(--color-ui-200)
+              dark:  var(--color-ui-800)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-ui-200), var(--color-ui-400) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-800), var(--color-ui-600) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-ui-200), var(--color-ui-400) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-800), var(--color-ui-600) 40%)
+            selected:
+              light: color-mix(in var(--color-space), var(--color-ui-200), var(--color-ui-accent-600) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-800), var(--color-ui-accent-500) 40%)
+            selected-bold:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
 
-        subtle:
-          $base:
-            light: var(--color-ui-300)
-            dark:  var(--color-ui-700)
-          hovered:
-            light: color-mix(in display-p3, var(--color-ui-300), var(--color-ui-500) 20%)
-            dark:  color-mix(in display-p3, var(--color-ui-700), var(--color-ui-500) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-ui-300), var(--color-ui-500) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-700), var(--color-ui-500) 40%)
-          selected:
-            light: color-mix(in display-p3, var(--color-ui-300), var(--color-ui-accent-600) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-700), var(--color-ui-accent-500) 40%)
-          selected-bold:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
+          subtle:
+            $base:
+              light: var(--color-ui-300)
+              dark:  var(--color-ui-700)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-ui-300), var(--color-ui-500) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-700), var(--color-ui-500) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-ui-300), var(--color-ui-500) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-700), var(--color-ui-500) 40%)
+            selected:
+              light: color-mix(in var(--color-space), var(--color-ui-300), var(--color-ui-accent-600) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-700), var(--color-ui-accent-500) 40%)
+            selected-bold:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
 
-        bold:
-          $base:
-            light: var(--color-ui-400)
-            dark:  var(--color-ui-600)
-          hovered:
-            light: color-mix(in display-p3, var(--color-ui-400), var(--color-ui-600) 20%)
-            dark:  color-mix(in display-p3, var(--color-ui-600), var(--color-ui-400) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-ui-400), var(--color-ui-600) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-600), var(--color-ui-400) 40%)
-          selected:
-            light: color-mix(in display-p3, var(--color-ui-400), var(--color-ui-accent-600) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-600), var(--color-ui-accent-500) 40%)
-          selected-bold:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
+          bold:
+            $base:
+              light: var(--color-ui-400)
+              dark:  var(--color-ui-600)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-ui-400), var(--color-ui-600) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-600), var(--color-ui-400) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-ui-400), var(--color-ui-600) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-600), var(--color-ui-400) 40%)
+            selected:
+              light: color-mix(in var(--color-space), var(--color-ui-400), var(--color-ui-accent-600) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-600), var(--color-ui-accent-500) 40%)
+            selected-bold:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
 
-        strong:
-          $base:
-            light: var(--color-ui-500)
-            dark:  var(--color-ui-500)
-          hovered:
-            light: color-mix(in display-p3, var(--color-ui-500), var(--color-ui-700) 20%)
-            dark:  color-mix(in display-p3, var(--color-ui-500), var(--color-ui-300) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-ui-500), var(--color-ui-700) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-500), var(--color-ui-300) 40%)
-          selected:
-            light: color-mix(in display-p3, var(--color-ui-500), var(--color-ui-accent-600) 40%)
-            dark:  color-mix(in display-p3, var(--color-ui-500), var(--color-ui-accent-500) 40%)
-          selected-bold:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
+          strong:
+            $base:
+              light: var(--color-ui-500)
+              dark:  var(--color-ui-500)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-700) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-300) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-700) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-300) 40%)
+            selected:
+              light: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-accent-600) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-accent-500) 40%)
+            selected-bold:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
 
-      success:
-        minimal:
-          $base:
-            light: var(--color-success-50)
-            dark:  var(--color-success-950)
-          hovered:
-            light: color-mix(in display-p3, var(--color-success-50),  var(--color-success-200) 20%)
-            dark:  color-mix(in display-p3, var(--color-success-950), var(--color-success-800) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-success-50),  var(--color-success-200) 40%)
-            dark:  color-mix(in display-p3, var(--color-success-950), var(--color-success-800) 40%)
+      status:
+        success:
+          minimal:
+            $base:
+              light: color-mix(in var(--color-space), var(--color-success-200) 20%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-success-800) 20%, transparent)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-success-400) 20%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-success-600) 20%, transparent)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-success-400) 40%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-success-600) 40%, transparent)
 
-        muted:
-          $base:
-            light: var(--color-success-200)
-            dark:  var(--color-success-800)
-          hovered:
-            light: color-mix(in display-p3, var(--color-success-200), var(--color-success-400) 20%)
-            dark:  color-mix(in display-p3, var(--color-success-800), var(--color-success-600) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-success-200), var(--color-success-400) 40%)
-            dark:  color-mix(in display-p3, var(--color-success-800), var(--color-success-600) 40%)
+          subtle:
+            $base:
+              light: var(--color-success-200)
+              dark:  var(--color-success-800)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-success-200), var(--color-success-400) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-success-800), var(--color-success-600) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-success-200), var(--color-success-400) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-success-800), var(--color-success-600) 40%)
 
-        bold:
-          $base:
-            light: var(--color-success-600)
-            dark:  var(--color-success-500)
-          hovered:
-            light: color-mix(in display-p3, var(--color-success-600), var(--color-success-800) 20%)
-            dark:  color-mix(in display-p3, var(--color-success-500), var(--color-success-300) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-success-600), var(--color-success-800) 40%)
-            dark:  color-mix(in display-p3, var(--color-success-500), var(--color-success-300) 40%)
+          bold:
+            $base:
+              light: var(--color-success-600)
+              dark:  var(--color-success-500)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-success-600), var(--color-success-800) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-success-500), var(--color-success-300) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-success-600), var(--color-success-800) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-success-500), var(--color-success-300) 40%)
 
-      notice:
-        minimal:
-          $base:
-            light: var(--color-notice-50)
-            dark:  var(--color-notice-950)
-          hovered:
-            light: color-mix(in display-p3, var(--color-notice-50),  var(--color-notice-200) 20%)
-            dark:  color-mix(in display-p3, var(--color-notice-950), var(--color-notice-800) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-notice-50),  var(--color-notice-200) 40%)
-            dark:  color-mix(in display-p3, var(--color-notice-950), var(--color-notice-800) 40%)
+        notice:
+          minimal:
+            $base:
+              light: color-mix(in var(--color-space), var(--color-notice-200) 20%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-notice-800) 20%, transparent)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-notice-400) 20%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-notice-600) 20%, transparent)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-notice-400) 40%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-notice-600) 40%, transparent)
 
-        muted:
-          $base:
-            light: var(--color-notice-200)
-            dark:  var(--color-notice-800)
-          hovered:
-            light: color-mix(in display-p3, var(--color-notice-200), var(--color-notice-400) 20%)
-            dark:  color-mix(in display-p3, var(--color-notice-800), var(--color-notice-600) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-notice-200), var(--color-notice-400) 40%)
-            dark:  color-mix(in display-p3, var(--color-notice-800), var(--color-notice-600) 40%)
+          subtle:
+            $base:
+              light: var(--color-notice-200)
+              dark:  var(--color-notice-800)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-notice-200), var(--color-notice-400) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-notice-800), var(--color-notice-600) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-notice-200), var(--color-notice-400) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-notice-800), var(--color-notice-600) 40%)
 
-        bold:
-          $base:
-            light: var(--color-notice-600)
-            dark:  var(--color-notice-500)
-          hovered:
-            light: color-mix(in display-p3, var(--color-notice-600), var(--color-notice-800) 20%)
-            dark:  color-mix(in display-p3, var(--color-notice-500), var(--color-notice-300) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-notice-600), var(--color-notice-800) 40%)
-            dark:  color-mix(in display-p3, var(--color-notice-500), var(--color-notice-300) 40%)
+          bold:
+            $base:
+              light: var(--color-notice-600)
+              dark:  var(--color-notice-500)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-notice-600), var(--color-notice-800) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-notice-500), var(--color-notice-300) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-notice-600), var(--color-notice-800) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-notice-500), var(--color-notice-300) 40%)
 
-      warning:
-        minimal:
-          $base:
-            light: var(--color-warning-50)
-            dark:  var(--color-warning-950)
-          hovered:
-            light: color-mix(in display-p3, var(--color-warning-50),  var(--color-warning-200) 20%)
-            dark:  color-mix(in display-p3, var(--color-warning-950), var(--color-warning-800) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-warning-50),  var(--color-warning-200) 40%)
-            dark:  color-mix(in display-p3, var(--color-warning-950), var(--color-warning-800) 40%)
+        warning:
+          minimal:
+            $base:
+              light: color-mix(in var(--color-space), var(--color-warning-200) 15%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-warning-500) 10%, transparent)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-warning-200) 20%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-warning-500) 20%, transparent)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-warning-200) 40%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-warning-500) 40%, transparent)
 
-        muted:
-          $base:
-            light: var(--color-warning-200)
-            dark:  var(--color-warning-800)
-          hovered:
-            light: color-mix(in display-p3, var(--color-warning-200), var(--color-warning-400) 20%)
-            dark:  color-mix(in display-p3, var(--color-warning-800), var(--color-warning-600) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-warning-200), var(--color-warning-400) 40%)
-            dark:  color-mix(in display-p3, var(--color-warning-800), var(--color-warning-600) 40%)
+          subtle:
+            $base:
+              light: var(--color-warning-100)
+              dark:  var(--color-warning-500)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-warning-100), var(--color-warning-300) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-warning-500), var(--color-warning-200) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-warning-100), var(--color-warning-300) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-warning-500), var(--color-warning-200) 40%)
 
-        bold:
-          $base:
-            light: var(--color-warning-600)
-            dark:  var(--color-warning-500)
-          hovered:
-            light: color-mix(in display-p3, var(--color-warning-600), var(--color-warning-800) 20%)
-            dark:  color-mix(in display-p3, var(--color-warning-500), var(--color-warning-300) 20%)
-          pressed:
-            light: color-mix(in display-p3, var(--color-warning-600), var(--color-warning-800) 40%)
-            dark:  color-mix(in display-p3, var(--color-warning-500), var(--color-warning-300) 40%)
+          bold:
+            $base:
+              light: var(--color-warning-300)
+              dark:  var(--color-warning-300)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-500) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-100) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-500) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-100) 40%)
+
+        alert:
+          minimal:
+            $base:
+              light: color-mix(in var(--color-space), var(--color-alert-200) 20%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-alert-800) 20%, transparent)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-alert-400) 20%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-alert-600) 20%, transparent)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-alert-400) 40%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-alert-600) 40%, transparent)
+
+          subtle:
+            $base:
+              light: var(--color-alert-200)
+              dark:  var(--color-alert-800)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-alert-200), var(--color-alert-400) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-alert-800), var(--color-alert-600) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-alert-200), var(--color-alert-400) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-alert-800), var(--color-alert-600) 40%)
+
+          bold:
+            $base:
+              light: var(--color-alert-600)
+              dark:  var(--color-alert-500)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-alert-600), var(--color-alert-800) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-alert-500), var(--color-alert-300) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-alert-600), var(--color-alert-800) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-alert-500), var(--color-alert-300) 40%)
+
+        discovery:
+          minimal:
+            $base:
+              light: color-mix(in var(--color-space), var(--color-discovery-200) 20%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-discovery-800) 20%, transparent)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-discovery-400) 20%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-discovery-600) 20%, transparent)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-discovery-400) 40%, transparent)
+              dark:  color-mix(in var(--color-space), var(--color-discovery-600) 40%, transparent)
+
+          subtle:
+            $base:
+              light: var(--color-discovery-200)
+              dark:  var(--color-discovery-800)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-discovery-200), var(--color-discovery-400) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-discovery-800), var(--color-discovery-600) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-discovery-200), var(--color-discovery-400) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-discovery-800), var(--color-discovery-600) 40%)
+
+          bold:
+            $base:
+              light: var(--color-discovery-600)
+              dark:  var(--color-discovery-500)
+            hovered:
+              light: color-mix(in var(--color-space), var(--color-discovery-600), var(--color-discovery-800) 20%)
+              dark:  color-mix(in var(--color-space), var(--color-discovery-500), var(--color-discovery-300) 20%)
+            pressed:
+              light: color-mix(in var(--color-space), var(--color-discovery-600), var(--color-discovery-800) 40%)
+              dark:  color-mix(in var(--color-space), var(--color-discovery-500), var(--color-discovery-300) 40%)
 
     border:
       ui:
-        minimal:
-          $base:
-            light: var(--color-ui-100)
-            dark:  var(--color-ui-900)
-          hovered:
-            light: var(--color-ui-200)
-            dark:  var(--color-ui-800)
-          focused:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
-          selected:
-            light: var(--color-ui-accent-400)
-            dark:  var(--color-ui-accent-700)
-          selected-bold:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
+        $base: # no variant
+          muted:
+            $base:
+              light: var(--color-ui-100)
+              dark:  var(--color-ui-800)
+            hovered:
+              light: var(--color-ui-200)
+              dark:  var(--color-ui-700)
+            focused:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
+            selected:
+              light: var(--color-ui-accent-400)
+              dark:  var(--color-ui-accent-700)
+            selected-bold:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
 
-        muted:
-          $base:
-            light: var(--color-ui-200)
-            dark:  var(--color-ui-800)
-          hovered:
-            light: var(--color-ui-300)
-            dark:  var(--color-ui-700)
-          focused:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
-          selected:
-            light: var(--color-ui-accent-400)
-            dark:  var(--color-ui-accent-700)
-          selected-bold:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
+          minimal:
+            $base:
+              light: var(--color-ui-200)
+              dark:  var(--color-ui-700)
+            hovered:
+              light: var(--color-ui-300)
+              dark:  var(--color-ui-600)
+            focused:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
+            selected:
+              light: var(--color-ui-accent-400)
+              dark:  var(--color-ui-accent-700)
+            selected-bold:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
 
-        subtle:
-          $base:
-            light: var(--color-ui-300)
-            dark:  var(--color-ui-700)
-          hovered:
-            light: var(--color-ui-400)
-            dark:  var(--color-ui-600)
-          focused:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
-          selected:
-            light: var(--color-ui-accent-400)
-            dark:  var(--color-ui-accent-700)
-          selected-bold:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
+          subtle:
+            $base:
+              light: var(--color-ui-300)
+              dark:  var(--color-ui-600)
+            hovered:
+              light: var(--color-ui-400)
+              dark:  var(--color-ui-500)
+            focused:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
+            selected:
+              light: var(--color-ui-accent-400)
+              dark:  var(--color-ui-accent-700)
+            selected-bold:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
 
-        bold:
-          $base:
-            light: var(--color-ui-400)
-            dark:  var(--color-ui-600)
-          hovered:
-            light: var(--color-ui-500)
-            dark:  var(--color-ui-500)
-          focused:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
-          selected:
-            light: var(--color-ui-accent-400)
-            dark:  var(--color-ui-accent-700)
-          selected-bold:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
+          bold:
+            $base:
+              light: var(--color-ui-400)
+              dark:  var(--color-ui-500)
+            hovered:
+              light: var(--color-ui-500)
+              dark:  var(--color-ui-400)
+            focused:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
+            selected:
+              light: var(--color-ui-accent-400)
+              dark:  var(--color-ui-accent-700)
+            selected-bold:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
 
-        strong:
-          $base:
-            light: var(--color-ui-500)
-            dark:  var(--color-ui-500)
-          hovered:
-            light: var(--color-ui-600)
-            dark:  var(--color-ui-400)
-          focused:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
-          selected:
-            light: var(--color-ui-accent-400)
-            dark:  var(--color-ui-accent-700)
-          selected-bold:
-            light: var(--color-ui-accent-600)
-            dark:  var(--color-ui-accent-500)
+          strong:
+            $base:
+              light: var(--color-ui-500)
+              dark:  var(--color-ui-400)
+            hovered:
+              light: var(--color-ui-600)
+              dark:  var(--color-ui-300)
+            focused:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
+            selected:
+              light: var(--color-ui-accent-400)
+              dark:  var(--color-ui-accent-700)
+            selected-bold:
+              light: var(--color-ui-accent-600)
+              dark:  var(--color-ui-accent-500)
 
-      success:
-        $base:
+      status:
+        success:
           $base:
-            light: var(--color-success-600)
-            dark:  var(--color-success-500)
-          focused:
-            light: var(--color-success-600)
-            dark:  var(--color-success-500)
-          selected:
-            light: var(--color-success-400)
-            dark:  var(--color-success-700)
-          selected-bold:
-            light: var(--color-success-600)
-            dark:  var(--color-success-500)
+            $base:
+              light: var(--color-success-600)
+              dark:  var(--color-success-500)
+            focused:
+              light: var(--color-success-600)
+              dark:  var(--color-success-500)
+            selected:
+              light: var(--color-success-400)
+              dark:  var(--color-success-700)
+            selected-bold:
+              light: var(--color-success-600)
+              dark:  var(--color-success-500)
 
-      notice:
-        $base:
+        notice:
           $base:
-            light: var(--color-notice-600)
-            dark:  var(--color-notice-500)
-          focused:
-            light: var(--color-notice-600)
-            dark:  var(--color-notice-500)
-          selected:
-            light: var(--color-notice-400)
-            dark:  var(--color-notice-700)
-          selected-bold:
-            light: var(--color-notice-600)
-            dark:  var(--color-notice-500)
+            $base:
+              light: var(--color-notice-600)
+              dark:  var(--color-notice-500)
+            focused:
+              light: var(--color-notice-600)
+              dark:  var(--color-notice-500)
+            selected:
+              light: var(--color-notice-400)
+              dark:  var(--color-notice-700)
+            selected-bold:
+              light: var(--color-notice-600)
+              dark:  var(--color-notice-500)
+
+        warning:
+          $base:
+            $base:
+              light: var(--color-warning-300)
+              dark:  var(--color-warning-300)
+            focused:
+              light: var(--color-warning-300)
+              dark:  var(--color-warning-300)
+            selected:
+              light: var(--color-warning-200)
+              dark:  var(--color-warning-500)
+            selected-bold:
+              light: var(--color-warning-300)
+              dark:  var(--color-warning-300)
+
+        alert:
+          $base:
+            $base:
+              light: var(--color-alert-600)
+              dark:  var(--color-alert-500)
+            focused:
+              light: var(--color-alert-600)
+              dark:  var(--color-alert-500)
+            selected:
+              light: var(--color-alert-400)
+              dark:  var(--color-alert-700)
+            selected-bold:
+              light: var(--color-alert-600)
+              dark:  var(--color-alert-500)
+
+        discovery:
+          $base:
+            $base:
+              light: var(--color-discovery-600)
+              dark:  var(--color-discovery-500)
+            focused:
+              light: var(--color-discovery-600)
+              dark:  var(--color-discovery-500)
+            selected:
+              light: var(--color-discovery-400)
+              dark:  var(--color-discovery-700)
+            selected-bold:
+              light: var(--color-discovery-600)
+              dark:  var(--color-discovery-500)
 
     text:
-      default:
-        $base:
-          light: var(--color-ui-900)
-          dark:  var(--color-ui-100)
+      $base: # no role
+        primary:
+          $base:
+            light: var(--color-ui-900)
+            dark:  var(--color-ui-100)
 
-      subtle:
-        $base:
-          light: var(--color-ui-600)
-          dark:  var(--color-ui-400)
+        secondary:
+          $base:
+            light: var(--color-ui-600)
+            dark:  var(--color-ui-400)
 
-      subtler:
-        $base:
-          light: var(--color-ui-400)
-          dark:  var(--color-ui-600)
+        tertiary:
+          $base:
+            light: var(--color-ui-400)
+            dark:  var(--color-ui-600)
 
-      subtlest:
-        $base:
-          light: var(--color-ui-300)
-          dark:  var(--color-ui-700)
+        disabled:
+          $base:
+            light: --alpha(var(--color-ui-500) / 40%)
+            dark:  --alpha(var(--color-ui-500) / 40%)
 
-      disabled:
-        $base:
-          light: --alpha(var(--color-ui-400) / 40%)
-          dark:  --alpha(var(--color-ui-600) / 40%)
+        selected:
+          $base:
+            light: var(--color-ui-accent-600)
+            dark:  var(--color-ui-accent-500)
 
-      selected:
-        $base:
-          light: var(--color-ui-accent-600)
-          dark:  var(--color-ui-accent-500)
+      status:
+        success:
+          $base:
+            light: var(--color-success-500)
+            dark:  var(--color-success-600)
 
-      success:
-        $base:
-          light: var(--color-success-600)
-          dark:  var(--color-success-500)
+          bold:
+            light: var(--color-success-700)
+            dark:  var(--color-success-400)
 
-        bold:
-          light: var(--color-success-700)
-          dark:  var(--color-success-400)
+        notice:
+          $base:
+            light: var(--color-notice-500)
+            dark:  var(--color-notice-600)
 
-      information:
-        $base:
-          light: var(--color-information-600)
-          dark:  var(--color-information-500)
+          bold:
+            light: var(--color-notice-700)
+            dark:  var(--color-notice-400)
 
-        bold:
-          light: var(--color-information-700)
-          dark:  var(--color-information-400)
+        warning:
+          $base:
+            light: var(--color-warning-300)
+            dark:  var(--color-warning-500)
 
-      warning:
-        $base:
-          light: var(--color-warning-600)
-          dark:  var(--color-warning-500)
+          bold:
+            light: var(--color-warning-500)
+            dark:  var(--color-warning-300)
 
-        bold:
-          light: var(--color-warning-700)
-          dark:  var(--color-warning-400)
+        alert:
+          $base:
+            light: var(--color-alert-500)
+            dark:  var(--color-alert-600)
 
-      alert:
-        $base:
-          light: var(--color-alert-600)
-          dark:  var(--color-alert-500)
+          bold:
+            light: var(--color-alert-700)
+            dark:  var(--color-alert-400)
 
-        bold:
-          light: var(--color-alert-700)
-          dark:  var(--color-alert-400)
+        discovery:
+          $base:
+            light: var(--color-discovery-500)
+            dark:  var(--color-discovery-600)
 
-      discovery:
-        $base:
-          light: var(--color-discovery-600)
-          dark:  var(--color-discovery-500)
-
-        bold:
-          light: var(--color-discovery-700)
-          dark:  var(--color-discovery-400)
-
-      inverse:
-        $base:
-          light: var(--color-ui-100)
-          dark:  var(--color-ui-900)
+          bold:
+            light: var(--color-discovery-700)
+            dark:  var(--color-discovery-400)

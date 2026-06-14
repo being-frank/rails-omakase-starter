@@ -1,7 +1,12 @@
 <%= vite_stylesheet_tag 'application.css', 'data-turbo-track': :reload %>
 <%= render 'kitsune_ds/pages/kdsdocs_styles', styles_for: %i[states tokens variants] %>
+<%
+  tokens = KitsuneDS::DesignTokens.new.semantic
+%>
 
-<% KitsuneDS::DesignTokens.new.semantic.select { |t|
+<h2><%= tokens.size %> Tokens</h2>
+
+<% tokens.select { |t|
   t.mode != 'dark'
 }.group_by(&:property).each do |role, role_tokens|
   role_tokens.group_by { |t| t.role }.each do |emphasis, tokens|

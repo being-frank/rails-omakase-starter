@@ -1,24 +1,34 @@
 ---
 priority: 1
 ---
-<h2>Background</h2>
+<h2>Success</h2>
 
 <%= render_design_tokens(
-  title:    'Interaction States',
+  title:    'Background',
   set:      :semantic,
   category: :color,
   property: :bg,
-  role:     :success,
+  role:     :status,
+  variant:  :success,
   display:  :states
 ) %>
 
-<h2>Border</h2>
-
 <%= render_design_tokens(
-  title:    'Interaction States',
+  title:    'Border',
   set:      :semantic,
   category: :color,
   property: :border,
-  role:     :success,
+  role:     :status,
+  variant:  :success,
   display:  :states
+) %>
+
+<%= render_design_tokens(
+  title:    'Text',
+  set:      :semantic,
+  category: :color,
+  property: :text,
+  role:     :status,
+  variant:  :success,
+  display:  :text
 ) %>

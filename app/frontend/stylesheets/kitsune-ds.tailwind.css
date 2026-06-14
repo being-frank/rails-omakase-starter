@@ -6,6 +6,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline static {
+  --color-space: srgb;
   --color-ui-0: var(--color-white);
   --color-ui-50: var(--color-gray-50);
   --color-ui-100: var(--color-gray-100);
@@ -40,28 +41,28 @@
   --color-ui-accent-800: var(--color-accent-800);
   --color-ui-accent-900: var(--color-accent-900);
   --color-ui-accent-950: var(--color-accent-950);
-  --color-success-50: var(--color-emerald-50);
-  --color-success-100: var(--color-emerald-100);
-  --color-success-200: var(--color-emerald-200);
-  --color-success-300: var(--color-emerald-300);
-  --color-success-400: var(--color-emerald-400);
-  --color-success-500: var(--color-emerald-500);
-  --color-success-600: var(--color-emerald-600);
-  --color-success-700: var(--color-emerald-700);
-  --color-success-800: var(--color-emerald-800);
-  --color-success-900: var(--color-emerald-900);
-  --color-success-950: var(--color-emerald-950);
-  --color-notice-50: var(--color-sky-50);
-  --color-notice-100: var(--color-sky-100);
-  --color-notice-200: var(--color-sky-200);
-  --color-notice-300: var(--color-sky-300);
-  --color-notice-400: var(--color-sky-400);
-  --color-notice-500: var(--color-sky-500);
-  --color-notice-600: var(--color-sky-600);
-  --color-notice-700: var(--color-sky-700);
-  --color-notice-800: var(--color-sky-800);
-  --color-notice-900: var(--color-sky-900);
-  --color-notice-950: var(--color-sky-950);
+  --color-success-50: var(--color-green-50);
+  --color-success-100: var(--color-green-100);
+  --color-success-200: var(--color-green-200);
+  --color-success-300: var(--color-green-300);
+  --color-success-400: var(--color-green-400);
+  --color-success-500: var(--color-green-500);
+  --color-success-600: var(--color-green-600);
+  --color-success-700: var(--color-green-700);
+  --color-success-800: var(--color-green-800);
+  --color-success-900: var(--color-green-900);
+  --color-success-950: var(--color-green-950);
+  --color-notice-50: var(--color-blue-50);
+  --color-notice-100: var(--color-blue-100);
+  --color-notice-200: var(--color-blue-200);
+  --color-notice-300: var(--color-blue-300);
+  --color-notice-400: var(--color-blue-400);
+  --color-notice-500: var(--color-blue-500);
+  --color-notice-600: var(--color-blue-600);
+  --color-notice-700: var(--color-blue-700);
+  --color-notice-800: var(--color-blue-800);
+  --color-notice-900: var(--color-blue-900);
+  --color-notice-950: var(--color-blue-950);
   --color-warning-50: var(--color-amber-50);
   --color-warning-100: var(--color-amber-100);
   --color-warning-200: var(--color-amber-200);
@@ -73,28 +74,28 @@
   --color-warning-800: var(--color-amber-800);
   --color-warning-900: var(--color-amber-900);
   --color-warning-950: var(--color-amber-950);
-  --color-alert-50: var(--color-rose-50);
-  --color-alert-100: var(--color-rose-100);
-  --color-alert-200: var(--color-rose-200);
-  --color-alert-300: var(--color-rose-300);
-  --color-alert-400: var(--color-rose-400);
-  --color-alert-500: var(--color-rose-500);
-  --color-alert-600: var(--color-rose-600);
-  --color-alert-700: var(--color-rose-700);
-  --color-alert-800: var(--color-rose-800);
-  --color-alert-900: var(--color-rose-900);
-  --color-alert-950: var(--color-rose-950);
-  --color-discovery-50: var(--color-fuchsia-50);
-  --color-discovery-100: var(--color-fuchsia-100);
-  --color-discovery-200: var(--color-fuchsia-200);
-  --color-discovery-300: var(--color-fuchsia-300);
-  --color-discovery-400: var(--color-fuchsia-400);
-  --color-discovery-500: var(--color-fuchsia-500);
-  --color-discovery-600: var(--color-fuchsia-600);
-  --color-discovery-700: var(--color-fuchsia-700);
-  --color-discovery-800: var(--color-fuchsia-800);
-  --color-discovery-900: var(--color-fuchsia-900);
-  --color-discovery-950: var(--color-fuchsia-950);
+  --color-alert-50: var(--color-red-50);
+  --color-alert-100: var(--color-red-100);
+  --color-alert-200: var(--color-red-200);
+  --color-alert-300: var(--color-red-300);
+  --color-alert-400: var(--color-red-400);
+  --color-alert-500: var(--color-red-500);
+  --color-alert-600: var(--color-red-600);
+  --color-alert-700: var(--color-red-700);
+  --color-alert-800: var(--color-red-800);
+  --color-alert-900: var(--color-red-900);
+  --color-alert-950: var(--color-red-950);
+  --color-discovery-50: var(--color-purple-50);
+  --color-discovery-100: var(--color-purple-100);
+  --color-discovery-200: var(--color-purple-200);
+  --color-discovery-300: var(--color-purple-300);
+  --color-discovery-400: var(--color-purple-400);
+  --color-discovery-500: var(--color-purple-500);
+  --color-discovery-600: var(--color-purple-600);
+  --color-discovery-700: var(--color-purple-700);
+  --color-discovery-800: var(--color-purple-800);
+  --color-discovery-900: var(--color-purple-900);
+  --color-discovery-950: var(--color-purple-950);
   --spacing-*: initial;
   --spacing-2: 0.125rem;
   --spacing-4: 0.25rem;
@@ -114,72 +115,90 @@
   /* Semantic */
 
   --bg-ui-primary: var(--color-ui-0);
-  --bg-ui-primary-hovered: color-mix(in display-p3, var(--color-ui-0),   var(--color-ui-200) 20%);
-  --bg-ui-primary-pressed: color-mix(in display-p3, var(--color-ui-0),   var(--color-ui-200) 40%);
-  --bg-ui-primary-selected: color-mix(in display-p3, var(--color-ui-0),   var(--color-ui-accent-600) 40%);
+  --bg-ui-primary-hovered: color-mix(in var(--color-space), var(--color-ui-0),   var(--color-ui-200) 20%);
+  --bg-ui-primary-pressed: color-mix(in var(--color-space), var(--color-ui-0),   var(--color-ui-200) 40%);
+  --bg-ui-primary-selected: color-mix(in var(--color-space), var(--color-ui-0),   var(--color-ui-accent-600) 40%);
   --bg-ui-primary-selected-bold: var(--color-ui-accent-600);
-  --bg-ui-minimal: var(--color-ui-100);
-  --bg-ui-minimal-hovered: color-mix(in display-p3, var(--color-ui-100), var(--color-ui-300) 20%);
-  --bg-ui-minimal-pressed: color-mix(in display-p3, var(--color-ui-100), var(--color-ui-300) 40%);
-  --bg-ui-minimal-selected: color-mix(in display-p3, var(--color-ui-100), var(--color-ui-accent-600) 40%);
-  --bg-ui-minimal-selected-bold: var(--color-ui-accent-600);
-  --bg-ui-muted: var(--color-ui-200);
-  --bg-ui-muted-hovered: color-mix(in display-p3, var(--color-ui-200), var(--color-ui-400) 20%);
-  --bg-ui-muted-pressed: color-mix(in display-p3, var(--color-ui-200), var(--color-ui-400) 40%);
-  --bg-ui-muted-selected: color-mix(in display-p3, var(--color-ui-200), var(--color-ui-accent-600) 40%);
+  --bg-ui-muted: var(--color-ui-100);
+  --bg-ui-muted-hovered: color-mix(in var(--color-space), var(--color-ui-100), var(--color-ui-300) 20%);
+  --bg-ui-muted-pressed: color-mix(in var(--color-space), var(--color-ui-100), var(--color-ui-300) 40%);
+  --bg-ui-muted-selected: color-mix(in var(--color-space), var(--color-ui-100), var(--color-ui-accent-600) 40%);
   --bg-ui-muted-selected-bold: var(--color-ui-accent-600);
+  --bg-ui-minimal: var(--color-ui-200);
+  --bg-ui-minimal-hovered: color-mix(in var(--color-space), var(--color-ui-200), var(--color-ui-400) 20%);
+  --bg-ui-minimal-pressed: color-mix(in var(--color-space), var(--color-ui-200), var(--color-ui-400) 40%);
+  --bg-ui-minimal-selected: color-mix(in var(--color-space), var(--color-ui-200), var(--color-ui-accent-600) 40%);
+  --bg-ui-minimal-selected-bold: var(--color-ui-accent-600);
   --bg-ui-subtle: var(--color-ui-300);
-  --bg-ui-subtle-hovered: color-mix(in display-p3, var(--color-ui-300), var(--color-ui-500) 20%);
-  --bg-ui-subtle-pressed: color-mix(in display-p3, var(--color-ui-300), var(--color-ui-500) 40%);
-  --bg-ui-subtle-selected: color-mix(in display-p3, var(--color-ui-300), var(--color-ui-accent-600) 40%);
+  --bg-ui-subtle-hovered: color-mix(in var(--color-space), var(--color-ui-300), var(--color-ui-500) 20%);
+  --bg-ui-subtle-pressed: color-mix(in var(--color-space), var(--color-ui-300), var(--color-ui-500) 40%);
+  --bg-ui-subtle-selected: color-mix(in var(--color-space), var(--color-ui-300), var(--color-ui-accent-600) 40%);
   --bg-ui-subtle-selected-bold: var(--color-ui-accent-600);
   --bg-ui-bold: var(--color-ui-400);
-  --bg-ui-bold-hovered: color-mix(in display-p3, var(--color-ui-400), var(--color-ui-600) 20%);
-  --bg-ui-bold-pressed: color-mix(in display-p3, var(--color-ui-400), var(--color-ui-600) 40%);
-  --bg-ui-bold-selected: color-mix(in display-p3, var(--color-ui-400), var(--color-ui-accent-600) 40%);
+  --bg-ui-bold-hovered: color-mix(in var(--color-space), var(--color-ui-400), var(--color-ui-600) 20%);
+  --bg-ui-bold-pressed: color-mix(in var(--color-space), var(--color-ui-400), var(--color-ui-600) 40%);
+  --bg-ui-bold-selected: color-mix(in var(--color-space), var(--color-ui-400), var(--color-ui-accent-600) 40%);
   --bg-ui-bold-selected-bold: var(--color-ui-accent-600);
   --bg-ui-strong: var(--color-ui-500);
-  --bg-ui-strong-hovered: color-mix(in display-p3, var(--color-ui-500), var(--color-ui-700) 20%);
-  --bg-ui-strong-pressed: color-mix(in display-p3, var(--color-ui-500), var(--color-ui-700) 40%);
-  --bg-ui-strong-selected: color-mix(in display-p3, var(--color-ui-500), var(--color-ui-accent-600) 40%);
+  --bg-ui-strong-hovered: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-700) 20%);
+  --bg-ui-strong-pressed: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-700) 40%);
+  --bg-ui-strong-selected: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-accent-600) 40%);
   --bg-ui-strong-selected-bold: var(--color-ui-accent-600);
-  --bg-success-minimal: var(--color-success-50);
-  --bg-success-minimal-hovered: color-mix(in display-p3, var(--color-success-50),  var(--color-success-200) 20%);
-  --bg-success-minimal-pressed: color-mix(in display-p3, var(--color-success-50),  var(--color-success-200) 40%);
-  --bg-success-muted: var(--color-success-200);
-  --bg-success-muted-hovered: color-mix(in display-p3, var(--color-success-200), var(--color-success-400) 20%);
-  --bg-success-muted-pressed: color-mix(in display-p3, var(--color-success-200), var(--color-success-400) 40%);
-  --bg-success-bold: var(--color-success-600);
-  --bg-success-bold-hovered: color-mix(in display-p3, var(--color-success-600), var(--color-success-800) 20%);
-  --bg-success-bold-pressed: color-mix(in display-p3, var(--color-success-600), var(--color-success-800) 40%);
-  --bg-notice-minimal: var(--color-notice-50);
-  --bg-notice-minimal-hovered: color-mix(in display-p3, var(--color-notice-50),  var(--color-notice-200) 20%);
-  --bg-notice-minimal-pressed: color-mix(in display-p3, var(--color-notice-50),  var(--color-notice-200) 40%);
-  --bg-notice-muted: var(--color-notice-200);
-  --bg-notice-muted-hovered: color-mix(in display-p3, var(--color-notice-200), var(--color-notice-400) 20%);
-  --bg-notice-muted-pressed: color-mix(in display-p3, var(--color-notice-200), var(--color-notice-400) 40%);
-  --bg-notice-bold: var(--color-notice-600);
-  --bg-notice-bold-hovered: color-mix(in display-p3, var(--color-notice-600), var(--color-notice-800) 20%);
-  --bg-notice-bold-pressed: color-mix(in display-p3, var(--color-notice-600), var(--color-notice-800) 40%);
-  --bg-warning-minimal: var(--color-warning-50);
-  --bg-warning-minimal-hovered: color-mix(in display-p3, var(--color-warning-50),  var(--color-warning-200) 20%);
-  --bg-warning-minimal-pressed: color-mix(in display-p3, var(--color-warning-50),  var(--color-warning-200) 40%);
-  --bg-warning-muted: var(--color-warning-200);
-  --bg-warning-muted-hovered: color-mix(in display-p3, var(--color-warning-200), var(--color-warning-400) 20%);
-  --bg-warning-muted-pressed: color-mix(in display-p3, var(--color-warning-200), var(--color-warning-400) 40%);
-  --bg-warning-bold: var(--color-warning-600);
-  --bg-warning-bold-hovered: color-mix(in display-p3, var(--color-warning-600), var(--color-warning-800) 20%);
-  --bg-warning-bold-pressed: color-mix(in display-p3, var(--color-warning-600), var(--color-warning-800) 40%);
-  --border-ui-minimal: var(--color-ui-100);
-  --border-ui-minimal-hovered: var(--color-ui-200);
-  --border-ui-minimal-focused: var(--color-ui-accent-600);
-  --border-ui-minimal-selected: var(--color-ui-accent-400);
-  --border-ui-minimal-selected-bold: var(--color-ui-accent-600);
-  --border-ui-muted: var(--color-ui-200);
-  --border-ui-muted-hovered: var(--color-ui-300);
+  --bg-status-success-minimal: color-mix(in var(--color-space), var(--color-success-200) 20%, transparent);
+  --bg-status-success-minimal-hovered: color-mix(in var(--color-space), var(--color-success-400) 20%, transparent);
+  --bg-status-success-minimal-pressed: color-mix(in var(--color-space), var(--color-success-400) 40%, transparent);
+  --bg-status-success-subtle: var(--color-success-200);
+  --bg-status-success-subtle-hovered: color-mix(in var(--color-space), var(--color-success-200), var(--color-success-400) 20%);
+  --bg-status-success-subtle-pressed: color-mix(in var(--color-space), var(--color-success-200), var(--color-success-400) 40%);
+  --bg-status-success-bold: var(--color-success-600);
+  --bg-status-success-bold-hovered: color-mix(in var(--color-space), var(--color-success-600), var(--color-success-800) 20%);
+  --bg-status-success-bold-pressed: color-mix(in var(--color-space), var(--color-success-600), var(--color-success-800) 40%);
+  --bg-status-notice-minimal: color-mix(in var(--color-space), var(--color-notice-200) 20%, transparent);
+  --bg-status-notice-minimal-hovered: color-mix(in var(--color-space), var(--color-notice-400) 20%, transparent);
+  --bg-status-notice-minimal-pressed: color-mix(in var(--color-space), var(--color-notice-400) 40%, transparent);
+  --bg-status-notice-subtle: var(--color-notice-200);
+  --bg-status-notice-subtle-hovered: color-mix(in var(--color-space), var(--color-notice-200), var(--color-notice-400) 20%);
+  --bg-status-notice-subtle-pressed: color-mix(in var(--color-space), var(--color-notice-200), var(--color-notice-400) 40%);
+  --bg-status-notice-bold: var(--color-notice-600);
+  --bg-status-notice-bold-hovered: color-mix(in var(--color-space), var(--color-notice-600), var(--color-notice-800) 20%);
+  --bg-status-notice-bold-pressed: color-mix(in var(--color-space), var(--color-notice-600), var(--color-notice-800) 40%);
+  --bg-status-warning-minimal: color-mix(in var(--color-space), var(--color-warning-200) 15%, transparent);
+  --bg-status-warning-minimal-hovered: color-mix(in var(--color-space), var(--color-warning-200) 20%, transparent);
+  --bg-status-warning-minimal-pressed: color-mix(in var(--color-space), var(--color-warning-200) 40%, transparent);
+  --bg-status-warning-subtle: var(--color-warning-100);
+  --bg-status-warning-subtle-hovered: color-mix(in var(--color-space), var(--color-warning-100), var(--color-warning-300) 20%);
+  --bg-status-warning-subtle-pressed: color-mix(in var(--color-space), var(--color-warning-100), var(--color-warning-300) 40%);
+  --bg-status-warning-bold: var(--color-warning-300);
+  --bg-status-warning-bold-hovered: color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-500) 20%);
+  --bg-status-warning-bold-pressed: color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-500) 40%);
+  --bg-status-alert-minimal: color-mix(in var(--color-space), var(--color-alert-200) 20%, transparent);
+  --bg-status-alert-minimal-hovered: color-mix(in var(--color-space), var(--color-alert-400) 20%, transparent);
+  --bg-status-alert-minimal-pressed: color-mix(in var(--color-space), var(--color-alert-400) 40%, transparent);
+  --bg-status-alert-subtle: var(--color-alert-200);
+  --bg-status-alert-subtle-hovered: color-mix(in var(--color-space), var(--color-alert-200), var(--color-alert-400) 20%);
+  --bg-status-alert-subtle-pressed: color-mix(in var(--color-space), var(--color-alert-200), var(--color-alert-400) 40%);
+  --bg-status-alert-bold: var(--color-alert-600);
+  --bg-status-alert-bold-hovered: color-mix(in var(--color-space), var(--color-alert-600), var(--color-alert-800) 20%);
+  --bg-status-alert-bold-pressed: color-mix(in var(--color-space), var(--color-alert-600), var(--color-alert-800) 40%);
+  --bg-status-discovery-minimal: color-mix(in var(--color-space), var(--color-discovery-200) 20%, transparent);
+  --bg-status-discovery-minimal-hovered: color-mix(in var(--color-space), var(--color-discovery-400) 20%, transparent);
+  --bg-status-discovery-minimal-pressed: color-mix(in var(--color-space), var(--color-discovery-400) 40%, transparent);
+  --bg-status-discovery-subtle: var(--color-discovery-200);
+  --bg-status-discovery-subtle-hovered: color-mix(in var(--color-space), var(--color-discovery-200), var(--color-discovery-400) 20%);
+  --bg-status-discovery-subtle-pressed: color-mix(in var(--color-space), var(--color-discovery-200), var(--color-discovery-400) 40%);
+  --bg-status-discovery-bold: var(--color-discovery-600);
+  --bg-status-discovery-bold-hovered: color-mix(in var(--color-space), var(--color-discovery-600), var(--color-discovery-800) 20%);
+  --bg-status-discovery-bold-pressed: color-mix(in var(--color-space), var(--color-discovery-600), var(--color-discovery-800) 40%);
+  --border-ui-muted: var(--color-ui-100);
+  --border-ui-muted-hovered: var(--color-ui-200);
   --border-ui-muted-focused: var(--color-ui-accent-600);
   --border-ui-muted-selected: var(--color-ui-accent-400);
   --border-ui-muted-selected-bold: var(--color-ui-accent-600);
+  --border-ui-minimal: var(--color-ui-200);
+  --border-ui-minimal-hovered: var(--color-ui-300);
+  --border-ui-minimal-focused: var(--color-ui-accent-600);
+  --border-ui-minimal-selected: var(--color-ui-accent-400);
+  --border-ui-minimal-selected-bold: var(--color-ui-accent-600);
   --border-ui-subtle: var(--color-ui-300);
   --border-ui-subtle-hovered: var(--color-ui-400);
   --border-ui-subtle-focused: var(--color-ui-accent-600);
@@ -195,141 +214,179 @@
   --border-ui-strong-focused: var(--color-ui-accent-600);
   --border-ui-strong-selected: var(--color-ui-accent-400);
   --border-ui-strong-selected-bold: var(--color-ui-accent-600);
-  --border-success: var(--color-success-600);
-  --border-success-focused: var(--color-success-600);
-  --border-success-selected: var(--color-success-400);
-  --border-success-selected-bold: var(--color-success-600);
-  --border-notice: var(--color-notice-600);
-  --border-notice-focused: var(--color-notice-600);
-  --border-notice-selected: var(--color-notice-400);
-  --border-notice-selected-bold: var(--color-notice-600);
-  --text-default: var(--color-ui-900);
-  --text-subtle: var(--color-ui-600);
-  --text-subtler: var(--color-ui-400);
-  --text-subtlest: var(--color-ui-300);
-  --text-disabled: --alpha(var(--color-ui-400) / 40%);
+  --border-status-success: var(--color-success-600);
+  --border-status-success-focused: var(--color-success-600);
+  --border-status-success-selected: var(--color-success-400);
+  --border-status-success-selected-bold: var(--color-success-600);
+  --border-status-notice: var(--color-notice-600);
+  --border-status-notice-focused: var(--color-notice-600);
+  --border-status-notice-selected: var(--color-notice-400);
+  --border-status-notice-selected-bold: var(--color-notice-600);
+  --border-status-warning: var(--color-warning-300);
+  --border-status-warning-focused: var(--color-warning-300);
+  --border-status-warning-selected: var(--color-warning-200);
+  --border-status-warning-selected-bold: var(--color-warning-300);
+  --border-status-alert: var(--color-alert-600);
+  --border-status-alert-focused: var(--color-alert-600);
+  --border-status-alert-selected: var(--color-alert-400);
+  --border-status-alert-selected-bold: var(--color-alert-600);
+  --border-status-discovery: var(--color-discovery-600);
+  --border-status-discovery-focused: var(--color-discovery-600);
+  --border-status-discovery-selected: var(--color-discovery-400);
+  --border-status-discovery-selected-bold: var(--color-discovery-600);
+  --text-primary: var(--color-ui-900);
+  --text-secondary: var(--color-ui-600);
+  --text-tertiary: var(--color-ui-400);
+  --text-disabled: --alpha(var(--color-ui-500) / 40%);
   --text-selected: var(--color-ui-accent-600);
-  --text-success: var(--color-success-600);
-  --text-success-bold: var(--color-success-700);
-  --text-information: var(--color-information-600);
-  --text-information-bold: var(--color-information-700);
-  --text-warning: var(--color-warning-600);
-  --text-warning-bold: var(--color-warning-700);
-  --text-alert: var(--color-alert-600);
-  --text-alert-bold: var(--color-alert-700);
-  --text-discovery: var(--color-discovery-600);
-  --text-discovery-bold: var(--color-discovery-700);
-  --text-inverse: var(--color-ui-100);
+  --text-status-success: var(--color-success-500);
+  --text-status-success-bold: var(--color-success-700);
+  --text-status-notice: var(--color-notice-500);
+  --text-status-notice-bold: var(--color-notice-700);
+  --text-status-warning: var(--color-warning-300);
+  --text-status-warning-bold: var(--color-warning-500);
+  --text-status-alert: var(--color-alert-500);
+  --text-status-alert-bold: var(--color-alert-700);
+  --text-status-discovery: var(--color-discovery-500);
+  --text-status-discovery-bold: var(--color-discovery-700);
 }
 
 :root.dark, .dark {
   --bg-ui-primary: var(--color-ui-950);
-  --bg-ui-primary-hovered: color-mix(in display-p3, var(--color-ui-950), var(--color-ui-800) 20%);
-  --bg-ui-primary-pressed: color-mix(in display-p3, var(--color-ui-950), var(--color-ui-800) 40%);
-  --bg-ui-primary-selected: color-mix(in display-p3, var(--color-ui-950), var(--color-ui-accent-500) 40%);
+  --bg-ui-primary-hovered: color-mix(in var(--color-space), var(--color-ui-950), var(--color-ui-800) 20%);
+  --bg-ui-primary-pressed: color-mix(in var(--color-space), var(--color-ui-950), var(--color-ui-800) 40%);
+  --bg-ui-primary-selected: color-mix(in var(--color-space), var(--color-ui-950), var(--color-ui-accent-500) 40%);
   --bg-ui-primary-selected-bold: var(--color-ui-accent-500);
-  --bg-ui-minimal: var(--color-ui-900);
-  --bg-ui-minimal-hovered: color-mix(in display-p3, var(--color-ui-900), var(--color-ui-700) 20%);
-  --bg-ui-minimal-pressed: color-mix(in display-p3, var(--color-ui-900), var(--color-ui-700) 40%);
-  --bg-ui-minimal-selected: color-mix(in display-p3, var(--color-ui-900), var(--color-ui-accent-500) 40%);
-  --bg-ui-minimal-selected-bold: var(--color-ui-accent-500);
-  --bg-ui-muted: var(--color-ui-800);
-  --bg-ui-muted-hovered: color-mix(in display-p3, var(--color-ui-800), var(--color-ui-600) 20%);
-  --bg-ui-muted-pressed: color-mix(in display-p3, var(--color-ui-800), var(--color-ui-600) 40%);
-  --bg-ui-muted-selected: color-mix(in display-p3, var(--color-ui-800), var(--color-ui-accent-500) 40%);
+  --bg-ui-muted: var(--color-ui-900);
+  --bg-ui-muted-hovered: color-mix(in var(--color-space), var(--color-ui-900), var(--color-ui-700) 20%);
+  --bg-ui-muted-pressed: color-mix(in var(--color-space), var(--color-ui-900), var(--color-ui-700) 40%);
+  --bg-ui-muted-selected: color-mix(in var(--color-space), var(--color-ui-900), var(--color-ui-accent-500) 40%);
   --bg-ui-muted-selected-bold: var(--color-ui-accent-500);
+  --bg-ui-minimal: var(--color-ui-800);
+  --bg-ui-minimal-hovered: color-mix(in var(--color-space), var(--color-ui-800), var(--color-ui-600) 20%);
+  --bg-ui-minimal-pressed: color-mix(in var(--color-space), var(--color-ui-800), var(--color-ui-600) 40%);
+  --bg-ui-minimal-selected: color-mix(in var(--color-space), var(--color-ui-800), var(--color-ui-accent-500) 40%);
+  --bg-ui-minimal-selected-bold: var(--color-ui-accent-500);
   --bg-ui-subtle: var(--color-ui-700);
-  --bg-ui-subtle-hovered: color-mix(in display-p3, var(--color-ui-700), var(--color-ui-500) 20%);
-  --bg-ui-subtle-pressed: color-mix(in display-p3, var(--color-ui-700), var(--color-ui-500) 40%);
-  --bg-ui-subtle-selected: color-mix(in display-p3, var(--color-ui-700), var(--color-ui-accent-500) 40%);
+  --bg-ui-subtle-hovered: color-mix(in var(--color-space), var(--color-ui-700), var(--color-ui-500) 20%);
+  --bg-ui-subtle-pressed: color-mix(in var(--color-space), var(--color-ui-700), var(--color-ui-500) 40%);
+  --bg-ui-subtle-selected: color-mix(in var(--color-space), var(--color-ui-700), var(--color-ui-accent-500) 40%);
   --bg-ui-subtle-selected-bold: var(--color-ui-accent-500);
   --bg-ui-bold: var(--color-ui-600);
-  --bg-ui-bold-hovered: color-mix(in display-p3, var(--color-ui-600), var(--color-ui-400) 20%);
-  --bg-ui-bold-pressed: color-mix(in display-p3, var(--color-ui-600), var(--color-ui-400) 40%);
-  --bg-ui-bold-selected: color-mix(in display-p3, var(--color-ui-600), var(--color-ui-accent-500) 40%);
+  --bg-ui-bold-hovered: color-mix(in var(--color-space), var(--color-ui-600), var(--color-ui-400) 20%);
+  --bg-ui-bold-pressed: color-mix(in var(--color-space), var(--color-ui-600), var(--color-ui-400) 40%);
+  --bg-ui-bold-selected: color-mix(in var(--color-space), var(--color-ui-600), var(--color-ui-accent-500) 40%);
   --bg-ui-bold-selected-bold: var(--color-ui-accent-500);
   --bg-ui-strong: var(--color-ui-500);
-  --bg-ui-strong-hovered: color-mix(in display-p3, var(--color-ui-500), var(--color-ui-300) 20%);
-  --bg-ui-strong-pressed: color-mix(in display-p3, var(--color-ui-500), var(--color-ui-300) 40%);
-  --bg-ui-strong-selected: color-mix(in display-p3, var(--color-ui-500), var(--color-ui-accent-500) 40%);
+  --bg-ui-strong-hovered: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-300) 20%);
+  --bg-ui-strong-pressed: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-300) 40%);
+  --bg-ui-strong-selected: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-accent-500) 40%);
   --bg-ui-strong-selected-bold: var(--color-ui-accent-500);
-  --bg-success-minimal: var(--color-success-950);
-  --bg-success-minimal-hovered: color-mix(in display-p3, var(--color-success-950), var(--color-success-800) 20%);
-  --bg-success-minimal-pressed: color-mix(in display-p3, var(--color-success-950), var(--color-success-800) 40%);
-  --bg-success-muted: var(--color-success-800);
-  --bg-success-muted-hovered: color-mix(in display-p3, var(--color-success-800), var(--color-success-600) 20%);
-  --bg-success-muted-pressed: color-mix(in display-p3, var(--color-success-800), var(--color-success-600) 40%);
-  --bg-success-bold: var(--color-success-500);
-  --bg-success-bold-hovered: color-mix(in display-p3, var(--color-success-500), var(--color-success-300) 20%);
-  --bg-success-bold-pressed: color-mix(in display-p3, var(--color-success-500), var(--color-success-300) 40%);
-  --bg-notice-minimal: var(--color-notice-950);
-  --bg-notice-minimal-hovered: color-mix(in display-p3, var(--color-notice-950), var(--color-notice-800) 20%);
-  --bg-notice-minimal-pressed: color-mix(in display-p3, var(--color-notice-950), var(--color-notice-800) 40%);
-  --bg-notice-muted: var(--color-notice-800);
-  --bg-notice-muted-hovered: color-mix(in display-p3, var(--color-notice-800), var(--color-notice-600) 20%);
-  --bg-notice-muted-pressed: color-mix(in display-p3, var(--color-notice-800), var(--color-notice-600) 40%);
-  --bg-notice-bold: var(--color-notice-500);
-  --bg-notice-bold-hovered: color-mix(in display-p3, var(--color-notice-500), var(--color-notice-300) 20%);
-  --bg-notice-bold-pressed: color-mix(in display-p3, var(--color-notice-500), var(--color-notice-300) 40%);
-  --bg-warning-minimal: var(--color-warning-950);
-  --bg-warning-minimal-hovered: color-mix(in display-p3, var(--color-warning-950), var(--color-warning-800) 20%);
-  --bg-warning-minimal-pressed: color-mix(in display-p3, var(--color-warning-950), var(--color-warning-800) 40%);
-  --bg-warning-muted: var(--color-warning-800);
-  --bg-warning-muted-hovered: color-mix(in display-p3, var(--color-warning-800), var(--color-warning-600) 20%);
-  --bg-warning-muted-pressed: color-mix(in display-p3, var(--color-warning-800), var(--color-warning-600) 40%);
-  --bg-warning-bold: var(--color-warning-500);
-  --bg-warning-bold-hovered: color-mix(in display-p3, var(--color-warning-500), var(--color-warning-300) 20%);
-  --bg-warning-bold-pressed: color-mix(in display-p3, var(--color-warning-500), var(--color-warning-300) 40%);
-  --border-ui-minimal: var(--color-ui-900);
-  --border-ui-minimal-hovered: var(--color-ui-800);
-  --border-ui-minimal-focused: var(--color-ui-accent-500);
-  --border-ui-minimal-selected: var(--color-ui-accent-700);
-  --border-ui-minimal-selected-bold: var(--color-ui-accent-500);
+  --bg-status-success-minimal: color-mix(in var(--color-space), var(--color-success-800) 20%, transparent);
+  --bg-status-success-minimal-hovered: color-mix(in var(--color-space), var(--color-success-600) 20%, transparent);
+  --bg-status-success-minimal-pressed: color-mix(in var(--color-space), var(--color-success-600) 40%, transparent);
+  --bg-status-success-subtle: var(--color-success-800);
+  --bg-status-success-subtle-hovered: color-mix(in var(--color-space), var(--color-success-800), var(--color-success-600) 20%);
+  --bg-status-success-subtle-pressed: color-mix(in var(--color-space), var(--color-success-800), var(--color-success-600) 40%);
+  --bg-status-success-bold: var(--color-success-500);
+  --bg-status-success-bold-hovered: color-mix(in var(--color-space), var(--color-success-500), var(--color-success-300) 20%);
+  --bg-status-success-bold-pressed: color-mix(in var(--color-space), var(--color-success-500), var(--color-success-300) 40%);
+  --bg-status-notice-minimal: color-mix(in var(--color-space), var(--color-notice-800) 20%, transparent);
+  --bg-status-notice-minimal-hovered: color-mix(in var(--color-space), var(--color-notice-600) 20%, transparent);
+  --bg-status-notice-minimal-pressed: color-mix(in var(--color-space), var(--color-notice-600) 40%, transparent);
+  --bg-status-notice-subtle: var(--color-notice-800);
+  --bg-status-notice-subtle-hovered: color-mix(in var(--color-space), var(--color-notice-800), var(--color-notice-600) 20%);
+  --bg-status-notice-subtle-pressed: color-mix(in var(--color-space), var(--color-notice-800), var(--color-notice-600) 40%);
+  --bg-status-notice-bold: var(--color-notice-500);
+  --bg-status-notice-bold-hovered: color-mix(in var(--color-space), var(--color-notice-500), var(--color-notice-300) 20%);
+  --bg-status-notice-bold-pressed: color-mix(in var(--color-space), var(--color-notice-500), var(--color-notice-300) 40%);
+  --bg-status-warning-minimal: color-mix(in var(--color-space), var(--color-warning-500) 10%, transparent);
+  --bg-status-warning-minimal-hovered: color-mix(in var(--color-space), var(--color-warning-500) 20%, transparent);
+  --bg-status-warning-minimal-pressed: color-mix(in var(--color-space), var(--color-warning-500) 40%, transparent);
+  --bg-status-warning-subtle: var(--color-warning-500);
+  --bg-status-warning-subtle-hovered: color-mix(in var(--color-space), var(--color-warning-500), var(--color-warning-200) 20%);
+  --bg-status-warning-subtle-pressed: color-mix(in var(--color-space), var(--color-warning-500), var(--color-warning-200) 40%);
+  --bg-status-warning-bold: var(--color-warning-300);
+  --bg-status-warning-bold-hovered: color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-100) 20%);
+  --bg-status-warning-bold-pressed: color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-100) 40%);
+  --bg-status-alert-minimal: color-mix(in var(--color-space), var(--color-alert-800) 20%, transparent);
+  --bg-status-alert-minimal-hovered: color-mix(in var(--color-space), var(--color-alert-600) 20%, transparent);
+  --bg-status-alert-minimal-pressed: color-mix(in var(--color-space), var(--color-alert-600) 40%, transparent);
+  --bg-status-alert-subtle: var(--color-alert-800);
+  --bg-status-alert-subtle-hovered: color-mix(in var(--color-space), var(--color-alert-800), var(--color-alert-600) 20%);
+  --bg-status-alert-subtle-pressed: color-mix(in var(--color-space), var(--color-alert-800), var(--color-alert-600) 40%);
+  --bg-status-alert-bold: var(--color-alert-500);
+  --bg-status-alert-bold-hovered: color-mix(in var(--color-space), var(--color-alert-500), var(--color-alert-300) 20%);
+  --bg-status-alert-bold-pressed: color-mix(in var(--color-space), var(--color-alert-500), var(--color-alert-300) 40%);
+  --bg-status-discovery-minimal: color-mix(in var(--color-space), var(--color-discovery-800) 20%, transparent);
+  --bg-status-discovery-minimal-hovered: color-mix(in var(--color-space), var(--color-discovery-600) 20%, transparent);
+  --bg-status-discovery-minimal-pressed: color-mix(in var(--color-space), var(--color-discovery-600) 40%, transparent);
+  --bg-status-discovery-subtle: var(--color-discovery-800);
+  --bg-status-discovery-subtle-hovered: color-mix(in var(--color-space), var(--color-discovery-800), var(--color-discovery-600) 20%);
+  --bg-status-discovery-subtle-pressed: color-mix(in var(--color-space), var(--color-discovery-800), var(--color-discovery-600) 40%);
+  --bg-status-discovery-bold: var(--color-discovery-500);
+  --bg-status-discovery-bold-hovered: color-mix(in var(--color-space), var(--color-discovery-500), var(--color-discovery-300) 20%);
+  --bg-status-discovery-bold-pressed: color-mix(in var(--color-space), var(--color-discovery-500), var(--color-discovery-300) 40%);
   --border-ui-muted: var(--color-ui-800);
   --border-ui-muted-hovered: var(--color-ui-700);
   --border-ui-muted-focused: var(--color-ui-accent-500);
   --border-ui-muted-selected: var(--color-ui-accent-700);
   --border-ui-muted-selected-bold: var(--color-ui-accent-500);
-  --border-ui-subtle: var(--color-ui-700);
-  --border-ui-subtle-hovered: var(--color-ui-600);
+  --border-ui-minimal: var(--color-ui-700);
+  --border-ui-minimal-hovered: var(--color-ui-600);
+  --border-ui-minimal-focused: var(--color-ui-accent-500);
+  --border-ui-minimal-selected: var(--color-ui-accent-700);
+  --border-ui-minimal-selected-bold: var(--color-ui-accent-500);
+  --border-ui-subtle: var(--color-ui-600);
+  --border-ui-subtle-hovered: var(--color-ui-500);
   --border-ui-subtle-focused: var(--color-ui-accent-500);
   --border-ui-subtle-selected: var(--color-ui-accent-700);
   --border-ui-subtle-selected-bold: var(--color-ui-accent-500);
-  --border-ui-bold: var(--color-ui-600);
-  --border-ui-bold-hovered: var(--color-ui-500);
+  --border-ui-bold: var(--color-ui-500);
+  --border-ui-bold-hovered: var(--color-ui-400);
   --border-ui-bold-focused: var(--color-ui-accent-500);
   --border-ui-bold-selected: var(--color-ui-accent-700);
   --border-ui-bold-selected-bold: var(--color-ui-accent-500);
-  --border-ui-strong: var(--color-ui-500);
-  --border-ui-strong-hovered: var(--color-ui-400);
+  --border-ui-strong: var(--color-ui-400);
+  --border-ui-strong-hovered: var(--color-ui-300);
   --border-ui-strong-focused: var(--color-ui-accent-500);
   --border-ui-strong-selected: var(--color-ui-accent-700);
   --border-ui-strong-selected-bold: var(--color-ui-accent-500);
-  --border-success: var(--color-success-500);
-  --border-success-focused: var(--color-success-500);
-  --border-success-selected: var(--color-success-700);
-  --border-success-selected-bold: var(--color-success-500);
-  --border-notice: var(--color-notice-500);
-  --border-notice-focused: var(--color-notice-500);
-  --border-notice-selected: var(--color-notice-700);
-  --border-notice-selected-bold: var(--color-notice-500);
-  --text-default: var(--color-ui-100);
-  --text-subtle: var(--color-ui-400);
-  --text-subtler: var(--color-ui-600);
-  --text-subtlest: var(--color-ui-700);
-  --text-disabled: --alpha(var(--color-ui-600) / 40%);
+  --border-status-success: var(--color-success-500);
+  --border-status-success-focused: var(--color-success-500);
+  --border-status-success-selected: var(--color-success-700);
+  --border-status-success-selected-bold: var(--color-success-500);
+  --border-status-notice: var(--color-notice-500);
+  --border-status-notice-focused: var(--color-notice-500);
+  --border-status-notice-selected: var(--color-notice-700);
+  --border-status-notice-selected-bold: var(--color-notice-500);
+  --border-status-warning: var(--color-warning-300);
+  --border-status-warning-focused: var(--color-warning-300);
+  --border-status-warning-selected: var(--color-warning-500);
+  --border-status-warning-selected-bold: var(--color-warning-300);
+  --border-status-alert: var(--color-alert-500);
+  --border-status-alert-focused: var(--color-alert-500);
+  --border-status-alert-selected: var(--color-alert-700);
+  --border-status-alert-selected-bold: var(--color-alert-500);
+  --border-status-discovery: var(--color-discovery-500);
+  --border-status-discovery-focused: var(--color-discovery-500);
+  --border-status-discovery-selected: var(--color-discovery-700);
+  --border-status-discovery-selected-bold: var(--color-discovery-500);
+  --text-primary: var(--color-ui-100);
+  --text-secondary: var(--color-ui-400);
+  --text-tertiary: var(--color-ui-600);
+  --text-disabled: --alpha(var(--color-ui-500) / 40%);
   --text-selected: var(--color-ui-accent-500);
-  --text-success: var(--color-success-500);
-  --text-success-bold: var(--color-success-400);
-  --text-information: var(--color-information-500);
-  --text-information-bold: var(--color-information-400);
-  --text-warning: var(--color-warning-500);
-  --text-warning-bold: var(--color-warning-400);
-  --text-alert: var(--color-alert-500);
-  --text-alert-bold: var(--color-alert-400);
-  --text-discovery: var(--color-discovery-500);
-  --text-discovery-bold: var(--color-discovery-400);
-  --text-inverse: var(--color-ui-900);
+  --text-status-success: var(--color-success-600);
+  --text-status-success-bold: var(--color-success-400);
+  --text-status-notice: var(--color-notice-600);
+  --text-status-notice-bold: var(--color-notice-400);
+  --text-status-warning: var(--color-warning-500);
+  --text-status-warning-bold: var(--color-warning-300);
+  --text-status-alert: var(--color-alert-600);
+  --text-status-alert-bold: var(--color-alert-400);
+  --text-status-discovery: var(--color-discovery-600);
+  --text-status-discovery-bold: var(--color-discovery-400);
 }
 
 @utility bg-ui-primary { background-color: var(--bg-ui-primary) }
@@ -337,16 +394,16 @@
 @utility bg-ui-primary-pressed { background-color: var(--bg-ui-primary-pressed) }
 @utility bg-ui-primary-selected { background-color: var(--bg-ui-primary-selected) }
 @utility bg-ui-primary-selected-bold { background-color: var(--bg-ui-primary-selected-bold) }
-@utility bg-ui-minimal { background-color: var(--bg-ui-minimal) }
-@utility bg-ui-minimal-hovered { background-color: var(--bg-ui-minimal-hovered) }
-@utility bg-ui-minimal-pressed { background-color: var(--bg-ui-minimal-pressed) }
-@utility bg-ui-minimal-selected { background-color: var(--bg-ui-minimal-selected) }
-@utility bg-ui-minimal-selected-bold { background-color: var(--bg-ui-minimal-selected-bold) }
 @utility bg-ui-muted { background-color: var(--bg-ui-muted) }
 @utility bg-ui-muted-hovered { background-color: var(--bg-ui-muted-hovered) }
 @utility bg-ui-muted-pressed { background-color: var(--bg-ui-muted-pressed) }
 @utility bg-ui-muted-selected { background-color: var(--bg-ui-muted-selected) }
 @utility bg-ui-muted-selected-bold { background-color: var(--bg-ui-muted-selected-bold) }
+@utility bg-ui-minimal { background-color: var(--bg-ui-minimal) }
+@utility bg-ui-minimal-hovered { background-color: var(--bg-ui-minimal-hovered) }
+@utility bg-ui-minimal-pressed { background-color: var(--bg-ui-minimal-pressed) }
+@utility bg-ui-minimal-selected { background-color: var(--bg-ui-minimal-selected) }
+@utility bg-ui-minimal-selected-bold { background-color: var(--bg-ui-minimal-selected-bold) }
 @utility bg-ui-subtle { background-color: var(--bg-ui-subtle) }
 @utility bg-ui-subtle-hovered { background-color: var(--bg-ui-subtle-hovered) }
 @utility bg-ui-subtle-pressed { background-color: var(--bg-ui-subtle-pressed) }
@@ -362,43 +419,61 @@
 @utility bg-ui-strong-pressed { background-color: var(--bg-ui-strong-pressed) }
 @utility bg-ui-strong-selected { background-color: var(--bg-ui-strong-selected) }
 @utility bg-ui-strong-selected-bold { background-color: var(--bg-ui-strong-selected-bold) }
-@utility bg-success-minimal { background-color: var(--bg-success-minimal) }
-@utility bg-success-minimal-hovered { background-color: var(--bg-success-minimal-hovered) }
-@utility bg-success-minimal-pressed { background-color: var(--bg-success-minimal-pressed) }
-@utility bg-success-muted { background-color: var(--bg-success-muted) }
-@utility bg-success-muted-hovered { background-color: var(--bg-success-muted-hovered) }
-@utility bg-success-muted-pressed { background-color: var(--bg-success-muted-pressed) }
-@utility bg-success-bold { background-color: var(--bg-success-bold) }
-@utility bg-success-bold-hovered { background-color: var(--bg-success-bold-hovered) }
-@utility bg-success-bold-pressed { background-color: var(--bg-success-bold-pressed) }
-@utility bg-notice-minimal { background-color: var(--bg-notice-minimal) }
-@utility bg-notice-minimal-hovered { background-color: var(--bg-notice-minimal-hovered) }
-@utility bg-notice-minimal-pressed { background-color: var(--bg-notice-minimal-pressed) }
-@utility bg-notice-muted { background-color: var(--bg-notice-muted) }
-@utility bg-notice-muted-hovered { background-color: var(--bg-notice-muted-hovered) }
-@utility bg-notice-muted-pressed { background-color: var(--bg-notice-muted-pressed) }
-@utility bg-notice-bold { background-color: var(--bg-notice-bold) }
-@utility bg-notice-bold-hovered { background-color: var(--bg-notice-bold-hovered) }
-@utility bg-notice-bold-pressed { background-color: var(--bg-notice-bold-pressed) }
-@utility bg-warning-minimal { background-color: var(--bg-warning-minimal) }
-@utility bg-warning-minimal-hovered { background-color: var(--bg-warning-minimal-hovered) }
-@utility bg-warning-minimal-pressed { background-color: var(--bg-warning-minimal-pressed) }
-@utility bg-warning-muted { background-color: var(--bg-warning-muted) }
-@utility bg-warning-muted-hovered { background-color: var(--bg-warning-muted-hovered) }
-@utility bg-warning-muted-pressed { background-color: var(--bg-warning-muted-pressed) }
-@utility bg-warning-bold { background-color: var(--bg-warning-bold) }
-@utility bg-warning-bold-hovered { background-color: var(--bg-warning-bold-hovered) }
-@utility bg-warning-bold-pressed { background-color: var(--bg-warning-bold-pressed) }
-@utility border-ui-minimal { border-color: var(--border-ui-minimal) }
-@utility border-ui-minimal-hovered { border-color: var(--border-ui-minimal-hovered) }
-@utility border-ui-minimal-focused { border-color: var(--border-ui-minimal-focused) }
-@utility border-ui-minimal-selected { border-color: var(--border-ui-minimal-selected) }
-@utility border-ui-minimal-selected-bold { border-color: var(--border-ui-minimal-selected-bold) }
+@utility bg-status-success-minimal { background-color: var(--bg-status-success-minimal) }
+@utility bg-status-success-minimal-hovered { background-color: var(--bg-status-success-minimal-hovered) }
+@utility bg-status-success-minimal-pressed { background-color: var(--bg-status-success-minimal-pressed) }
+@utility bg-status-success-subtle { background-color: var(--bg-status-success-subtle) }
+@utility bg-status-success-subtle-hovered { background-color: var(--bg-status-success-subtle-hovered) }
+@utility bg-status-success-subtle-pressed { background-color: var(--bg-status-success-subtle-pressed) }
+@utility bg-status-success-bold { background-color: var(--bg-status-success-bold) }
+@utility bg-status-success-bold-hovered { background-color: var(--bg-status-success-bold-hovered) }
+@utility bg-status-success-bold-pressed { background-color: var(--bg-status-success-bold-pressed) }
+@utility bg-status-notice-minimal { background-color: var(--bg-status-notice-minimal) }
+@utility bg-status-notice-minimal-hovered { background-color: var(--bg-status-notice-minimal-hovered) }
+@utility bg-status-notice-minimal-pressed { background-color: var(--bg-status-notice-minimal-pressed) }
+@utility bg-status-notice-subtle { background-color: var(--bg-status-notice-subtle) }
+@utility bg-status-notice-subtle-hovered { background-color: var(--bg-status-notice-subtle-hovered) }
+@utility bg-status-notice-subtle-pressed { background-color: var(--bg-status-notice-subtle-pressed) }
+@utility bg-status-notice-bold { background-color: var(--bg-status-notice-bold) }
+@utility bg-status-notice-bold-hovered { background-color: var(--bg-status-notice-bold-hovered) }
+@utility bg-status-notice-bold-pressed { background-color: var(--bg-status-notice-bold-pressed) }
+@utility bg-status-warning-minimal { background-color: var(--bg-status-warning-minimal) }
+@utility bg-status-warning-minimal-hovered { background-color: var(--bg-status-warning-minimal-hovered) }
+@utility bg-status-warning-minimal-pressed { background-color: var(--bg-status-warning-minimal-pressed) }
+@utility bg-status-warning-subtle { background-color: var(--bg-status-warning-subtle) }
+@utility bg-status-warning-subtle-hovered { background-color: var(--bg-status-warning-subtle-hovered) }
+@utility bg-status-warning-subtle-pressed { background-color: var(--bg-status-warning-subtle-pressed) }
+@utility bg-status-warning-bold { background-color: var(--bg-status-warning-bold) }
+@utility bg-status-warning-bold-hovered { background-color: var(--bg-status-warning-bold-hovered) }
+@utility bg-status-warning-bold-pressed { background-color: var(--bg-status-warning-bold-pressed) }
+@utility bg-status-alert-minimal { background-color: var(--bg-status-alert-minimal) }
+@utility bg-status-alert-minimal-hovered { background-color: var(--bg-status-alert-minimal-hovered) }
+@utility bg-status-alert-minimal-pressed { background-color: var(--bg-status-alert-minimal-pressed) }
+@utility bg-status-alert-subtle { background-color: var(--bg-status-alert-subtle) }
+@utility bg-status-alert-subtle-hovered { background-color: var(--bg-status-alert-subtle-hovered) }
+@utility bg-status-alert-subtle-pressed { background-color: var(--bg-status-alert-subtle-pressed) }
+@utility bg-status-alert-bold { background-color: var(--bg-status-alert-bold) }
+@utility bg-status-alert-bold-hovered { background-color: var(--bg-status-alert-bold-hovered) }
+@utility bg-status-alert-bold-pressed { background-color: var(--bg-status-alert-bold-pressed) }
+@utility bg-status-discovery-minimal { background-color: var(--bg-status-discovery-minimal) }
+@utility bg-status-discovery-minimal-hovered { background-color: var(--bg-status-discovery-minimal-hovered) }
+@utility bg-status-discovery-minimal-pressed { background-color: var(--bg-status-discovery-minimal-pressed) }
+@utility bg-status-discovery-subtle { background-color: var(--bg-status-discovery-subtle) }
+@utility bg-status-discovery-subtle-hovered { background-color: var(--bg-status-discovery-subtle-hovered) }
+@utility bg-status-discovery-subtle-pressed { background-color: var(--bg-status-discovery-subtle-pressed) }
+@utility bg-status-discovery-bold { background-color: var(--bg-status-discovery-bold) }
+@utility bg-status-discovery-bold-hovered { background-color: var(--bg-status-discovery-bold-hovered) }
+@utility bg-status-discovery-bold-pressed { background-color: var(--bg-status-discovery-bold-pressed) }
 @utility border-ui-muted { border-color: var(--border-ui-muted) }
 @utility border-ui-muted-hovered { border-color: var(--border-ui-muted-hovered) }
 @utility border-ui-muted-focused { border-color: var(--border-ui-muted-focused) }
 @utility border-ui-muted-selected { border-color: var(--border-ui-muted-selected) }
 @utility border-ui-muted-selected-bold { border-color: var(--border-ui-muted-selected-bold) }
+@utility border-ui-minimal { border-color: var(--border-ui-minimal) }
+@utility border-ui-minimal-hovered { border-color: var(--border-ui-minimal-hovered) }
+@utility border-ui-minimal-focused { border-color: var(--border-ui-minimal-focused) }
+@utility border-ui-minimal-selected { border-color: var(--border-ui-minimal-selected) }
+@utility border-ui-minimal-selected-bold { border-color: var(--border-ui-minimal-selected-bold) }
 @utility border-ui-subtle { border-color: var(--border-ui-subtle) }
 @utility border-ui-subtle-hovered { border-color: var(--border-ui-subtle-hovered) }
 @utility border-ui-subtle-focused { border-color: var(--border-ui-subtle-focused) }
@@ -414,35 +489,45 @@
 @utility border-ui-strong-focused { border-color: var(--border-ui-strong-focused) }
 @utility border-ui-strong-selected { border-color: var(--border-ui-strong-selected) }
 @utility border-ui-strong-selected-bold { border-color: var(--border-ui-strong-selected-bold) }
-@utility border-success { border-color: var(--border-success) }
-@utility border-success-focused { border-color: var(--border-success-focused) }
-@utility border-success-selected { border-color: var(--border-success-selected) }
-@utility border-success-selected-bold { border-color: var(--border-success-selected-bold) }
-@utility border-notice { border-color: var(--border-notice) }
-@utility border-notice-focused { border-color: var(--border-notice-focused) }
-@utility border-notice-selected { border-color: var(--border-notice-selected) }
-@utility border-notice-selected-bold { border-color: var(--border-notice-selected-bold) }
-@utility text-default { color: var(--text-default) }
-@utility text-subtle { color: var(--text-subtle) }
-@utility text-subtler { color: var(--text-subtler) }
-@utility text-subtlest { color: var(--text-subtlest) }
+@utility border-status-success { border-color: var(--border-status-success) }
+@utility border-status-success-focused { border-color: var(--border-status-success-focused) }
+@utility border-status-success-selected { border-color: var(--border-status-success-selected) }
+@utility border-status-success-selected-bold { border-color: var(--border-status-success-selected-bold) }
+@utility border-status-notice { border-color: var(--border-status-notice) }
+@utility border-status-notice-focused { border-color: var(--border-status-notice-focused) }
+@utility border-status-notice-selected { border-color: var(--border-status-notice-selected) }
+@utility border-status-notice-selected-bold { border-color: var(--border-status-notice-selected-bold) }
+@utility border-status-warning { border-color: var(--border-status-warning) }
+@utility border-status-warning-focused { border-color: var(--border-status-warning-focused) }
+@utility border-status-warning-selected { border-color: var(--border-status-warning-selected) }
+@utility border-status-warning-selected-bold { border-color: var(--border-status-warning-selected-bold) }
+@utility border-status-alert { border-color: var(--border-status-alert) }
+@utility border-status-alert-focused { border-color: var(--border-status-alert-focused) }
+@utility border-status-alert-selected { border-color: var(--border-status-alert-selected) }
+@utility border-status-alert-selected-bold { border-color: var(--border-status-alert-selected-bold) }
+@utility border-status-discovery { border-color: var(--border-status-discovery) }
+@utility border-status-discovery-focused { border-color: var(--border-status-discovery-focused) }
+@utility border-status-discovery-selected { border-color: var(--border-status-discovery-selected) }
+@utility border-status-discovery-selected-bold { border-color: var(--border-status-discovery-selected-bold) }
+@utility text-primary { color: var(--text-primary) }
+@utility text-secondary { color: var(--text-secondary) }
+@utility text-tertiary { color: var(--text-tertiary) }
 @utility text-disabled { color: var(--text-disabled) }
 @utility text-selected { color: var(--text-selected) }
-@utility text-success { color: var(--text-success) }
-@utility text-success-bold { color: var(--text-success-bold) }
-@utility text-information { color: var(--text-information) }
-@utility text-information-bold { color: var(--text-information-bold) }
-@utility text-warning { color: var(--text-warning) }
-@utility text-warning-bold { color: var(--text-warning-bold) }
-@utility text-alert { color: var(--text-alert) }
-@utility text-alert-bold { color: var(--text-alert-bold) }
-@utility text-discovery { color: var(--text-discovery) }
-@utility text-discovery-bold { color: var(--text-discovery-bold) }
-@utility text-inverse { color: var(--text-inverse) }
+@utility text-status-success { color: var(--text-status-success) }
+@utility text-status-success-bold { color: var(--text-status-success-bold) }
+@utility text-status-notice { color: var(--text-status-notice) }
+@utility text-status-notice-bold { color: var(--text-status-notice-bold) }
+@utility text-status-warning { color: var(--text-status-warning) }
+@utility text-status-warning-bold { color: var(--text-status-warning-bold) }
+@utility text-status-alert { color: var(--text-status-alert) }
+@utility text-status-alert-bold { color: var(--text-status-alert-bold) }
+@utility text-status-discovery { color: var(--text-status-discovery) }
+@utility text-status-discovery-bold { color: var(--text-status-discovery-bold) }
 
 @source inline('bg-ui{,-bold,-minimal,-muted,-primary,-strong,-subtle}{,-hovered,-pressed,-selected,-selected-bold}{,!}');
-@source inline('bg{-notice,-success,-warning}{,-bold,-minimal,-muted}{,-hovered,-pressed}{,!}');
+@source inline('bg{-status-alert,-status-discovery,-status-notice,-status-success,-status-warning}{,-bold,-minimal,-subtle}{,-hovered,-pressed}{,!}');
 @source inline('border-ui{,-bold,-minimal,-muted,-strong,-subtle}{,-focused,-hovered,-selected,-selected-bold}{,!}');
-@source inline('border{-notice,-success}{,-focused,-selected,-selected-bold}{,!}');
-@source inline('text{-default,-disabled,-inverse,-selected,-subtle,-subtler,-subtlest}{,!}');
-@source inline('text{-alert,-discovery,-information,-success,-warning}{,-bold}{,!}');
+@source inline('border{-status-alert,-status-discovery,-status-notice,-status-success,-status-warning}{,-focused,-selected,-selected-bold}{,!}');
+@source inline('text{-disabled,-primary,-secondary,-selected,-tertiary}{,!}');
+@source inline('text{-status-alert,-status-discovery,-status-notice,-status-success,-status-warning}{,-bold}{,!}');

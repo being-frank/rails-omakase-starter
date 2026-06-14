@@ -1,24 +1,34 @@
 ---
 priority: 3
 ---
-<h2>Background</h2>
+<h2>Warning</h2>
 
 <%= render_design_tokens(
-  title:    'Interaction States',
+  title:    'Background',
   set:      :semantic,
   category: :color,
   property: :bg,
-  role:     :warning,
+  role:     :status,
+  variant:  :warning,
   display:  :states
 ) %>
 
-<h2>Border</h2>
-
 <%= render_design_tokens(
-  title:    'Interaction States',
+  title:    'Border',
   set:      :semantic,
   category: :color,
   property: :border,
-  role:     :warning,
+  role:     :status,
+  variant:  :warning,
   display:  :states
+) %>
+
+<%= render_design_tokens(
+  title:    'Text',
+  set:      :semantic,
+  category: :color,
+  property: :text,
+  role:     :status,
+  variant:  :warning,
+  display:  :text
 ) %>

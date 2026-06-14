@@ -1,9 +1,10 @@
 <%= vite_stylesheet_tag 'application.css', 'data-turbo-track': :reload %>
-<%= render 'kitsune_ds/pages/colors/text' %>
+<%= render 'kitsune_ds/pages/kdsdocs_styles', styles_for: %i[states tokens variants] %>
+
 <%= render_design_tokens(
-  title:    'Tokens',
+  title:    'Text',
   set:      :semantic,
   category: :color,
   property: :text,
-  display:  :list
+  display:  :text
 ) %>
