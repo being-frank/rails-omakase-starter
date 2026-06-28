@@ -1,7 +1,7 @@
 ---
-priority: 4
+priority: 1
 ---
-<h2>Alert</h2>
+<h2>Information</h2>
 
 <%= render_design_tokens(
   title:    'Background',
@@ -9,7 +9,7 @@ priority: 4
   category: :color,
   property: :bg,
   role:     :status,
-  variant:  :alert,
+  variant:  :information,
   display:  :states
 ) %>
 
@@ -19,8 +19,8 @@ priority: 4
   category: :color,
   property: :border,
   role:     :status,
-  variant:  :alert,
-  display:  :states
+  variant:  :information,
+  display:  :variants
 ) %>
 
 <%= render_design_tokens(
@@ -29,6 +29,6 @@ priority: 4
   category: :color,
   property: :text,
   role:     :status,
-  variant:  :alert,
+  variant:  :information,
   display:  :text
 ) %>

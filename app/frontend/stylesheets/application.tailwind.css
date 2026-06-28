@@ -14,12 +14,12 @@
 }
 
 @font-face {
-  font-display:  swap;
-  font-family:   'Open Sans';
-  font-stretch:  100%;
-  font-style:    normal;
-  font-weight:   300 800;
-  src:           url('~/fonts/open-sans.woff2') format('woff2');
+  font-display: swap;
+  font-family:  'Open Sans';
+  font-stretch: 100%;
+  font-style:   normal;
+  font-weight:  300 800;
+  src:          url('~/fonts/open-sans.woff2') format('woff2');
 }
 
 body {
