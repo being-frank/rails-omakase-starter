@@ -6,12 +6,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline static {
-  /*-- space --*/
   --color-space: srgb;
-  
-  /*-- ui --*/
-  --color-ui-0  : var(--color-white);
-  --color-ui-50 : var(--color-gray-50);
+  --color-ui-0: var(--color-white);
+  --color-ui-50: var(--color-gray-50);
   --color-ui-100: var(--color-gray-100);
   --color-ui-200: var(--color-gray-200);
   --color-ui-300: var(--color-gray-300);
@@ -22,9 +19,7 @@
   --color-ui-800: var(--color-gray-800);
   --color-ui-900: var(--color-gray-900);
   --color-ui-950: var(--color-gray-950);
-  
-  /*-- accent --*/
-  --color-accent-50 : var(--color-violet-50);
+  --color-accent-50: var(--color-violet-50);
   --color-accent-100: var(--color-violet-100);
   --color-accent-200: var(--color-violet-200);
   --color-accent-300: var(--color-violet-300);
@@ -35,9 +30,7 @@
   --color-accent-800: var(--color-violet-800);
   --color-accent-900: var(--color-violet-900);
   --color-accent-950: var(--color-violet-950);
-  
-  /*-- ui-accent --*/
-  --color-ui-accent-50 : var(--color-accent-50);
+  --color-ui-accent-50: var(--color-accent-50);
   --color-ui-accent-100: var(--color-accent-100);
   --color-ui-accent-200: var(--color-accent-200);
   --color-ui-accent-300: var(--color-accent-300);
@@ -48,9 +41,7 @@
   --color-ui-accent-800: var(--color-accent-800);
   --color-ui-accent-900: var(--color-accent-900);
   --color-ui-accent-950: var(--color-accent-950);
-  
-  /*-- information --*/
-  --color-information-50 : var(--color-blue-50);
+  --color-information-50: var(--color-blue-50);
   --color-information-100: var(--color-blue-100);
   --color-information-200: var(--color-blue-200);
   --color-information-300: var(--color-blue-300);
@@ -61,9 +52,7 @@
   --color-information-800: var(--color-blue-800);
   --color-information-900: var(--color-blue-900);
   --color-information-950: var(--color-blue-950);
-  
-  /*-- success --*/
-  --color-success-50 : var(--color-green-50);
+  --color-success-50: var(--color-green-50);
   --color-success-100: var(--color-green-100);
   --color-success-200: var(--color-green-200);
   --color-success-300: var(--color-green-300);
@@ -74,9 +63,7 @@
   --color-success-800: var(--color-green-800);
   --color-success-900: var(--color-green-900);
   --color-success-950: var(--color-green-950);
-  
-  /*-- warning --*/
-  --color-warning-50 : var(--color-orange-50);
+  --color-warning-50: var(--color-orange-50);
   --color-warning-100: var(--color-orange-100);
   --color-warning-200: var(--color-orange-200);
   --color-warning-300: var(--color-orange-300);
@@ -87,9 +74,7 @@
   --color-warning-800: var(--color-orange-800);
   --color-warning-900: var(--color-orange-900);
   --color-warning-950: var(--color-orange-950);
-  
-  /*-- danger --*/
-  --color-danger-50 : var(--color-red-50);
+  --color-danger-50: var(--color-red-50);
   --color-danger-100: var(--color-red-100);
   --color-danger-200: var(--color-red-200);
   --color-danger-300: var(--color-red-300);
@@ -100,9 +85,7 @@
   --color-danger-800: var(--color-red-800);
   --color-danger-900: var(--color-red-900);
   --color-danger-950: var(--color-red-950);
-  
-  /*-- discovery --*/
-  --color-discovery-50 : var(--color-purple-50);
+  --color-discovery-50: var(--color-purple-50);
   --color-discovery-100: var(--color-purple-100);
   --color-discovery-200: var(--color-purple-200);
   --color-discovery-300: var(--color-purple-300);
@@ -113,25 +96,23 @@
   --color-discovery-800: var(--color-purple-800);
   --color-discovery-900: var(--color-purple-900);
   --color-discovery-950: var(--color-purple-950);
-  
-  /*-- spacing --*/
-  --spacing-*  : initial;
-  --spacing-2  : 0.125rem;
-  --spacing-4  : 0.25rem;
-  --spacing-8  : 0.5rem;
-  --spacing-12 : 0.75rem;
-  --spacing-16 : 1rem;
-  --spacing-24 : 1.5rem;
-  --spacing-32 : 2rem;
-  --spacing-40 : 2.5rem;
-  --spacing-48 : 3rem;
-  --spacing-64 : 4rem;
-  --spacing-80 : 5rem;
-  --spacing-96 : 6rem;
+  --spacing-*: initial;
+  --spacing-2: 0.125rem;
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-12: 0.75rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-40: 2.5rem;
+  --spacing-48: 3rem;
+  --spacing-64: 4rem;
+  --spacing-80: 5rem;
+  --spacing-96: 6rem;
   --spacing-112: 7rem;
   --spacing-128: 8rem;
 
-  /* Semantic */
+  /*-- semantic --*/
 
   --kds-bg-ui-primary: var(--color-ui-0);
   --kds-bg-ui-primary-hovered: color-mix(in var(--color-space), var(--color-ui-0), var(--color-ui-200) 20%);
@@ -245,11 +226,11 @@
   --kds-border-status-danger-dark: var(--color-danger-500);
   --kds-border-status-discovery-light: var(--color-discovery-600);
   --kds-border-status-discovery-dark: var(--color-discovery-500);
+  --kds-text-disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent);
+  --kds-text-selected: var(--color-ui-accent-600);
   --kds-text-primary: var(--color-ui-900);
   --kds-text-secondary: var(--color-ui-600);
   --kds-text-tertiary: var(--color-ui-400);
-  --kds-text-disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent);
-  --kds-text-selected: var(--color-ui-accent-600);
   --kds-text-status-information: var(--color-information-500);
   --kds-text-status-information-bold: var(--color-information-700);
   --kds-text-status-success: var(--color-success-500);
@@ -363,11 +344,11 @@
   --kds-border-ui-strong-focused: var(--color-ui-accent-500);
   --kds-border-ui-strong-selected: var(--color-ui-accent-700);
   --kds-border-ui-strong-selected-bold: var(--color-ui-accent-500);
+  --kds-text-disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent);
+  --kds-text-selected: var(--color-ui-accent-500);
   --kds-text-primary: var(--color-ui-100);
   --kds-text-secondary: var(--color-ui-400);
   --kds-text-tertiary: var(--color-ui-600);
-  --kds-text-disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent);
-  --kds-text-selected: var(--color-ui-accent-500);
   --kds-text-status-information: var(--color-information-600);
   --kds-text-status-information-bold: var(--color-information-400);
   --kds-text-status-success: var(--color-success-600);
@@ -480,23 +461,11 @@
 @utility border-ui-strong-focused  { border-color: var(--kds-border-ui-strong-focused) }
 @utility border-ui-strong-selected  { border-color: var(--kds-border-ui-strong-selected) }
 @utility border-ui-strong-selected-bold  { border-color: var(--kds-border-ui-strong-selected-bold) }
-@utility border-accent-light  { border-color: var(--kds-border-accent-light) }
-@utility border-accent-dark  { border-color: var(--kds-border-accent-dark) }
-@utility border-status-information-light  { border-color: var(--kds-border-status-information-light) }
-@utility border-status-information-dark  { border-color: var(--kds-border-status-information-dark) }
-@utility border-status-success-light  { border-color: var(--kds-border-status-success-light) }
-@utility border-status-success-dark  { border-color: var(--kds-border-status-success-dark) }
-@utility border-status-warning-light  { border-color: var(--kds-border-status-warning-light) }
-@utility border-status-warning-dark  { border-color: var(--kds-border-status-warning-dark) }
-@utility border-status-danger-light  { border-color: var(--kds-border-status-danger-light) }
-@utility border-status-danger-dark  { border-color: var(--kds-border-status-danger-dark) }
-@utility border-status-discovery-light  { border-color: var(--kds-border-status-discovery-light) }
-@utility border-status-discovery-dark  { border-color: var(--kds-border-status-discovery-dark) }
+@utility text-disabled  { color: var(--kds-text-disabled) }
+@utility text-selected  { color: var(--kds-text-selected) }
 @utility text-primary  { color: var(--kds-text-primary) }
 @utility text-secondary  { color: var(--kds-text-secondary) }
 @utility text-tertiary  { color: var(--kds-text-tertiary) }
-@utility text-disabled  { color: var(--kds-text-disabled) }
-@utility text-selected  { color: var(--kds-text-selected) }
 @utility text-status-information  { color: var(--kds-text-status-information) }
 @utility text-status-information-bold  { color: var(--kds-text-status-information-bold) }
 @utility text-status-success  { color: var(--kds-text-status-success) }
@@ -511,7 +480,5 @@
 @source inline('bg-ui{-bold,-minimal,-muted,-primary,-strong,-subtle}{,-hovered,-pressed,-selected,-selected-bold}{,!}');
 @source inline('bg-status{-danger,-discovery,-information,-success,-warning}{-bold,-minimal,-subtle}{,-hovered,-pressed}{,!}');
 @source inline('border-ui{-bold,-minimal,-muted,-strong,-subtle}{,-focused,-hovered,-selected,-selected-bold}{,!}');
-@source inline('border-accent{-dark,-light}{,!}');
-@source inline('border-status{-danger,-discovery,-information,-success,-warning}{-dark,-light}{,!}');
 @source inline('text{-primary,-secondary,-tertiary}{,-disabled,-selected}{,!}');
 @source inline('text-status{-danger,-discovery,-information,-success,-warning}{,-bold}{,!}');

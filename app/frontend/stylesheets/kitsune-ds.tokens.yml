@@ -539,6 +539,14 @@ semantic:
 
     text:
       $no-role:
+        $no-emphasis:
+          light:
+            disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent)
+            selected: var(--color-ui-accent-600)
+          dark:
+            disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent)
+            selected: var(--color-ui-accent-500)
+
         primary:
           light:
             $base: var(--color-ui-900)
@@ -556,14 +564,6 @@ semantic:
             $base: var(--color-ui-400)
           dark:
             $base: var(--color-ui-600)
-
-        $no-emphasis:
-          light:
-            disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent)
-            selected: var(--color-ui-accent-600)
-          dark:
-            disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent)
-            selected: var(--color-ui-accent-500)
 
       status:
         information:
