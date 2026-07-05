@@ -9,10 +9,10 @@
 <% tokens.select { |t|
   t.mode == 'light' &&
   t.group == 'semantic'
-}.group_by(&:property).each do |role, role_tokens|
-  role_tokens.group_by { |t| t.role }.each do |emphasis, tokens|
+}.group_by(&:property).each do |property, property_tokens|
+  { nil => property_tokens }.each do |level, tokens|
 %>
-  <h3 class='-font-mono'><%= [role, emphasis].compact_blank.join('.') %></h3>
+  <h3 class='-font-mono'><%= [property, level].compact_blank.join('.') %></h3>
   <table class='kdsdocs-table'>
     <thead>
       <tr>

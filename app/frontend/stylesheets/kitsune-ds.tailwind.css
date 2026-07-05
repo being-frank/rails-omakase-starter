@@ -2,9 +2,6 @@
   Do not edit directly, this file was auto-generated.
   To regenerate run `rails kitsune_ds:design_tokens:export`
 */
-
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme inline static {
   --color-space: srgb;
   --color-ui-0: var(--color-white);
@@ -111,9 +108,6 @@
   --spacing-96: 6rem;
   --spacing-112: 7rem;
   --spacing-128: 8rem;
-
-  /*-- semantic --*/
-
   --kds-bg-ui-primary: var(--color-ui-0);
   --kds-bg-ui-primary-hovered: color-mix(in var(--color-space), var(--color-ui-0), var(--color-ui-200) 20%);
   --kds-bg-ui-primary-pressed: color-mix(in var(--color-space), var(--color-ui-0), var(--color-ui-200) 40%);
@@ -144,51 +138,36 @@
   --kds-bg-ui-strong-pressed: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-700) 40%);
   --kds-bg-ui-strong-selected: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-accent-600) 40%);
   --kds-bg-ui-strong-selected-bold: var(--color-ui-accent-600);
-  --kds-bg-status-information-minimal: color-mix(in var(--color-space), var(--color-information-200) 20%, transparent);
-  --kds-bg-status-information-minimal-hovered: color-mix(in var(--color-space), var(--color-information-400) 20%, transparent);
-  --kds-bg-status-information-minimal-pressed: color-mix(in var(--color-space), var(--color-information-400) 40%, transparent);
-  --kds-bg-status-information-subtle: var(--color-information-200);
-  --kds-bg-status-information-subtle-hovered: color-mix(in var(--color-space), var(--color-information-200), var(--color-information-400) 20%);
-  --kds-bg-status-information-subtle-pressed: color-mix(in var(--color-space), var(--color-information-200), var(--color-information-400) 40%);
-  --kds-bg-status-information-bold: var(--color-information-600);
-  --kds-bg-status-information-bold-hovered: color-mix(in var(--color-space), var(--color-information-600), var(--color-information-800) 20%);
-  --kds-bg-status-information-bold-pressed: color-mix(in var(--color-space), var(--color-information-600), var(--color-information-800) 40%);
-  --kds-bg-status-success-minimal: color-mix(in var(--color-space), var(--color-success-200) 20%, transparent);
-  --kds-bg-status-success-minimal-hovered: color-mix(in var(--color-space), var(--color-success-400) 20%, transparent);
-  --kds-bg-status-success-minimal-pressed: color-mix(in var(--color-space), var(--color-success-400) 40%, transparent);
-  --kds-bg-status-success-subtle: var(--color-success-200);
-  --kds-bg-status-success-subtle-hovered: color-mix(in var(--color-space), var(--color-success-200), var(--color-success-400) 20%);
-  --kds-bg-status-success-subtle-pressed: color-mix(in var(--color-space), var(--color-success-200), var(--color-success-400) 40%);
-  --kds-bg-status-success-bold: var(--color-success-600);
-  --kds-bg-status-success-bold-hovered: color-mix(in var(--color-space), var(--color-success-600), var(--color-success-800) 20%);
-  --kds-bg-status-success-bold-pressed: color-mix(in var(--color-space), var(--color-success-600), var(--color-success-800) 40%);
-  --kds-bg-status-warning-minimal: color-mix(in var(--color-space), var(--color-warning-200) 15%, transparent);
-  --kds-bg-status-warning-minimal-hovered: color-mix(in var(--color-space), var(--color-warning-200) 20%, transparent);
-  --kds-bg-status-warning-minimal-pressed: color-mix(in var(--color-space), var(--color-warning-200) 40%, transparent);
-  --kds-bg-status-warning-subtle: var(--color-warning-100);
-  --kds-bg-status-warning-subtle-hovered: color-mix(in var(--color-space), var(--color-warning-100), var(--color-warning-300) 20%);
-  --kds-bg-status-warning-subtle-pressed: color-mix(in var(--color-space), var(--color-warning-100), var(--color-warning-300) 40%);
-  --kds-bg-status-warning-bold: var(--color-warning-300);
-  --kds-bg-status-warning-bold-hovered: color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-500) 20%);
-  --kds-bg-status-warning-bold-pressed: color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-500) 40%);
-  --kds-bg-status-danger-minimal: color-mix(in var(--color-space), var(--color-danger-200) 20%, transparent);
-  --kds-bg-status-danger-minimal-hovered: color-mix(in var(--color-space), var(--color-danger-400) 20%, transparent);
-  --kds-bg-status-danger-minimal-pressed: color-mix(in var(--color-space), var(--color-danger-400) 40%, transparent);
-  --kds-bg-status-danger-subtle: var(--color-danger-200);
-  --kds-bg-status-danger-subtle-hovered: color-mix(in var(--color-space), var(--color-danger-200), var(--color-danger-400) 20%);
-  --kds-bg-status-danger-subtle-pressed: color-mix(in var(--color-space), var(--color-danger-200), var(--color-danger-400) 40%);
-  --kds-bg-status-danger-bold: var(--color-danger-600);
-  --kds-bg-status-danger-bold-hovered: color-mix(in var(--color-space), var(--color-danger-600), var(--color-danger-800) 20%);
-  --kds-bg-status-danger-bold-pressed: color-mix(in var(--color-space), var(--color-danger-600), var(--color-danger-800) 40%);
-  --kds-bg-status-discovery-minimal: color-mix(in var(--color-space), var(--color-discovery-200) 20%, transparent);
-  --kds-bg-status-discovery-minimal-hovered: color-mix(in var(--color-space), var(--color-discovery-400) 20%, transparent);
-  --kds-bg-status-discovery-minimal-pressed: color-mix(in var(--color-space), var(--color-discovery-400) 40%, transparent);
-  --kds-bg-status-discovery-subtle: var(--color-discovery-200);
-  --kds-bg-status-discovery-subtle-hovered: color-mix(in var(--color-space), var(--color-discovery-200), var(--color-discovery-400) 20%);
-  --kds-bg-status-discovery-subtle-pressed: color-mix(in var(--color-space), var(--color-discovery-200), var(--color-discovery-400) 40%);
-  --kds-bg-status-discovery-bold: var(--color-discovery-600);
-  --kds-bg-status-discovery-bold-hovered: color-mix(in var(--color-space), var(--color-discovery-600), var(--color-discovery-800) 20%);
-  --kds-bg-status-discovery-bold-pressed: color-mix(in var(--color-space), var(--color-discovery-600), var(--color-discovery-800) 40%);
+  --kds-bg-information-minimal-light: color-mix(in var(--color-space), var(--color-information-200) 20%, transparent);
+  --kds-bg-information-minimal-dark: color-mix(in var(--color-space), var(--color-information-800) 20%, transparent);
+  --kds-bg-information-subtle-light: var(--color-information-200);
+  --kds-bg-information-subtle-dark: var(--color-information-800);
+  --kds-bg-information-bold-light: var(--color-information-600);
+  --kds-bg-information-bold-dark: var(--color-information-500);
+  --kds-bg-success-minimal-light: color-mix(in var(--color-space), var(--color-success-200) 20%, transparent);
+  --kds-bg-success-minimal-dark: color-mix(in var(--color-space), var(--color-success-800) 20%, transparent);
+  --kds-bg-success-subtle-light: var(--color-success-200);
+  --kds-bg-success-subtle-dark: var(--color-success-800);
+  --kds-bg-success-bold-light: var(--color-success-600);
+  --kds-bg-success-bold-dark: var(--color-success-500);
+  --kds-bg-warning-minimal-light: color-mix(in var(--color-space), var(--color-warning-200) 15%, transparent);
+  --kds-bg-warning-minimal-dark: color-mix(in var(--color-space), var(--color-warning-500) 10%, transparent);
+  --kds-bg-warning-subtle-light: var(--color-warning-100);
+  --kds-bg-warning-subtle-dark: var(--color-warning-500);
+  --kds-bg-warning-bold-light: var(--color-warning-300);
+  --kds-bg-warning-bold-dark: var(--color-warning-300);
+  --kds-bg-danger-minimal-light: color-mix(in var(--color-space), var(--color-danger-200) 20%, transparent);
+  --kds-bg-danger-minimal-dark: color-mix(in var(--color-space), var(--color-danger-800) 20%, transparent);
+  --kds-bg-danger-subtle-light: var(--color-danger-200);
+  --kds-bg-danger-subtle-dark: var(--color-danger-800);
+  --kds-bg-danger-bold-light: var(--color-danger-600);
+  --kds-bg-danger-bold-dark: var(--color-danger-500);
+  --kds-bg-discovery-minimal-light: color-mix(in var(--color-space), var(--color-discovery-200) 20%, transparent);
+  --kds-bg-discovery-minimal-dark: color-mix(in var(--color-space), var(--color-discovery-800) 20%, transparent);
+  --kds-bg-discovery-subtle-light: var(--color-discovery-200);
+  --kds-bg-discovery-subtle-dark: var(--color-discovery-800);
+  --kds-bg-discovery-bold-light: var(--color-discovery-600);
+  --kds-bg-discovery-bold-dark: var(--color-discovery-500);
   --kds-border-ui-muted: var(--color-ui-100);
   --kds-border-ui-muted-hovered: var(--color-ui-200);
   --kds-border-ui-muted-focused: var(--color-ui-accent-600);
@@ -231,18 +210,19 @@
   --kds-text-primary: var(--color-ui-900);
   --kds-text-secondary: var(--color-ui-600);
   --kds-text-tertiary: var(--color-ui-400);
-  --kds-text-status-information: var(--color-information-500);
-  --kds-text-status-information-bold: var(--color-information-700);
-  --kds-text-status-success: var(--color-success-500);
-  --kds-text-status-success-bold: var(--color-success-700);
-  --kds-text-status-warning: var(--color-warning-300);
-  --kds-text-status-warning-bold: var(--color-warning-500);
-  --kds-text-status-danger: var(--color-danger-500);
-  --kds-text-status-danger-bold: var(--color-danger-700);
-  --kds-text-status-discovery: var(--color-discovery-500);
-  --kds-text-status-discovery-bold: var(--color-discovery-700);
+  --kds-text-information: var(--color-information-500);
+  --kds-text-information-bold: var(--color-information-700);
+  --kds-text-success: var(--color-success-500);
+  --kds-text-success-bold: var(--color-success-700);
+  --kds-text-warning: var(--color-warning-300);
+  --kds-text-warning-bold: var(--color-warning-500);
+  --kds-text-danger: var(--color-danger-500);
+  --kds-text-danger-bold: var(--color-danger-700);
+  --kds-text-discovery: var(--color-discovery-500);
+  --kds-text-discovery-bold: var(--color-discovery-700);
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
 :root.dark, .dark {
   --kds-bg-ui-primary: var(--color-ui-950);
   --kds-bg-ui-primary-hovered: color-mix(in var(--color-space), var(--color-ui-950), var(--color-ui-800) 20%);
@@ -274,51 +254,6 @@
   --kds-bg-ui-strong-pressed: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-300) 40%);
   --kds-bg-ui-strong-selected: color-mix(in var(--color-space), var(--color-ui-500), var(--color-ui-accent-500) 40%);
   --kds-bg-ui-strong-selected-bold: var(--color-ui-accent-500);
-  --kds-bg-status-information-minimal: color-mix(in var(--color-space), var(--color-information-800) 20%, transparent);
-  --kds-bg-status-information-minimal-hovered: color-mix(in var(--color-space), var(--color-information-600) 20%, transparent);
-  --kds-bg-status-information-minimal-pressed: color-mix(in var(--color-space), var(--color-information-600) 40%, transparent);
-  --kds-bg-status-information-subtle: var(--color-information-800);
-  --kds-bg-status-information-subtle-hovered: color-mix(in var(--color-space), var(--color-information-800), var(--color-information-600) 20%);
-  --kds-bg-status-information-subtle-pressed: color-mix(in var(--color-space), var(--color-information-800), var(--color-information-600) 40%);
-  --kds-bg-status-information-bold: var(--color-information-500);
-  --kds-bg-status-information-bold-hovered: color-mix(in var(--color-space), var(--color-information-500), var(--color-information-300) 20%);
-  --kds-bg-status-information-bold-pressed: color-mix(in var(--color-space), var(--color-information-500), var(--color-information-300) 40%);
-  --kds-bg-status-success-minimal: color-mix(in var(--color-space), var(--color-success-800) 20%, transparent);
-  --kds-bg-status-success-minimal-hovered: color-mix(in var(--color-space), var(--color-success-600) 20%, transparent);
-  --kds-bg-status-success-minimal-pressed: color-mix(in var(--color-space), var(--color-success-600) 40%, transparent);
-  --kds-bg-status-success-subtle: var(--color-success-800);
-  --kds-bg-status-success-subtle-hovered: color-mix(in var(--color-space), var(--color-success-800), var(--color-success-600) 20%);
-  --kds-bg-status-success-subtle-pressed: color-mix(in var(--color-space), var(--color-success-800), var(--color-success-600) 40%);
-  --kds-bg-status-success-bold: var(--color-success-500);
-  --kds-bg-status-success-bold-hovered: color-mix(in var(--color-space), var(--color-success-500), var(--color-success-300) 20%);
-  --kds-bg-status-success-bold-pressed: color-mix(in var(--color-space), var(--color-success-500), var(--color-success-300) 40%);
-  --kds-bg-status-warning-minimal: color-mix(in var(--color-space), var(--color-warning-500) 10%, transparent);
-  --kds-bg-status-warning-minimal-hovered: color-mix(in var(--color-space), var(--color-warning-500) 20%, transparent);
-  --kds-bg-status-warning-minimal-pressed: color-mix(in var(--color-space), var(--color-warning-500) 40%, transparent);
-  --kds-bg-status-warning-subtle: var(--color-warning-500);
-  --kds-bg-status-warning-subtle-hovered: color-mix(in var(--color-space), var(--color-warning-500), var(--color-warning-200) 20%);
-  --kds-bg-status-warning-subtle-pressed: color-mix(in var(--color-space), var(--color-warning-500), var(--color-warning-200) 40%);
-  --kds-bg-status-warning-bold: var(--color-warning-300);
-  --kds-bg-status-warning-bold-hovered: color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-100) 20%);
-  --kds-bg-status-warning-bold-pressed: color-mix(in var(--color-space), var(--color-warning-300), var(--color-warning-100) 40%);
-  --kds-bg-status-danger-minimal: color-mix(in var(--color-space), var(--color-danger-800) 20%, transparent);
-  --kds-bg-status-danger-minimal-hovered: color-mix(in var(--color-space), var(--color-danger-600) 20%, transparent);
-  --kds-bg-status-danger-minimal-pressed: color-mix(in var(--color-space), var(--color-danger-600) 40%, transparent);
-  --kds-bg-status-danger-subtle: var(--color-danger-800);
-  --kds-bg-status-danger-subtle-hovered: color-mix(in var(--color-space), var(--color-danger-800), var(--color-danger-600) 20%);
-  --kds-bg-status-danger-subtle-pressed: color-mix(in var(--color-space), var(--color-danger-800), var(--color-danger-600) 40%);
-  --kds-bg-status-danger-bold: var(--color-danger-500);
-  --kds-bg-status-danger-bold-hovered: color-mix(in var(--color-space), var(--color-danger-500), var(--color-danger-300) 20%);
-  --kds-bg-status-danger-bold-pressed: color-mix(in var(--color-space), var(--color-danger-500), var(--color-danger-300) 40%);
-  --kds-bg-status-discovery-minimal: color-mix(in var(--color-space), var(--color-discovery-800) 20%, transparent);
-  --kds-bg-status-discovery-minimal-hovered: color-mix(in var(--color-space), var(--color-discovery-600) 20%, transparent);
-  --kds-bg-status-discovery-minimal-pressed: color-mix(in var(--color-space), var(--color-discovery-600) 40%, transparent);
-  --kds-bg-status-discovery-subtle: var(--color-discovery-800);
-  --kds-bg-status-discovery-subtle-hovered: color-mix(in var(--color-space), var(--color-discovery-800), var(--color-discovery-600) 20%);
-  --kds-bg-status-discovery-subtle-pressed: color-mix(in var(--color-space), var(--color-discovery-800), var(--color-discovery-600) 40%);
-  --kds-bg-status-discovery-bold: var(--color-discovery-500);
-  --kds-bg-status-discovery-bold-hovered: color-mix(in var(--color-space), var(--color-discovery-500), var(--color-discovery-300) 20%);
-  --kds-bg-status-discovery-bold-pressed: color-mix(in var(--color-space), var(--color-discovery-500), var(--color-discovery-300) 40%);
   --kds-border-ui-muted: var(--color-ui-800);
   --kds-border-ui-muted-hovered: var(--color-ui-700);
   --kds-border-ui-muted-focused: var(--color-ui-accent-500);
@@ -349,136 +284,95 @@
   --kds-text-primary: var(--color-ui-100);
   --kds-text-secondary: var(--color-ui-400);
   --kds-text-tertiary: var(--color-ui-600);
-  --kds-text-status-information: var(--color-information-600);
-  --kds-text-status-information-bold: var(--color-information-400);
-  --kds-text-status-success: var(--color-success-600);
-  --kds-text-status-success-bold: var(--color-success-400);
-  --kds-text-status-warning: var(--color-warning-500);
-  --kds-text-status-warning-bold: var(--color-warning-300);
-  --kds-text-status-danger: var(--color-danger-600);
-  --kds-text-status-danger-bold: var(--color-danger-400);
-  --kds-text-status-discovery: var(--color-discovery-600);
-  --kds-text-status-discovery-bold: var(--color-discovery-400);
+  --kds-text-information: var(--color-information-600);
+  --kds-text-information-bold: var(--color-information-400);
+  --kds-text-success: var(--color-success-600);
+  --kds-text-success-bold: var(--color-success-400);
+  --kds-text-warning: var(--color-warning-500);
+  --kds-text-warning-bold: var(--color-warning-300);
+  --kds-text-danger: var(--color-danger-600);
+  --kds-text-danger-bold: var(--color-danger-400);
+  --kds-text-discovery: var(--color-discovery-600);
+  --kds-text-discovery-bold: var(--color-discovery-400);
 }
-
-@utility bg-ui-primary  { background-color: var(--kds-bg-ui-primary) }
-@utility bg-ui-primary-hovered  { background-color: var(--kds-bg-ui-primary-hovered) }
-@utility bg-ui-primary-pressed  { background-color: var(--kds-bg-ui-primary-pressed) }
-@utility bg-ui-primary-selected  { background-color: var(--kds-bg-ui-primary-selected) }
-@utility bg-ui-primary-selected-bold  { background-color: var(--kds-bg-ui-primary-selected-bold) }
-@utility bg-ui-muted  { background-color: var(--kds-bg-ui-muted) }
-@utility bg-ui-muted-hovered  { background-color: var(--kds-bg-ui-muted-hovered) }
-@utility bg-ui-muted-pressed  { background-color: var(--kds-bg-ui-muted-pressed) }
-@utility bg-ui-muted-selected  { background-color: var(--kds-bg-ui-muted-selected) }
-@utility bg-ui-muted-selected-bold  { background-color: var(--kds-bg-ui-muted-selected-bold) }
-@utility bg-ui-minimal  { background-color: var(--kds-bg-ui-minimal) }
-@utility bg-ui-minimal-hovered  { background-color: var(--kds-bg-ui-minimal-hovered) }
-@utility bg-ui-minimal-pressed  { background-color: var(--kds-bg-ui-minimal-pressed) }
-@utility bg-ui-minimal-selected  { background-color: var(--kds-bg-ui-minimal-selected) }
-@utility bg-ui-minimal-selected-bold  { background-color: var(--kds-bg-ui-minimal-selected-bold) }
-@utility bg-ui-subtle  { background-color: var(--kds-bg-ui-subtle) }
-@utility bg-ui-subtle-hovered  { background-color: var(--kds-bg-ui-subtle-hovered) }
-@utility bg-ui-subtle-pressed  { background-color: var(--kds-bg-ui-subtle-pressed) }
-@utility bg-ui-subtle-selected  { background-color: var(--kds-bg-ui-subtle-selected) }
-@utility bg-ui-subtle-selected-bold  { background-color: var(--kds-bg-ui-subtle-selected-bold) }
-@utility bg-ui-bold  { background-color: var(--kds-bg-ui-bold) }
-@utility bg-ui-bold-hovered  { background-color: var(--kds-bg-ui-bold-hovered) }
-@utility bg-ui-bold-pressed  { background-color: var(--kds-bg-ui-bold-pressed) }
-@utility bg-ui-bold-selected  { background-color: var(--kds-bg-ui-bold-selected) }
-@utility bg-ui-bold-selected-bold  { background-color: var(--kds-bg-ui-bold-selected-bold) }
-@utility bg-ui-strong  { background-color: var(--kds-bg-ui-strong) }
-@utility bg-ui-strong-hovered  { background-color: var(--kds-bg-ui-strong-hovered) }
-@utility bg-ui-strong-pressed  { background-color: var(--kds-bg-ui-strong-pressed) }
-@utility bg-ui-strong-selected  { background-color: var(--kds-bg-ui-strong-selected) }
-@utility bg-ui-strong-selected-bold  { background-color: var(--kds-bg-ui-strong-selected-bold) }
-@utility bg-status-information-minimal  { background-color: var(--kds-bg-status-information-minimal) }
-@utility bg-status-information-minimal-hovered  { background-color: var(--kds-bg-status-information-minimal-hovered) }
-@utility bg-status-information-minimal-pressed  { background-color: var(--kds-bg-status-information-minimal-pressed) }
-@utility bg-status-information-subtle  { background-color: var(--kds-bg-status-information-subtle) }
-@utility bg-status-information-subtle-hovered  { background-color: var(--kds-bg-status-information-subtle-hovered) }
-@utility bg-status-information-subtle-pressed  { background-color: var(--kds-bg-status-information-subtle-pressed) }
-@utility bg-status-information-bold  { background-color: var(--kds-bg-status-information-bold) }
-@utility bg-status-information-bold-hovered  { background-color: var(--kds-bg-status-information-bold-hovered) }
-@utility bg-status-information-bold-pressed  { background-color: var(--kds-bg-status-information-bold-pressed) }
-@utility bg-status-success-minimal  { background-color: var(--kds-bg-status-success-minimal) }
-@utility bg-status-success-minimal-hovered  { background-color: var(--kds-bg-status-success-minimal-hovered) }
-@utility bg-status-success-minimal-pressed  { background-color: var(--kds-bg-status-success-minimal-pressed) }
-@utility bg-status-success-subtle  { background-color: var(--kds-bg-status-success-subtle) }
-@utility bg-status-success-subtle-hovered  { background-color: var(--kds-bg-status-success-subtle-hovered) }
-@utility bg-status-success-subtle-pressed  { background-color: var(--kds-bg-status-success-subtle-pressed) }
-@utility bg-status-success-bold  { background-color: var(--kds-bg-status-success-bold) }
-@utility bg-status-success-bold-hovered  { background-color: var(--kds-bg-status-success-bold-hovered) }
-@utility bg-status-success-bold-pressed  { background-color: var(--kds-bg-status-success-bold-pressed) }
-@utility bg-status-warning-minimal  { background-color: var(--kds-bg-status-warning-minimal) }
-@utility bg-status-warning-minimal-hovered  { background-color: var(--kds-bg-status-warning-minimal-hovered) }
-@utility bg-status-warning-minimal-pressed  { background-color: var(--kds-bg-status-warning-minimal-pressed) }
-@utility bg-status-warning-subtle  { background-color: var(--kds-bg-status-warning-subtle) }
-@utility bg-status-warning-subtle-hovered  { background-color: var(--kds-bg-status-warning-subtle-hovered) }
-@utility bg-status-warning-subtle-pressed  { background-color: var(--kds-bg-status-warning-subtle-pressed) }
-@utility bg-status-warning-bold  { background-color: var(--kds-bg-status-warning-bold) }
-@utility bg-status-warning-bold-hovered  { background-color: var(--kds-bg-status-warning-bold-hovered) }
-@utility bg-status-warning-bold-pressed  { background-color: var(--kds-bg-status-warning-bold-pressed) }
-@utility bg-status-danger-minimal  { background-color: var(--kds-bg-status-danger-minimal) }
-@utility bg-status-danger-minimal-hovered  { background-color: var(--kds-bg-status-danger-minimal-hovered) }
-@utility bg-status-danger-minimal-pressed  { background-color: var(--kds-bg-status-danger-minimal-pressed) }
-@utility bg-status-danger-subtle  { background-color: var(--kds-bg-status-danger-subtle) }
-@utility bg-status-danger-subtle-hovered  { background-color: var(--kds-bg-status-danger-subtle-hovered) }
-@utility bg-status-danger-subtle-pressed  { background-color: var(--kds-bg-status-danger-subtle-pressed) }
-@utility bg-status-danger-bold  { background-color: var(--kds-bg-status-danger-bold) }
-@utility bg-status-danger-bold-hovered  { background-color: var(--kds-bg-status-danger-bold-hovered) }
-@utility bg-status-danger-bold-pressed  { background-color: var(--kds-bg-status-danger-bold-pressed) }
-@utility bg-status-discovery-minimal  { background-color: var(--kds-bg-status-discovery-minimal) }
-@utility bg-status-discovery-minimal-hovered  { background-color: var(--kds-bg-status-discovery-minimal-hovered) }
-@utility bg-status-discovery-minimal-pressed  { background-color: var(--kds-bg-status-discovery-minimal-pressed) }
-@utility bg-status-discovery-subtle  { background-color: var(--kds-bg-status-discovery-subtle) }
-@utility bg-status-discovery-subtle-hovered  { background-color: var(--kds-bg-status-discovery-subtle-hovered) }
-@utility bg-status-discovery-subtle-pressed  { background-color: var(--kds-bg-status-discovery-subtle-pressed) }
-@utility bg-status-discovery-bold  { background-color: var(--kds-bg-status-discovery-bold) }
-@utility bg-status-discovery-bold-hovered  { background-color: var(--kds-bg-status-discovery-bold-hovered) }
-@utility bg-status-discovery-bold-pressed  { background-color: var(--kds-bg-status-discovery-bold-pressed) }
-@utility border-ui-muted  { border-color: var(--kds-border-ui-muted) }
-@utility border-ui-muted-hovered  { border-color: var(--kds-border-ui-muted-hovered) }
-@utility border-ui-muted-focused  { border-color: var(--kds-border-ui-muted-focused) }
-@utility border-ui-muted-selected  { border-color: var(--kds-border-ui-muted-selected) }
-@utility border-ui-muted-selected-bold  { border-color: var(--kds-border-ui-muted-selected-bold) }
-@utility border-ui-minimal  { border-color: var(--kds-border-ui-minimal) }
-@utility border-ui-minimal-hovered  { border-color: var(--kds-border-ui-minimal-hovered) }
-@utility border-ui-minimal-focused  { border-color: var(--kds-border-ui-minimal-focused) }
-@utility border-ui-minimal-selected  { border-color: var(--kds-border-ui-minimal-selected) }
-@utility border-ui-minimal-selected-bold  { border-color: var(--kds-border-ui-minimal-selected-bold) }
-@utility border-ui-subtle  { border-color: var(--kds-border-ui-subtle) }
-@utility border-ui-subtle-hovered  { border-color: var(--kds-border-ui-subtle-hovered) }
-@utility border-ui-subtle-focused  { border-color: var(--kds-border-ui-subtle-focused) }
-@utility border-ui-subtle-selected  { border-color: var(--kds-border-ui-subtle-selected) }
-@utility border-ui-subtle-selected-bold  { border-color: var(--kds-border-ui-subtle-selected-bold) }
-@utility border-ui-bold  { border-color: var(--kds-border-ui-bold) }
-@utility border-ui-bold-hovered  { border-color: var(--kds-border-ui-bold-hovered) }
-@utility border-ui-bold-focused  { border-color: var(--kds-border-ui-bold-focused) }
-@utility border-ui-bold-selected  { border-color: var(--kds-border-ui-bold-selected) }
-@utility border-ui-bold-selected-bold  { border-color: var(--kds-border-ui-bold-selected-bold) }
-@utility border-ui-strong  { border-color: var(--kds-border-ui-strong) }
-@utility border-ui-strong-hovered  { border-color: var(--kds-border-ui-strong-hovered) }
-@utility border-ui-strong-focused  { border-color: var(--kds-border-ui-strong-focused) }
-@utility border-ui-strong-selected  { border-color: var(--kds-border-ui-strong-selected) }
-@utility border-ui-strong-selected-bold  { border-color: var(--kds-border-ui-strong-selected-bold) }
-@utility text-disabled  { color: var(--kds-text-disabled) }
-@utility text-selected  { color: var(--kds-text-selected) }
-@utility text-primary  { color: var(--kds-text-primary) }
-@utility text-secondary  { color: var(--kds-text-secondary) }
-@utility text-tertiary  { color: var(--kds-text-tertiary) }
-@utility text-status-information  { color: var(--kds-text-status-information) }
-@utility text-status-information-bold  { color: var(--kds-text-status-information-bold) }
-@utility text-status-success  { color: var(--kds-text-status-success) }
-@utility text-status-success-bold  { color: var(--kds-text-status-success-bold) }
-@utility text-status-warning  { color: var(--kds-text-status-warning) }
-@utility text-status-warning-bold  { color: var(--kds-text-status-warning-bold) }
-@utility text-status-danger  { color: var(--kds-text-status-danger) }
-@utility text-status-danger-bold  { color: var(--kds-text-status-danger-bold) }
-@utility text-status-discovery  { color: var(--kds-text-status-discovery) }
-@utility text-status-discovery-bold  { color: var(--kds-text-status-discovery-bold) }
-
-@source inline('bg-ui{-bold,-minimal,-muted,-primary,-strong,-subtle}{,-hovered,-pressed,-selected,-selected-bold}{,!}');
-@source inline('bg-status{-danger,-discovery,-information,-success,-warning}{-bold,-minimal,-subtle}{,-hovered,-pressed}{,!}');
-@source inline('border-ui{-bold,-minimal,-muted,-strong,-subtle}{,-focused,-hovered,-selected,-selected-bold}{,!}');
-@source inline('text{-primary,-secondary,-tertiary}{,-disabled,-selected}{,!}');
-@source inline('text-status{-danger,-discovery,-information,-success,-warning}{,-bold}{,!}');
+@utility bg-ui-primary  { background-color: var(--kds-bg-ui-primary); }
+@utility bg-ui-primary-hovered  { background-color: var(--kds-bg-ui-primary-hovered); }
+@utility bg-ui-primary-pressed  { background-color: var(--kds-bg-ui-primary-pressed); }
+@utility bg-ui-primary-selected  { background-color: var(--kds-bg-ui-primary-selected); }
+@utility bg-ui-primary-selected-bold  { background-color: var(--kds-bg-ui-primary-selected-bold); }
+@utility bg-ui-muted  { background-color: var(--kds-bg-ui-muted); }
+@utility bg-ui-muted-hovered  { background-color: var(--kds-bg-ui-muted-hovered); }
+@utility bg-ui-muted-pressed  { background-color: var(--kds-bg-ui-muted-pressed); }
+@utility bg-ui-muted-selected  { background-color: var(--kds-bg-ui-muted-selected); }
+@utility bg-ui-muted-selected-bold  { background-color: var(--kds-bg-ui-muted-selected-bold); }
+@utility bg-ui-minimal  { background-color: var(--kds-bg-ui-minimal); }
+@utility bg-ui-minimal-hovered  { background-color: var(--kds-bg-ui-minimal-hovered); }
+@utility bg-ui-minimal-pressed  { background-color: var(--kds-bg-ui-minimal-pressed); }
+@utility bg-ui-minimal-selected  { background-color: var(--kds-bg-ui-minimal-selected); }
+@utility bg-ui-minimal-selected-bold  { background-color: var(--kds-bg-ui-minimal-selected-bold); }
+@utility bg-ui-subtle  { background-color: var(--kds-bg-ui-subtle); }
+@utility bg-ui-subtle-hovered  { background-color: var(--kds-bg-ui-subtle-hovered); }
+@utility bg-ui-subtle-pressed  { background-color: var(--kds-bg-ui-subtle-pressed); }
+@utility bg-ui-subtle-selected  { background-color: var(--kds-bg-ui-subtle-selected); }
+@utility bg-ui-subtle-selected-bold  { background-color: var(--kds-bg-ui-subtle-selected-bold); }
+@utility bg-ui-bold  { background-color: var(--kds-bg-ui-bold); }
+@utility bg-ui-bold-hovered  { background-color: var(--kds-bg-ui-bold-hovered); }
+@utility bg-ui-bold-pressed  { background-color: var(--kds-bg-ui-bold-pressed); }
+@utility bg-ui-bold-selected  { background-color: var(--kds-bg-ui-bold-selected); }
+@utility bg-ui-bold-selected-bold  { background-color: var(--kds-bg-ui-bold-selected-bold); }
+@utility bg-ui-strong  { background-color: var(--kds-bg-ui-strong); }
+@utility bg-ui-strong-hovered  { background-color: var(--kds-bg-ui-strong-hovered); }
+@utility bg-ui-strong-pressed  { background-color: var(--kds-bg-ui-strong-pressed); }
+@utility bg-ui-strong-selected  { background-color: var(--kds-bg-ui-strong-selected); }
+@utility bg-ui-strong-selected-bold  { background-color: var(--kds-bg-ui-strong-selected-bold); }
+@utility border-ui-muted  { border-color: var(--kds-border-ui-muted); }
+@utility border-ui-muted-hovered  { border-color: var(--kds-border-ui-muted-hovered); }
+@utility border-ui-muted-focused  { border-color: var(--kds-border-ui-muted-focused); }
+@utility border-ui-muted-selected  { border-color: var(--kds-border-ui-muted-selected); }
+@utility border-ui-muted-selected-bold  { border-color: var(--kds-border-ui-muted-selected-bold); }
+@utility border-ui-minimal  { border-color: var(--kds-border-ui-minimal); }
+@utility border-ui-minimal-hovered  { border-color: var(--kds-border-ui-minimal-hovered); }
+@utility border-ui-minimal-focused  { border-color: var(--kds-border-ui-minimal-focused); }
+@utility border-ui-minimal-selected  { border-color: var(--kds-border-ui-minimal-selected); }
+@utility border-ui-minimal-selected-bold  { border-color: var(--kds-border-ui-minimal-selected-bold); }
+@utility border-ui-subtle  { border-color: var(--kds-border-ui-subtle); }
+@utility border-ui-subtle-hovered  { border-color: var(--kds-border-ui-subtle-hovered); }
+@utility border-ui-subtle-focused  { border-color: var(--kds-border-ui-subtle-focused); }
+@utility border-ui-subtle-selected  { border-color: var(--kds-border-ui-subtle-selected); }
+@utility border-ui-subtle-selected-bold  { border-color: var(--kds-border-ui-subtle-selected-bold); }
+@utility border-ui-bold  { border-color: var(--kds-border-ui-bold); }
+@utility border-ui-bold-hovered  { border-color: var(--kds-border-ui-bold-hovered); }
+@utility border-ui-bold-focused  { border-color: var(--kds-border-ui-bold-focused); }
+@utility border-ui-bold-selected  { border-color: var(--kds-border-ui-bold-selected); }
+@utility border-ui-bold-selected-bold  { border-color: var(--kds-border-ui-bold-selected-bold); }
+@utility border-ui-strong  { border-color: var(--kds-border-ui-strong); }
+@utility border-ui-strong-hovered  { border-color: var(--kds-border-ui-strong-hovered); }
+@utility border-ui-strong-focused  { border-color: var(--kds-border-ui-strong-focused); }
+@utility border-ui-strong-selected  { border-color: var(--kds-border-ui-strong-selected); }
+@utility border-ui-strong-selected-bold  { border-color: var(--kds-border-ui-strong-selected-bold); }
+@utility text  { color: var(--kds-text-disabled); }
+@utility text  { color: var(--kds-text-selected); }
+@utility text-primary  { color: var(--kds-text-primary); }
+@utility text-secondary  { color: var(--kds-text-secondary); }
+@utility text-tertiary  { color: var(--kds-text-tertiary); }
+@utility text-information  { color: var(--kds-text-information); }
+@utility text-information-bold  { color: var(--kds-text-information-bold); }
+@utility text-success  { color: var(--kds-text-success); }
+@utility text-success-bold  { color: var(--kds-text-success-bold); }
+@utility text-warning  { color: var(--kds-text-warning); }
+@utility text-warning-bold  { color: var(--kds-text-warning-bold); }
+@utility text-danger  { color: var(--kds-text-danger); }
+@utility text-danger-bold  { color: var(--kds-text-danger-bold); }
+@utility text-discovery  { color: var(--kds-text-discovery); }
+@utility text-discovery-bold  { color: var(--kds-text-discovery-bold); }
+@source inline('bg-ui{-bold,-minimal,-muted,-primary,-strong,-subtle}{-hovered,-pressed,-selected,-selected-bold}{,!}');
+@source inline('border-ui{-bold,-minimal,-muted,-strong,-subtle}{-focused,-hovered,-selected,-selected-bold}{,!}');
+@source inline('text{,-disabled,-selected}{,!}');
+@source inline('text-primary{,!}');
+@source inline('text-secondary{,!}');
+@source inline('text-tertiary{,!}');
+@source inline('text-information{,-bold}{,!}');
+@source inline('text-success{,-bold}{,!}');
+@source inline('text-warning{,-bold}{,!}');
+@source inline('text-danger{,-bold}{,!}');
+@source inline('text-discovery{,-bold}{,!}');
