@@ -205,6 +205,43 @@
   --kds-border-status-danger-dark: var(--color-danger-500);
   --kds-border-status-discovery-light: var(--color-discovery-600);
   --kds-border-status-discovery-dark: var(--color-discovery-500);
+  --kds-ring-ui-muted: var(--color-ui-100);
+  --kds-ring-ui-muted-hovered: var(--color-ui-200);
+  --kds-ring-ui-muted-focused: var(--color-ui-accent-600);
+  --kds-ring-ui-muted-selected: var(--color-ui-accent-400);
+  --kds-ring-ui-muted-selected-bold: var(--color-ui-accent-600);
+  --kds-ring-ui-minimal: var(--color-ui-200);
+  --kds-ring-ui-minimal-hovered: var(--color-ui-300);
+  --kds-ring-ui-minimal-focused: var(--color-ui-accent-600);
+  --kds-ring-ui-minimal-selected: var(--color-ui-accent-400);
+  --kds-ring-ui-minimal-selected-bold: var(--color-ui-accent-600);
+  --kds-ring-ui-subtle: var(--color-ui-300);
+  --kds-ring-ui-subtle-hovered: var(--color-ui-400);
+  --kds-ring-ui-subtle-focused: var(--color-ui-accent-600);
+  --kds-ring-ui-subtle-selected: var(--color-ui-accent-400);
+  --kds-ring-ui-subtle-selected-bold: var(--color-ui-accent-600);
+  --kds-ring-ui-bold: var(--color-ui-400);
+  --kds-ring-ui-bold-hovered: var(--color-ui-500);
+  --kds-ring-ui-bold-focused: var(--color-ui-accent-600);
+  --kds-ring-ui-bold-selected: var(--color-ui-accent-400);
+  --kds-ring-ui-bold-selected-bold: var(--color-ui-accent-600);
+  --kds-ring-ui-strong: var(--color-ui-500);
+  --kds-ring-ui-strong-hovered: var(--color-ui-600);
+  --kds-ring-ui-strong-focused: var(--color-ui-accent-600);
+  --kds-ring-ui-strong-selected: var(--color-ui-accent-400);
+  --kds-ring-ui-strong-selected-bold: var(--color-ui-accent-600);
+  --kds-ring-accent-light: var(--color-accent-600);
+  --kds-ring-accent-dark: var(--color-accent-500);
+  --kds-ring-status-information-light: var(--color-information-600);
+  --kds-ring-status-information-dark: var(--color-information-500);
+  --kds-ring-status-success-light: var(--color-success-600);
+  --kds-ring-status-success-dark: var(--color-success-500);
+  --kds-ring-status-warning-light: var(--color-warning-600);
+  --kds-ring-status-warning-dark: var(--color-warning-500);
+  --kds-ring-status-danger-light: var(--color-danger-600);
+  --kds-ring-status-danger-dark: var(--color-danger-500);
+  --kds-ring-status-discovery-light: var(--color-discovery-600);
+  --kds-ring-status-discovery-dark: var(--color-discovery-500);
   --kds-text-disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent);
   --kds-text-selected: var(--color-ui-accent-600);
   --kds-text-primary: var(--color-ui-900);
@@ -279,6 +316,31 @@
   --kds-border-ui-strong-focused: var(--color-ui-accent-500);
   --kds-border-ui-strong-selected: var(--color-ui-accent-700);
   --kds-border-ui-strong-selected-bold: var(--color-ui-accent-500);
+  --kds-ring-ui-muted: var(--color-ui-800);
+  --kds-ring-ui-muted-hovered: var(--color-ui-700);
+  --kds-ring-ui-muted-focused: var(--color-ui-accent-500);
+  --kds-ring-ui-muted-selected: var(--color-ui-accent-700);
+  --kds-ring-ui-muted-selected-bold: var(--color-ui-accent-500);
+  --kds-ring-ui-minimal: var(--color-ui-700);
+  --kds-ring-ui-minimal-hovered: var(--color-ui-600);
+  --kds-ring-ui-minimal-focused: var(--color-ui-accent-500);
+  --kds-ring-ui-minimal-selected: var(--color-ui-accent-700);
+  --kds-ring-ui-minimal-selected-bold: var(--color-ui-accent-500);
+  --kds-ring-ui-subtle: var(--color-ui-600);
+  --kds-ring-ui-subtle-hovered: var(--color-ui-500);
+  --kds-ring-ui-subtle-focused: var(--color-ui-accent-500);
+  --kds-ring-ui-subtle-selected: var(--color-ui-accent-700);
+  --kds-ring-ui-subtle-selected-bold: var(--color-ui-accent-500);
+  --kds-ring-ui-bold: var(--color-ui-500);
+  --kds-ring-ui-bold-hovered: var(--color-ui-400);
+  --kds-ring-ui-bold-focused: var(--color-ui-accent-500);
+  --kds-ring-ui-bold-selected: var(--color-ui-accent-700);
+  --kds-ring-ui-bold-selected-bold: var(--color-ui-accent-500);
+  --kds-ring-ui-strong: var(--color-ui-400);
+  --kds-ring-ui-strong-hovered: var(--color-ui-300);
+  --kds-ring-ui-strong-focused: var(--color-ui-accent-500);
+  --kds-ring-ui-strong-selected: var(--color-ui-accent-700);
+  --kds-ring-ui-strong-selected-bold: var(--color-ui-accent-500);
   --kds-text-disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent);
   --kds-text-selected: var(--color-ui-accent-500);
   --kds-text-primary: var(--color-ui-100);
@@ -350,6 +412,31 @@
 @utility border-ui-strong-focused  { border-color: var(--kds-border-ui-strong-focused); }
 @utility border-ui-strong-selected  { border-color: var(--kds-border-ui-strong-selected); }
 @utility border-ui-strong-selected-bold  { border-color: var(--kds-border-ui-strong-selected-bold); }
+@utility ring-ui-muted  { --tw-ring-color: var(--kds-ring-ui-muted); }
+@utility ring-ui-muted-hovered  { --tw-ring-color: var(--kds-ring-ui-muted-hovered); }
+@utility ring-ui-muted-focused  { --tw-ring-color: var(--kds-ring-ui-muted-focused); }
+@utility ring-ui-muted-selected  { --tw-ring-color: var(--kds-ring-ui-muted-selected); }
+@utility ring-ui-muted-selected-bold  { --tw-ring-color: var(--kds-ring-ui-muted-selected-bold); }
+@utility ring-ui-minimal  { --tw-ring-color: var(--kds-ring-ui-minimal); }
+@utility ring-ui-minimal-hovered  { --tw-ring-color: var(--kds-ring-ui-minimal-hovered); }
+@utility ring-ui-minimal-focused  { --tw-ring-color: var(--kds-ring-ui-minimal-focused); }
+@utility ring-ui-minimal-selected  { --tw-ring-color: var(--kds-ring-ui-minimal-selected); }
+@utility ring-ui-minimal-selected-bold  { --tw-ring-color: var(--kds-ring-ui-minimal-selected-bold); }
+@utility ring-ui-subtle  { --tw-ring-color: var(--kds-ring-ui-subtle); }
+@utility ring-ui-subtle-hovered  { --tw-ring-color: var(--kds-ring-ui-subtle-hovered); }
+@utility ring-ui-subtle-focused  { --tw-ring-color: var(--kds-ring-ui-subtle-focused); }
+@utility ring-ui-subtle-selected  { --tw-ring-color: var(--kds-ring-ui-subtle-selected); }
+@utility ring-ui-subtle-selected-bold  { --tw-ring-color: var(--kds-ring-ui-subtle-selected-bold); }
+@utility ring-ui-bold  { --tw-ring-color: var(--kds-ring-ui-bold); }
+@utility ring-ui-bold-hovered  { --tw-ring-color: var(--kds-ring-ui-bold-hovered); }
+@utility ring-ui-bold-focused  { --tw-ring-color: var(--kds-ring-ui-bold-focused); }
+@utility ring-ui-bold-selected  { --tw-ring-color: var(--kds-ring-ui-bold-selected); }
+@utility ring-ui-bold-selected-bold  { --tw-ring-color: var(--kds-ring-ui-bold-selected-bold); }
+@utility ring-ui-strong  { --tw-ring-color: var(--kds-ring-ui-strong); }
+@utility ring-ui-strong-hovered  { --tw-ring-color: var(--kds-ring-ui-strong-hovered); }
+@utility ring-ui-strong-focused  { --tw-ring-color: var(--kds-ring-ui-strong-focused); }
+@utility ring-ui-strong-selected  { --tw-ring-color: var(--kds-ring-ui-strong-selected); }
+@utility ring-ui-strong-selected-bold  { --tw-ring-color: var(--kds-ring-ui-strong-selected-bold); }
 @utility text  { color: var(--kds-text-disabled); }
 @utility text  { color: var(--kds-text-selected); }
 @utility text-primary  { color: var(--kds-text-primary); }
@@ -365,8 +452,9 @@
 @utility text-danger-bold  { color: var(--kds-text-danger-bold); }
 @utility text-discovery  { color: var(--kds-text-discovery); }
 @utility text-discovery-bold  { color: var(--kds-text-discovery-bold); }
-@source inline('bg-ui{-bold,-minimal,-muted,-primary,-strong,-subtle}{-hovered,-pressed,-selected,-selected-bold}{,!}');
-@source inline('border-ui{-bold,-minimal,-muted,-strong,-subtle}{-focused,-hovered,-selected,-selected-bold}{,!}');
+@source inline('bg-ui{-bold,-minimal,-muted,-primary,-strong,-subtle}{,-hovered,-pressed,-selected,-selected-bold}{,!}');
+@source inline('border-ui{-bold,-minimal,-muted,-strong,-subtle}{,-focused,-hovered,-selected,-selected-bold}{,!}');
+@source inline('ring-ui{-bold,-minimal,-muted,-strong,-subtle}{,-focused,-hovered,-selected,-selected-bold}{,!}');
 @source inline('text{,-disabled,-selected}{,!}');
 @source inline('text-primary{,!}');
 @source inline('text-secondary{,!}');

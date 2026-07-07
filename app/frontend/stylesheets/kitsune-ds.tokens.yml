@@ -171,7 +171,6 @@ semantic:
           mapping:   category.property.role.mode.state
           css_class: property.role.state
 
-
   color:
     bg:
       ui:
@@ -414,7 +413,7 @@ semantic:
             hovered: color-mix(in var(--color-space), var(--color-discovery-500), var(--color-discovery-300) 20%)
             pressed: color-mix(in var(--color-space), var(--color-discovery-500), var(--color-discovery-300) 40%)
 
-    border:
+    border: &border-tokens
       ui:
         $no-variant:
           muted:
@@ -536,6 +535,9 @@ semantic:
           dark:
             $base:  var(--color-discovery-500)
             subtle: var(--color-discovery-800)
+
+    ring:
+      <<: *border-tokens
 
     text:
       $default-role:
