@@ -3,7 +3,7 @@
   To regenerate run `rails kitsune_ds:design_tokens:export`
 */
 @theme inline static {
-  --color-space: srgb;
+  --color-space: oklab;
   --color-ui-0: var(--color-white);
   --color-ui-50: var(--color-gray-50);
   --color-ui-100: var(--color-gray-100);
@@ -16,6 +16,7 @@
   --color-ui-800: var(--color-gray-800);
   --color-ui-900: var(--color-gray-900);
   --color-ui-950: var(--color-gray-950);
+  --color-ui-1000: var(--color-black);
   --color-accent-50: var(--color-violet-50);
   --color-accent-100: var(--color-violet-100);
   --color-accent-200: var(--color-violet-200);
@@ -183,18 +184,43 @@
   --kds-bg-discovery-bold: var(--color-discovery-600);
   --kds-bg-discovery-bold-hovered: color-mix(in var(--color-space), var(--color-discovery-600), var(--color-discovery-800) 20%);
   --kds-bg-discovery-bold-pressed: color-mix(in var(--color-space), var(--color-discovery-600), var(--color-discovery-800) 40%);
+  --kds-border-ui-muted: var(--color-ui-100);
+  --kds-border-ui-muted-hovered: var(--color-ui-200);
+  --kds-border-ui-muted-focused: var(--color-ui-accent-600);
+  --kds-border-ui-muted-selected: var(--color-ui-accent-400);
+  --kds-border-ui-muted-selected-bold: var(--color-ui-accent-600);
+  --kds-border-ui-minimal: var(--color-ui-200);
+  --kds-border-ui-minimal-hovered: var(--color-ui-300);
+  --kds-border-ui-minimal-focused: var(--color-ui-accent-600);
+  --kds-border-ui-minimal-selected: var(--color-ui-accent-400);
+  --kds-border-ui-minimal-selected-bold: var(--color-ui-accent-600);
+  --kds-border-ui-subtle: var(--color-ui-300);
+  --kds-border-ui-subtle-hovered: var(--color-ui-400);
+  --kds-border-ui-subtle-focused: var(--color-ui-accent-600);
+  --kds-border-ui-subtle-selected: var(--color-ui-accent-400);
+  --kds-border-ui-subtle-selected-bold: var(--color-ui-accent-600);
+  --kds-border-ui-bold: var(--color-ui-400);
+  --kds-border-ui-bold-hovered: var(--color-ui-500);
+  --kds-border-ui-bold-focused: var(--color-ui-accent-600);
+  --kds-border-ui-bold-selected: var(--color-ui-accent-400);
+  --kds-border-ui-bold-selected-bold: var(--color-ui-accent-600);
+  --kds-border-ui-strong: var(--color-ui-500);
+  --kds-border-ui-strong-hovered: var(--color-ui-600);
+  --kds-border-ui-strong-focused: var(--color-ui-accent-600);
+  --kds-border-ui-strong-selected: var(--color-ui-accent-400);
+  --kds-border-ui-strong-selected-bold: var(--color-ui-accent-600);
   --kds-border-accent: var(--color-accent-600);
   --kds-border-accent-subtle: var(--color-accent-300);
-  --kds-border-status-information: var(--color-information-600);
-  --kds-border-status-information-subtle: var(--color-information-300);
-  --kds-border-status-success: var(--color-success-600);
-  --kds-border-status-success-subtle: var(--color-success-300);
-  --kds-border-status-warning: var(--color-warning-600);
-  --kds-border-status-warning-subtle: var(--color-warning-300);
-  --kds-border-status-danger: var(--color-danger-600);
-  --kds-border-status-danger-subtle: var(--color-danger-300);
-  --kds-border-status-discovery: var(--color-discovery-600);
-  --kds-border-status-discovery-subtle: var(--color-discovery-300);
+  --kds-border-information: var(--color-information-600);
+  --kds-border-information-subtle: var(--color-information-300);
+  --kds-border-success: var(--color-success-600);
+  --kds-border-success-subtle: var(--color-success-300);
+  --kds-border-warning: var(--color-warning-600);
+  --kds-border-warning-subtle: var(--color-warning-300);
+  --kds-border-danger: var(--color-danger-600);
+  --kds-border-danger-subtle: var(--color-danger-300);
+  --kds-border-discovery: var(--color-discovery-600);
+  --kds-border-discovery-subtle: var(--color-discovery-300);
   --kds-ring-ui-muted: var(--color-ui-100);
   --kds-ring-ui-muted-hovered: var(--color-ui-200);
   --kds-ring-ui-muted-focused: var(--color-ui-accent-600);
@@ -220,18 +246,18 @@
   --kds-ring-ui-strong-focused: var(--color-ui-accent-600);
   --kds-ring-ui-strong-selected: var(--color-ui-accent-400);
   --kds-ring-ui-strong-selected-bold: var(--color-ui-accent-600);
-  --kds-ring-accent-light: var(--color-accent-600);
-  --kds-ring-accent-dark: var(--color-accent-500);
-  --kds-ring-status-information-light: var(--color-information-600);
-  --kds-ring-status-information-dark: var(--color-information-500);
-  --kds-ring-status-success-light: var(--color-success-600);
-  --kds-ring-status-success-dark: var(--color-success-500);
-  --kds-ring-status-warning-light: var(--color-warning-600);
-  --kds-ring-status-warning-dark: var(--color-warning-500);
-  --kds-ring-status-danger-light: var(--color-danger-600);
-  --kds-ring-status-danger-dark: var(--color-danger-500);
-  --kds-ring-status-discovery-light: var(--color-discovery-600);
-  --kds-ring-status-discovery-dark: var(--color-discovery-500);
+  --kds-ring-accent: var(--color-accent-600);
+  --kds-ring-accent-subtle: var(--color-accent-300);
+  --kds-ring-information: var(--color-information-600);
+  --kds-ring-information-subtle: var(--color-information-300);
+  --kds-ring-success: var(--color-success-600);
+  --kds-ring-success-subtle: var(--color-success-300);
+  --kds-ring-warning: var(--color-warning-600);
+  --kds-ring-warning-subtle: var(--color-warning-300);
+  --kds-ring-danger: var(--color-danger-600);
+  --kds-ring-danger-subtle: var(--color-danger-300);
+  --kds-ring-discovery: var(--color-discovery-600);
+  --kds-ring-discovery-subtle: var(--color-discovery-300);
   --kds-text-disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent);
   --kds-text-selected: var(--color-ui-accent-600);
   --kds-text-primary: var(--color-ui-900);
@@ -326,18 +352,43 @@
   --kds-bg-discovery-bold: var(--color-discovery-500);
   --kds-bg-discovery-bold-hovered: color-mix(in var(--color-space), var(--color-discovery-500), var(--color-discovery-300) 20%);
   --kds-bg-discovery-bold-pressed: color-mix(in var(--color-space), var(--color-discovery-500), var(--color-discovery-300) 40%);
+  --kds-border-ui-muted: var(--color-ui-800);
+  --kds-border-ui-muted-hovered: var(--color-ui-700);
+  --kds-border-ui-muted-focused: var(--color-ui-accent-500);
+  --kds-border-ui-muted-selected: var(--color-ui-accent-700);
+  --kds-border-ui-muted-selected-bold: var(--color-ui-accent-500);
+  --kds-border-ui-minimal: var(--color-ui-700);
+  --kds-border-ui-minimal-hovered: var(--color-ui-600);
+  --kds-border-ui-minimal-focused: var(--color-ui-accent-500);
+  --kds-border-ui-minimal-selected: var(--color-ui-accent-700);
+  --kds-border-ui-minimal-selected-bold: var(--color-ui-accent-500);
+  --kds-border-ui-subtle: var(--color-ui-600);
+  --kds-border-ui-subtle-hovered: var(--color-ui-500);
+  --kds-border-ui-subtle-focused: var(--color-ui-accent-500);
+  --kds-border-ui-subtle-selected: var(--color-ui-accent-700);
+  --kds-border-ui-subtle-selected-bold: var(--color-ui-accent-500);
+  --kds-border-ui-bold: var(--color-ui-500);
+  --kds-border-ui-bold-hovered: var(--color-ui-400);
+  --kds-border-ui-bold-focused: var(--color-ui-accent-500);
+  --kds-border-ui-bold-selected: var(--color-ui-accent-700);
+  --kds-border-ui-bold-selected-bold: var(--color-ui-accent-500);
+  --kds-border-ui-strong: var(--color-ui-400);
+  --kds-border-ui-strong-hovered: var(--color-ui-300);
+  --kds-border-ui-strong-focused: var(--color-ui-accent-500);
+  --kds-border-ui-strong-selected: var(--color-ui-accent-700);
+  --kds-border-ui-strong-selected-bold: var(--color-ui-accent-500);
   --kds-border-accent: var(--color-accent-500);
   --kds-border-accent-subtle: var(--color-accent-800);
-  --kds-border-status-information: var(--color-information-500);
-  --kds-border-status-information-subtle: var(--color-information-800);
-  --kds-border-status-success: var(--color-success-500);
-  --kds-border-status-success-subtle: var(--color-success-800);
-  --kds-border-status-warning: var(--color-warning-500);
-  --kds-border-status-warning-subtle: var(--color-warning-800);
-  --kds-border-status-danger: var(--color-danger-500);
-  --kds-border-status-danger-subtle: var(--color-danger-800);
-  --kds-border-status-discovery: var(--color-discovery-500);
-  --kds-border-status-discovery-subtle: var(--color-discovery-800);
+  --kds-border-information: var(--color-information-500);
+  --kds-border-information-subtle: var(--color-information-800);
+  --kds-border-success: var(--color-success-500);
+  --kds-border-success-subtle: var(--color-success-800);
+  --kds-border-warning: var(--color-warning-500);
+  --kds-border-warning-subtle: var(--color-warning-800);
+  --kds-border-danger: var(--color-danger-500);
+  --kds-border-danger-subtle: var(--color-danger-800);
+  --kds-border-discovery: var(--color-discovery-500);
+  --kds-border-discovery-subtle: var(--color-discovery-800);
   --kds-ring-ui-muted: var(--color-ui-800);
   --kds-ring-ui-muted-hovered: var(--color-ui-700);
   --kds-ring-ui-muted-focused: var(--color-ui-accent-500);
@@ -363,6 +414,18 @@
   --kds-ring-ui-strong-focused: var(--color-ui-accent-500);
   --kds-ring-ui-strong-selected: var(--color-ui-accent-700);
   --kds-ring-ui-strong-selected-bold: var(--color-ui-accent-500);
+  --kds-ring-accent: var(--color-accent-500);
+  --kds-ring-accent-subtle: var(--color-accent-800);
+  --kds-ring-information: var(--color-information-500);
+  --kds-ring-information-subtle: var(--color-information-800);
+  --kds-ring-success: var(--color-success-500);
+  --kds-ring-success-subtle: var(--color-success-800);
+  --kds-ring-warning: var(--color-warning-500);
+  --kds-ring-warning-subtle: var(--color-warning-800);
+  --kds-ring-danger: var(--color-danger-500);
+  --kds-ring-danger-subtle: var(--color-danger-800);
+  --kds-ring-discovery: var(--color-discovery-500);
+  --kds-ring-discovery-subtle: var(--color-discovery-800);
   --kds-text-disabled: color-mix(in var(--color-space), var(--color-ui-500) 40%, transparent);
   --kds-text-selected: var(--color-ui-accent-500);
   --kds-text-primary: var(--color-ui-100);
@@ -454,18 +517,43 @@
 @utility bg-discovery-bold  { background-color: var(--kds-bg-discovery-bold); }
 @utility bg-discovery-bold-hovered  { background-color: var(--kds-bg-discovery-bold-hovered); }
 @utility bg-discovery-bold-pressed  { background-color: var(--kds-bg-discovery-bold-pressed); }
+@utility border-ui-muted  { border-color: var(--kds-border-ui-muted); }
+@utility border-ui-muted-hovered  { border-color: var(--kds-border-ui-muted-hovered); }
+@utility border-ui-muted-focused  { border-color: var(--kds-border-ui-muted-focused); }
+@utility border-ui-muted-selected  { border-color: var(--kds-border-ui-muted-selected); }
+@utility border-ui-muted-selected-bold  { border-color: var(--kds-border-ui-muted-selected-bold); }
+@utility border-ui-minimal  { border-color: var(--kds-border-ui-minimal); }
+@utility border-ui-minimal-hovered  { border-color: var(--kds-border-ui-minimal-hovered); }
+@utility border-ui-minimal-focused  { border-color: var(--kds-border-ui-minimal-focused); }
+@utility border-ui-minimal-selected  { border-color: var(--kds-border-ui-minimal-selected); }
+@utility border-ui-minimal-selected-bold  { border-color: var(--kds-border-ui-minimal-selected-bold); }
+@utility border-ui-subtle  { border-color: var(--kds-border-ui-subtle); }
+@utility border-ui-subtle-hovered  { border-color: var(--kds-border-ui-subtle-hovered); }
+@utility border-ui-subtle-focused  { border-color: var(--kds-border-ui-subtle-focused); }
+@utility border-ui-subtle-selected  { border-color: var(--kds-border-ui-subtle-selected); }
+@utility border-ui-subtle-selected-bold  { border-color: var(--kds-border-ui-subtle-selected-bold); }
+@utility border-ui-bold  { border-color: var(--kds-border-ui-bold); }
+@utility border-ui-bold-hovered  { border-color: var(--kds-border-ui-bold-hovered); }
+@utility border-ui-bold-focused  { border-color: var(--kds-border-ui-bold-focused); }
+@utility border-ui-bold-selected  { border-color: var(--kds-border-ui-bold-selected); }
+@utility border-ui-bold-selected-bold  { border-color: var(--kds-border-ui-bold-selected-bold); }
+@utility border-ui-strong  { border-color: var(--kds-border-ui-strong); }
+@utility border-ui-strong-hovered  { border-color: var(--kds-border-ui-strong-hovered); }
+@utility border-ui-strong-focused  { border-color: var(--kds-border-ui-strong-focused); }
+@utility border-ui-strong-selected  { border-color: var(--kds-border-ui-strong-selected); }
+@utility border-ui-strong-selected-bold  { border-color: var(--kds-border-ui-strong-selected-bold); }
 @utility border-accent  { border-color: var(--kds-border-accent); }
 @utility border-accent-subtle  { border-color: var(--kds-border-accent-subtle); }
-@utility border-status-information  { border-color: var(--kds-border-status-information); }
-@utility border-status-information-subtle  { border-color: var(--kds-border-status-information-subtle); }
-@utility border-status-success  { border-color: var(--kds-border-status-success); }
-@utility border-status-success-subtle  { border-color: var(--kds-border-status-success-subtle); }
-@utility border-status-warning  { border-color: var(--kds-border-status-warning); }
-@utility border-status-warning-subtle  { border-color: var(--kds-border-status-warning-subtle); }
-@utility border-status-danger  { border-color: var(--kds-border-status-danger); }
-@utility border-status-danger-subtle  { border-color: var(--kds-border-status-danger-subtle); }
-@utility border-status-discovery  { border-color: var(--kds-border-status-discovery); }
-@utility border-status-discovery-subtle  { border-color: var(--kds-border-status-discovery-subtle); }
+@utility border-information  { border-color: var(--kds-border-information); }
+@utility border-information-subtle  { border-color: var(--kds-border-information-subtle); }
+@utility border-success  { border-color: var(--kds-border-success); }
+@utility border-success-subtle  { border-color: var(--kds-border-success-subtle); }
+@utility border-warning  { border-color: var(--kds-border-warning); }
+@utility border-warning-subtle  { border-color: var(--kds-border-warning-subtle); }
+@utility border-danger  { border-color: var(--kds-border-danger); }
+@utility border-danger-subtle  { border-color: var(--kds-border-danger-subtle); }
+@utility border-discovery  { border-color: var(--kds-border-discovery); }
+@utility border-discovery-subtle  { border-color: var(--kds-border-discovery-subtle); }
 @utility ring-ui-muted  { --tw-ring-color: var(--kds-ring-ui-muted); }
 @utility ring-ui-muted-hovered  { --tw-ring-color: var(--kds-ring-ui-muted-hovered); }
 @utility ring-ui-muted-focused  { --tw-ring-color: var(--kds-ring-ui-muted-focused); }
@@ -491,6 +579,18 @@
 @utility ring-ui-strong-focused  { --tw-ring-color: var(--kds-ring-ui-strong-focused); }
 @utility ring-ui-strong-selected  { --tw-ring-color: var(--kds-ring-ui-strong-selected); }
 @utility ring-ui-strong-selected-bold  { --tw-ring-color: var(--kds-ring-ui-strong-selected-bold); }
+@utility ring-accent  { --tw-ring-color: var(--kds-ring-accent); }
+@utility ring-accent-subtle  { --tw-ring-color: var(--kds-ring-accent-subtle); }
+@utility ring-information  { --tw-ring-color: var(--kds-ring-information); }
+@utility ring-information-subtle  { --tw-ring-color: var(--kds-ring-information-subtle); }
+@utility ring-success  { --tw-ring-color: var(--kds-ring-success); }
+@utility ring-success-subtle  { --tw-ring-color: var(--kds-ring-success-subtle); }
+@utility ring-warning  { --tw-ring-color: var(--kds-ring-warning); }
+@utility ring-warning-subtle  { --tw-ring-color: var(--kds-ring-warning-subtle); }
+@utility ring-danger  { --tw-ring-color: var(--kds-ring-danger); }
+@utility ring-danger-subtle  { --tw-ring-color: var(--kds-ring-danger-subtle); }
+@utility ring-discovery  { --tw-ring-color: var(--kds-ring-discovery); }
+@utility ring-discovery-subtle  { --tw-ring-color: var(--kds-ring-discovery-subtle); }
 @utility text  { color: var(--kds-text-disabled); }
 @utility text  { color: var(--kds-text-selected); }
 @utility text-primary  { color: var(--kds-text-primary); }
@@ -512,9 +612,20 @@
 @source inline('bg-warning{-bold,-minimal,-subtle}{,-hovered,-pressed}{,!}');
 @source inline('bg-danger{-bold,-minimal,-subtle}{,-hovered,-pressed}{,!}');
 @source inline('bg-discovery{-bold,-minimal,-subtle}{,-hovered,-pressed}{,!}');
+@source inline('border-ui{-bold,-minimal,-muted,-strong,-subtle}{,-focused,-hovered,-selected,-selected-bold}{,!}');
 @source inline('border-accent{,-subtle}{,!}');
-@source inline('border-status{-danger,-discovery,-information,-success,-warning}{,-subtle}{,!}');
+@source inline('border-information{,-subtle}{,!}');
+@source inline('border-success{,-subtle}{,!}');
+@source inline('border-warning{,-subtle}{,!}');
+@source inline('border-danger{,-subtle}{,!}');
+@source inline('border-discovery{,-subtle}{,!}');
 @source inline('ring-ui{-bold,-minimal,-muted,-strong,-subtle}{,-focused,-hovered,-selected,-selected-bold}{,!}');
+@source inline('ring-accent{,-subtle}{,!}');
+@source inline('ring-information{,-subtle}{,!}');
+@source inline('ring-success{,-subtle}{,!}');
+@source inline('ring-warning{,-subtle}{,!}');
+@source inline('ring-danger{,-subtle}{,!}');
+@source inline('ring-discovery{,-subtle}{,!}');
 @source inline('text{,-disabled,-selected}{,!}');
 @source inline('text-primary{,!}');
 @source inline('text-secondary{,!}');
