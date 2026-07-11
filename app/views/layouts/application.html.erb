@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html class='h-full'>
   <head>
-    <title><%= content_for(:title) || "Rails Omakase Starter" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Rails Omakase Starter">
-    <meta name="mobile-web-app-capable" content="yes">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= yield :head %>
-
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
-
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= render 'layouts/shared/head' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class='h-full bg-slate-300'>
+    <div class='pt-10 container mx-auto'>
+      <%= yield %>
+    </div>
+    <div class='bg-ui-500'>bg-ui-500</div>
+    <br>
+    <div class='border-4 border-ui-500'>border-4 border-ui-500</div>
+    <br>
+    <div class='bg-ui-minimal'>bg-ui-surface</div>
+    <div class='border-4 border-ui-bold'>border-ui-bold</div>
   </body>
 </html>

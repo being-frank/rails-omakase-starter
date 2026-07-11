@@ -1,0 +1,31 @@
+---
+priority: 3
+---
+<h2>Warning</h2>
+
+<%= render_design_tokens(
+  title:    'Background',
+  set:      :semantic,
+  category: :color,
+  property: :bg,
+  role:     :warning,
+  display:  :states
+) %>
+
+<%= render_design_tokens(
+  title:    'Border',
+  set:      :semantic,
+  category: :color,
+  property: :border,
+  role:     :warning,
+  display:  :variants
+) %>
+
+<%= render_design_tokens(
+  title:    'Text',
+  set:      :semantic,
+  category: :color,
+  property: :text,
+  role:     :warning,
+  display:  :text
+) %>

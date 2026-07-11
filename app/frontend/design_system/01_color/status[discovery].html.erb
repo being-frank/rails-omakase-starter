@@ -1,0 +1,31 @@
+---
+priority: 5
+---
+<h2>Discovery</h2>
+
+<%= render_design_tokens(
+  title:    'Background',
+  set:      :semantic,
+  category: :color,
+  property: :bg,
+  role:     :discovery,
+  display:  :states
+) %>
+
+<%= render_design_tokens(
+  title:    'Border',
+  set:      :semantic,
+  category: :color,
+  property: :border,
+  role:     :discovery,
+  display:  :variants
+) %>
+
+<%= render_design_tokens(
+  title:    'Text',
+  set:      :semantic,
+  category: :color,
+  property: :text,
+  role:     :discovery,
+  display:  :text
+) %>

@@ -1,8 +1,9 @@
+# https://github.com/rails/solid_cache
+
 default: &default
-  store_options:
-    # Cap age of oldest cache entry to fulfill retention policies
-    # max_age: <%= 60.days.to_i %>
-    max_size: <%= 256.megabytes %>
+  database: cache
+  store_options: &default_store_options
+    max_age: <%= 256.megabytes %>
     namespace: <%= Rails.env %>
 
 development:
@@ -11,6 +12,11 @@ development:
 test:
   <<: *default
 
-production:
-  database: cache
+production: &production
   <<: *default
+  store_options:
+    <<: *default_store_options
+    max_age: <%= 60.days.to_i %>
+
+staging:
+  <<: *production

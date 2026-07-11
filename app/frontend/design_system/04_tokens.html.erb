@@ -1,0 +1,58 @@
+<%= vite_stylesheet_tag 'application.css', 'data-turbo-track': :reload %>
+<%= render 'kitsune_ds/pages/kdsdocs_styles', styles_for: %i[states tokens variants] %>
+<%
+  tokens = KitsuneDS::DesignTokens.new.all
+%>
+
+<h2><%= tokens.size %> Tokens</h2>
+
+<% tokens.select { |t|
+  t.mode == 'light' &&
+  t.group == 'semantic'
+}.group_by(&:property).each do |property, property_tokens|
+  { nil => property_tokens }.each do |level, tokens|
+%>
+  <h3 class='-font-mono'><%= [property, level].compact_blank.join('.') %></h3>
+  <table class='kdsdocs-table'>
+    <thead>
+      <tr>
+        <th>type</th>
+        <th>group</th>
+        <th>system</th>
+        <th>component</th>
+        <th>category</th>
+        <th>property</th>
+        <th>role</th>
+        <th>variant</th>
+        <th>emphasis</th>
+        <th class='-right'>scale</th>
+        <th class='-right'>state</th>
+      </tr>
+    </thead>
+    <% tokens.each do |token| %>
+      <tbody>
+        <tr <% if token.description.present? %>style='border-bottom-width:0'<% end %>>
+          <td><tt style='font-size:10px'><%= token.type %></tt></td>
+          <td><tt style='font-size:10px'><%= token.group %></tt></td>
+          <td><tt style='font-size:10px'><%= token.system %></tt></td>
+          <td><tt style='font-size:10px'><%= token.component %></tt></td>
+          <td><tt style='font-size:10px'><%= token.category %></tt></td>
+          <td><tt style='font-size:10px'><%= token.property %></tt></td>
+          <td><tt style='font-size:10px'><%= token.role %></tt></td>
+          <td><tt style='font-size:10px'><%= token.variant %></tt></td>
+          <td><tt style='font-size:10px'><%= token.emphasis %></tt></td>
+          <td class='-right'><tt style='font-size:10px'><%= token.scale %></tt></td>
+          <td class='-right'><tt style='font-size:10px'><%= token.state %></tt></td>
+        </tr>
+        <% if token.description.present? %>
+          <tr>
+            <td colspan='11' class='-caption' style='padding-top:0'>
+              <%= token.description %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    <% end %>
+  </table>
+  <% end %>
+<% end %>

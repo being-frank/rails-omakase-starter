@@ -1,0 +1,24 @@
+---
+title: Neutral UI
+label: Neutral UI
+---
+<%= vite_stylesheet_tag 'application.css', 'data-turbo-track': :reload %>
+<%= render 'kitsune_ds/pages/kdsdocs_styles', styles_for: %i[states tokens variants] %>
+
+<%= render_design_tokens(
+  title:    'Background',
+  set:      :semantic,
+  category: :color,
+  property: :bg,
+  role:     :ui,
+  display:  :states
+) %>
+
+<%= render_design_tokens(
+  title:    'Border',
+  set:      :semantic,
+  category: :color,
+  property: :border,
+  role:     :ui,
+  display:  :states
+) %>

@@ -1,2 +1,17 @@
-#!/usr/bin/env ruby
-exec "./bin/rails", "server", *ARGV
+#!/usr/bin/env bash
+
+rails log:clear
+bundle install
+
+if ! command -v overmind &> /dev/null
+then
+  echo "Installing overmind..."
+  brew install overmind
+else
+  if [ -e "./.overmind.sock" ]
+  then
+    rm -f ./.overmind.sock
+  fi
+fi
+
+overmind start

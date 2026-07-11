@@ -1,0 +1,28 @@
+{
+  "all": {
+    "additionalEntrypoints": [
+      "~/{fonts,icons,images}/**/*"
+    ],
+    "publicDir": "public",
+    "sourceCodeDir": "app/frontend",
+    "viteBinPath": "bin/vite-shim"
+  },
+  "development": {
+    "autoBuild": true,
+    "port": 3036,
+    "publicOutputDir": "vite-dev"
+  },
+  "test": {
+    "autoBuild": true,
+    "port": 3037,
+    "publicOutputDir": "vite-test"
+  },
+  "production": {
+    "autoBuild": false,
+    "publicOutputDir": "./"
+  },
+  "staging": {
+    "autoBuild": false,
+    "publicOutputDir": "./"
+  }
+}

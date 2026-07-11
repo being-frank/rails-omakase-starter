@@ -1,0 +1,31 @@
+---
+priority: 4
+---
+<h2>Danger</h2>
+
+<%= render_design_tokens(
+  title:    'Background',
+  set:      :semantic,
+  category: :color,
+  property: :bg,
+  role:     :danger,
+  display:  :states
+) %>
+
+<%= render_design_tokens(
+  title:    'Border',
+  set:      :semantic,
+  category: :color,
+  property: :border,
+  role:     :danger,
+  display:  :variants
+) %>
+
+<%= render_design_tokens(
+  title:    'Text',
+  set:      :semantic,
+  category: :color,
+  property: :text,
+  role:     :danger,
+  display:  :text
+) %>

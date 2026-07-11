@@ -1,0 +1,9 @@
+<%= display_meta_tags(default_meta_tags) %>
+<%= tag.meta(name: 'turbo-prefetch', content: false) %>
+
+<%= csp_meta_tag %>
+<%= csrf_meta_tags %>
+
+<%= yield :head %>
+
+<%= render 'layouts/shared/vite_head' %>
